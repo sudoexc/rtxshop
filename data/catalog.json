@@ -24,7 +24,12 @@
     "category": "Мыши",
     "name": "Mercury V60 Pro",
     "badge": "NEW",
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-15.webp?v=1765965816",
+    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-1.webp?v=1765965816",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-1.webp?v=1765965816",
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-15.webp?v=1765965816",
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/MercuryV60ProSpecialEdition-CyberFrostBlack-5.webp?v=1770962305"
+    ],
     "colors": [
       "Chrome Silver",
       "GunMetal",
@@ -120,6 +125,11 @@
     "name": "Mercury V75 Pro",
     "badge": "NEW",
     "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-1.webp?v=1765440850",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-1.webp?v=1765440850",
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-V75-Pro-1_batch.webp?v=1765440638",
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-special-edition-neon-graffiti-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-street-art-1.webp?v=1768640121"
+    ],
     "colors": [
       "Neon Graffiti",
       "Iron Purple",
@@ -182,6 +192,12 @@
     "name": "Mercury K1 Pro",
     "badge": null,
     "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-K1-Pro-Gaming-Keyboard-Interstellar-Silver-75-Mechanical.webp?v=1765441169",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-K1-Pro-Gaming-Keyboard-Interstellar-Silver-75-Mechanical.webp?v=1765441169",
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-K1-Pro-Gaming-Keyboard-CyberFlare-75-Mechanical-Keyboard.webp?v=1765441205",
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-K1-Pro-Gaming-Keyboard-Cyberpunk-Edition-75-Mechanical.webp?v=1765441686",
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-K1-Pro-Battle-Worn-Yellow-gaming-keyboard-ergonomic-design-customizable-RGB.webp?v=1765441467"
+    ],
     "colors": [
       "Interstellar Silver",
       "CyberFlare",
@@ -204,6 +220,10 @@
     "name": "Mercury X",
     "badge": null,
     "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Silver-gaming-mouse-RGB-mouse-ergonomic-mouse-lightweight-mouse-compact-mouse-customizable-mouse-great-sensor-mouse.webp?v=1765441490",
+    "images": [
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Silver-gaming-mouse-RGB-mouse-ergonomic-mouse-lightweight-mouse-compact-mouse-customizable-mouse-great-sensor-mouse.webp?v=1765441490",
+      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastarx.webp?v=1765441359"
+    ],
     "colors": [
       "Galaxy Black"
     ],

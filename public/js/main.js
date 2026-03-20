@@ -507,17 +507,52 @@ function clearSearch() {
 }
 
 // ── Product modal ──
+let _pmImages = [];
+let _pmActive = 0;
+
+function _pmSetActive(idx) {
+  _pmActive = idx;
+  const main = document.getElementById('pmGalleryMain');
+  if (!main) return;
+  const url = _pmImages[idx];
+  const altName = main.dataset.name || '';
+  main.innerHTML = url
+    ? `<img src="${url}" alt="${altName}" onclick="openLightbox(${idx})" loading="lazy" />
+       <button class="pm-zoom-btn" onclick="openLightbox(${idx})" aria-label="Увеличить">
+         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm0 0l.01.01M10 8v6m-3-3h6"/></svg>
+       </button>`
+    : `<div class="pm-img-placeholder">${BRAND_ICON.GravaStar}</div>`;
+  document.querySelectorAll('.pm-thumb').forEach((t, i) => t.classList.toggle('active', i === idx));
+}
+
 function openProductModal(id) {
   const p = _catalogAll.find(pr => pr.id === id);
   if (!p) return;
 
   const modal = document.getElementById('productModal');
 
-  // Image
-  const imgWrap = modal.querySelector('.pm-img-wrap');
-  imgWrap.innerHTML = p.image_url
-    ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" />`
-    : `<div class="pm-img-placeholder">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
+  // Gallery
+  _pmImages = (p.images?.length ? p.images : [p.image_url]).filter(Boolean);
+  _pmActive = 0;
+  const main = document.getElementById('pmGalleryMain');
+  const thumbsEl = document.getElementById('pmGalleryThumbs');
+  if (main) main.dataset.name = p.name.replace(/"/g, '&quot;');
+
+  // Thumbnails (only if >1 image)
+  if (thumbsEl) {
+    if (_pmImages.length > 1) {
+      thumbsEl.style.display = '';
+      thumbsEl.innerHTML = _pmImages.map((url, i) =>
+        `<button class="pm-thumb${i === 0 ? ' active' : ''}" onclick="_pmSetActive(${i})" aria-label="Фото ${i+1}">
+          <img src="${url}" alt="Фото ${i+1}" loading="lazy" />
+        </button>`
+      ).join('');
+    } else {
+      thumbsEl.style.display = 'none';
+      thumbsEl.innerHTML = '';
+    }
+  }
+  _pmSetActive(0);
 
   // Header info
   modal.querySelector('.pm-badge').innerHTML = p.badge
@@ -565,9 +600,39 @@ function closeProductModal() {
   document.body.style.overflow = '';
 }
 
+// ── Lightbox ──
+function openLightbox(idx) {
+  if (!_pmImages.length) return;
+  _pmActive = idx;
+  const lb = document.getElementById('pmLightbox');
+  const wrap = document.getElementById('pmLightboxImg');
+  if (!lb || !wrap) return;
+  wrap.innerHTML = `<img src="${_pmImages[idx]}" alt="Фото ${idx+1}" />`;
+  lb.classList.add('open');
+  document.getElementById('pmLightbox').querySelector('.pm-lightbox-prev').style.display = _pmImages.length > 1 ? '' : 'none';
+  document.getElementById('pmLightbox').querySelector('.pm-lightbox-next').style.display = _pmImages.length > 1 ? '' : 'none';
+}
+
+function closeLightbox() {
+  document.getElementById('pmLightbox')?.classList.remove('open');
+}
+
+function pmLightboxNav(dir) {
+  if (!_pmImages.length) return;
+  _pmActive = (_pmActive + dir + _pmImages.length) % _pmImages.length;
+  const wrap = document.getElementById('pmLightboxImg');
+  if (wrap) wrap.innerHTML = `<img src="${_pmImages[_pmActive]}" alt="Фото ${_pmActive+1}" />`;
+  _pmSetActive(_pmActive);
+}
+
 // Close on Escape
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeProductModal();
+  if (e.key === 'Escape') {
+    if (document.getElementById('pmLightbox')?.classList.contains('open')) closeLightbox();
+    else closeProductModal();
+  }
+  if (e.key === 'ArrowLeft') pmLightboxNav(-1);
+  if (e.key === 'ArrowRight') pmLightboxNav(1);
 });
 
 // ── Contact form prefill ──
