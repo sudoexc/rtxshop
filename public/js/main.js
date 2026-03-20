@@ -364,10 +364,15 @@ function _bslUpdateState(total) {
 }
 
 function _bslApply(grid) {
-  const card   = grid.querySelector('.bsl-card');
+  const card = grid.querySelector('.bsl-card');
   if (!card) return;
-  const offset = _bslIdx * (card.offsetWidth + 20);
-  grid.style.transform = `translateX(-${offset}px)`;
+  const trackWrap = grid.parentElement;
+  // On mobile (1 card visible) use track width as step — avoids overflow miscalc
+  // On desktop use card width + gap
+  const step = _bslVisible() === 1
+    ? trackWrap.offsetWidth
+    : card.offsetWidth + 20;
+  grid.style.transform = `translateX(-${_bslIdx * step}px)`;
 }
 
 function bslNav(dir) {
