@@ -5,6 +5,7 @@ const fetch      = require('node-fetch');
 const path       = require('path');
 const fs         = require('fs');
 const compression = require('compression');
+const rateLimit   = require('express-rate-limit');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -75,6 +76,22 @@ async function sendToTelegram(text) {
   return res.json();
 }
 
+// ─── rate limiters ─────────────────────────────────────────
+const adminLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 min
+  max: 30,
+  message: { error: 'Too many requests, try again later' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+const contactLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 10,
+  message: { error: 'Too many submissions, try again later' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
 // ─── admin auth ────────────────────────────────────────────
 function adminAuth(req, res, next) {
   const pass = process.env.ADMIN_PASSWORD;
@@ -85,7 +102,7 @@ function adminAuth(req, res, next) {
 }
 
 // ─── public: contact form ──────────────────────────────────
-app.post('/api/contact', async (req, res) => {
+app.post('/api/contact', contactLimiter, async (req, res) => {
   const { name, company, phone, email, message, interest } = req.body;
   if (!name || !phone) return res.status(400).json({ error: 'Name and phone are required' });
 
@@ -259,6 +276,7 @@ app.get('/api/brands/:brand', async (req, res) => {
 });
 
 // ─── admin: submissions ────────────────────────────────────
+app.use('/api/admin', adminLimiter);
 app.get('/api/admin/submissions', adminAuth, (req, res) => res.json(readSubmissions()));
 
 app.delete('/api/admin/submissions/:id', adminAuth, (req, res) => {

@@ -311,6 +311,16 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 
+// ======= UTILS =======
+function escHtml(str) {
+  return String(str ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // ======= CATALOG =======
 let _catalogAll  = [];   // curated product list from /api/catalog
 let _activeTab   = 'GravaStar';
@@ -404,24 +414,24 @@ function renderBestsellers() {
 
   grid.innerHTML = items.map((p, i) => {
     const badge = p.badge
-      ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}">${p.badge}</span>` : '';
+      ? `<span class="bpc-badge bpc-badge--${escHtml(p.badge.toLowerCase())}">${escHtml(p.badge)}</span>` : '';
     const imgHtml = p.image_url
-      ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" width="400" height="400" />`
+      ? `<img src="${escHtml(p.image_url)}" alt="${escHtml(p.name)}" loading="lazy" width="400" height="400" />`
       : `<div class="bpc-img-icon">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
     const colorDots = p.colors?.length
       ? `<div class="bpc-colors">${p.colors.map(c =>
-          `<span class="bpc-color bpc-color--${c.toLowerCase().replace(/\s/g,'-')}" title="${c}"></span>`
+          `<span class="bpc-color bpc-color--${escHtml(c.toLowerCase().replace(/\s/g,'-'))}" title="${escHtml(c)}"></span>`
         ).join('')}</div>` : '';
     const specEntries = Object.entries(p.specs || {}).slice(0, 3);
     const specsHtml = specEntries.length
       ? `<div class="bsl-specs">${specEntries.map(([k,v]) =>
-          `<div class="bsl-spec"><span class="bsl-spec-v">${v}</span><span class="bsl-spec-k">${k}</span></div>`
+          `<div class="bsl-spec"><span class="bsl-spec-v">${escHtml(v)}</span><span class="bsl-spec-k">${escHtml(k)}</span></div>`
         ).join('')}</div>` : '';
-    return `<div class="bpc bsl-card" onclick="openProductModal('${p.id}')">
+    return `<div class="bpc bsl-card" onclick="openProductModal('${escHtml(p.id)}')">
       <div class="bpc-img">${badge}${imgHtml}</div>
       <div class="bpc-body">
-        <div class="bpc-type">${p.brand} · ${p.category}</div>
-        <div class="bpc-name">${p.name}</div>
+        <div class="bpc-type">${escHtml(p.brand)} · ${escHtml(p.category)}</div>
+        <div class="bpc-name">${escHtml(p.name)}</div>
         ${specsHtml}
         ${colorDots}
         <button class="bpc-btn">Подробнее</button>
@@ -513,24 +523,24 @@ function renderCatalog() {
     html += '<div class="brand-photo-grid">';
     items.forEach(p => {
       const badge = p.badge
-        ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}">${p.badge}</span>` : '';
+        ? `<span class="bpc-badge bpc-badge--${escHtml(p.badge.toLowerCase())}">${escHtml(p.badge)}</span>` : '';
       const imgHtml = p.image_url
-        ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" width="400" height="400" />`
+        ? `<img src="${escHtml(p.image_url)}" alt="${escHtml(p.name)}" loading="lazy" width="400" height="400" />`
         : `<div class="bpc-img-icon">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
       const colorDots = p.colors?.length
         ? `<div class="bpc-colors">${p.colors.map(c =>
-            `<span class="bpc-color bpc-color--${c.toLowerCase().replace(/\s/g,'-')}" title="${c}"></span>`
+            `<span class="bpc-color bpc-color--${escHtml(c.toLowerCase().replace(/\s/g,'-'))}" title="${escHtml(c)}"></span>`
           ).join('')}</div>` : '';
       const specEntries = Object.entries(p.specs || {}).slice(0, 3);
       const specsHtml = specEntries.length
         ? `<div class="bpc-specs">${specEntries.map(([k,v]) =>
-            `<div class="bpc-spec"><span class="bpc-spec-v">${v}</span><span class="bpc-spec-k">${k}</span></div>`
+            `<div class="bpc-spec"><span class="bpc-spec-v">${escHtml(v)}</span><span class="bpc-spec-k">${escHtml(k)}</span></div>`
           ).join('')}</div>` : '';
-      html += `<div class="bpc" onclick="openProductModal('${p.id}')">
+      html += `<div class="bpc" onclick="openProductModal('${escHtml(p.id)}')">
         <div class="bpc-img">${badge}${imgHtml}</div>
         <div class="bpc-body">
-          <div class="bpc-type">${p.category}</div>
-          <div class="bpc-name">${p.name}</div>
+          <div class="bpc-type">${escHtml(p.category)}</div>
+          <div class="bpc-name">${escHtml(p.name)}</div>
           ${specsHtml}
           ${colorDots}
           <button class="bpc-btn">Подробнее</button>
