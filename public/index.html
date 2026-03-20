@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <!-- prevent theme flash -->
   <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('rtx_theme') || 'light')</script>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230071e3'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-size='14' font-weight='900' fill='white'>RT</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230071e3'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-size='11' font-weight='900' fill='white'>RTX</text></svg>" />
 </head>
 <body>
 
@@ -36,8 +36,10 @@
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">RT</div>
-      <span class="nav-logo-text">RTXSHOP</span>
+      <div class="nav-logo-icon">
+        <span class="logo-rtx">RTX</span>
+        <span class="logo-shop">SHOP</span>
+      </div>
     </a>
 
     <ul class="nav-links">
@@ -101,12 +103,15 @@
         <a href="#catalog" class="btn-secondary" data-i18n="hero_cta2">Смотреть каталог</a>
       </div>
       <div class="hero-cats">
-        <span>ATK</span><span>GravaStar</span><span>Arctic</span><span>Игровые мыши</span><span>Охлаждение</span><span>Периферия</span>
+        <span>ATK</span><span>GravaStar</span><span>Arctic</span><span>Picun</span><span>Игровые мыши</span><span>Охлаждение</span><span>Периферия</span>
       </div>
     </div>
 
     <div class="hero-visual" aria-hidden="true">
       <div class="hero-product-card">
+        <div class="hpc-img">
+          <img src="https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-1.webp?v=1765965816" alt="Mercury V60 Pro" />
+        </div>
         <div class="hpc-tag">Хит продаж</div>
         <div class="hpc-cat">GravaStar — Игровые мыши</div>
         <div class="hpc-name">Mercury<br>V60 Pro</div>
@@ -114,7 +119,7 @@
           <div class="hpc-spec"><span class="hpc-spec-v">PAW3950</span><span class="hpc-spec-k">Сенсор</span></div>
           <div class="hpc-spec"><span class="hpc-spec-v">4000Hz</span><span class="hpc-spec-k">Polling rate</span></div>
           <div class="hpc-spec"><span class="hpc-spec-v">71g</span><span class="hpc-spec-k">Вес</span></div>
-          <div class="hpc-spec"><span class="hpc-spec-v">от $99</span><span class="hpc-spec-k">Оптовая цена</span></div>
+          <div class="hpc-spec"><span class="hpc-spec-v">2.4GHz / BT</span><span class="hpc-spec-k">Подключение</span></div>
         </div>
         <a href="#catalog" class="hpc-btn" onclick="showBrandCatalog('GravaStar')">Смотреть каталог</a>
         <p class="hpc-note">Оптовые условия для магазинов Узбекистана</p>
@@ -129,7 +134,7 @@
     </div>
     <div class="hero-divider"></div>
     <div class="hero-stat">
-      <div class="hero-stat-number">3</div>
+      <div class="hero-stat-number">4</div>
       <div class="hero-stat-label" data-i18n="stat_brands">Официальных бренда</div>
     </div>
     <div class="hero-divider"></div>
@@ -178,88 +183,8 @@
       <h2 class="section-title"><span data-i18n="bsl_h2a">Самые</span> <span class="accent-text" data-i18n="bsl_h2b">востребованные</span></h2>
       <p class="section-sub" data-i18n="bsl_sub">Топовые позиции из нашего каталога — от GPU до игровой периферии</p>
     </div>
-    <div class="bsl-grid">
-
-      <!-- GravaStar Mercury M3 Pro -->
-      <div class="pc reveal">
-        <div class="pc-visual pc-visual--mouse">
-          <span class="pc-badge pc-badge--hot">HOT</span>
-          <svg width="48" height="60" viewBox="0 0 48 60" fill="none" aria-hidden="true">
-            <path d="M24 4C13.5 4 5 12.5 5 23v14c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.55"/>
-            <line x1="24" y1="4" x2="24" y2="30" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.35"/>
-            <rect x="18" y="34" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1" stroke-opacity="0.4"/>
-          </svg>
-        </div>
-        <div class="pc-body">
-          <div class="pc-brand">GravaStar · Мышь</div>
-          <div class="pc-name">Mercury M3 Pro</div>
-          <div class="pc-sub">4000Hz · PAW3395 · 55g · RGB</div>
-          <div class="pc-price">от $79 <small data-i18n="pc_wholesale">оптом</small></div>
-          <button class="pc-btn" onclick="showBrandCatalog('GravaStar')" data-i18n="pc_view_brand">Каталог GravaStar</button>
-        </div>
-      </div>
-
-      <!-- GravaStar Mercury V60 Pro -->
-      <div class="pc reveal reveal-delay-1">
-        <div class="pc-visual pc-visual--mouse">
-          <span class="pc-badge pc-badge--new">NEW</span>
-          <svg width="48" height="60" viewBox="0 0 48 60" fill="none" aria-hidden="true">
-            <path d="M24 4C13.5 4 5 12.5 5 23v14c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.55"/>
-            <line x1="24" y1="4" x2="24" y2="30" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.35"/>
-            <rect x="18" y="34" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1" stroke-opacity="0.4"/>
-          </svg>
-        </div>
-        <div class="pc-body">
-          <div class="pc-brand">GravaStar · Мышь</div>
-          <div class="pc-name">Mercury V60 Pro</div>
-          <div class="pc-sub">Беспроводная · PAW3950 · 4000Hz · 71g</div>
-          <div class="pc-price">от $99 <small data-i18n="pc_wholesale">оптом</small></div>
-          <button class="pc-btn" onclick="showBrandCatalog('GravaStar')" data-i18n="pc_view_brand">Каталог GravaStar</button>
-        </div>
-      </div>
-
-      <!-- ATK F1 Pro -->
-      <div class="pc reveal reveal-delay-2">
-        <div class="pc-visual pc-visual--mouse">
-          <span class="pc-badge pc-badge--hot">HOT</span>
-          <svg width="48" height="60" viewBox="0 0 48 60" fill="none" aria-hidden="true">
-            <path d="M24 4C13.5 4 5 12.5 5 23v14c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.55"/>
-            <line x1="24" y1="4" x2="24" y2="30" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.35"/>
-            <rect x="18" y="34" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1" stroke-opacity="0.4"/>
-          </svg>
-        </div>
-        <div class="pc-body">
-          <div class="pc-brand">ATK · Мышь</div>
-          <div class="pc-name">F1 Pro</div>
-          <div class="pc-sub">FPS · PAW3395 · 59g · 1000Hz</div>
-          <div class="pc-price">от $69 <small data-i18n="pc_wholesale">оптом</small></div>
-          <button class="pc-btn" onclick="showBrandCatalog('ATK')" data-i18n="pc_view_brand">Каталог ATK</button>
-        </div>
-      </div>
-
-      <!-- Arctic Liquid Freezer III 360 -->
-      <div class="pc reveal reveal-delay-3">
-        <div class="pc-visual pc-visual--cooler">
-          <span class="pc-badge pc-badge--hot">HOT</span>
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.5"/>
-            <circle cx="32" cy="32" r="14" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.35"/>
-            <circle cx="32" cy="32" r="5" fill="currentColor" fill-opacity="0.3"/>
-            <path d="M32 6 Q38 16 32 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
-            <path d="M58 32 Q48 38 42 32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
-            <path d="M32 58 Q26 48 32 42" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
-            <path d="M6 32 Q16 26 22 32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
-          </svg>
-        </div>
-        <div class="pc-body">
-          <div class="pc-brand">Arctic · Охлаждение</div>
-          <div class="pc-name">Liquid Freezer III 360</div>
-          <div class="pc-sub">AIO · 360mm · AM5 / LGA1851</div>
-          <div class="pc-price">от $89 <small data-i18n="pc_wholesale">оптом</small></div>
-          <button class="pc-btn" onclick="showBrandCatalog('Arctic')" data-i18n="pc_view_brand">Каталог Arctic</button>
-        </div>
-      </div>
-
+    <div class="bsl-grid" id="bslGrid">
+      <div class="catalog-loading"><div class="catalog-spinner"></div></div>
     </div>
   </div>
 </section>
@@ -272,7 +197,7 @@
         <div class="about-card">
           <div class="about-card-stats">
             <div class="about-mini-stat"><div class="about-mini-stat-num">20+</div><div class="about-mini-stat-label" data-i18n="stat_stores">Магазинов-партнёров</div></div>
-            <div class="about-mini-stat"><div class="about-mini-stat-num">3</div><div class="about-mini-stat-label" data-i18n="stat_brands">Официальных бренда</div></div>
+            <div class="about-mini-stat"><div class="about-mini-stat-num">4</div><div class="about-mini-stat-label" data-i18n="stat_brands">Официальных бренда</div></div>
             <div class="about-mini-stat"><div class="about-mini-stat-num">5+</div><div class="about-mini-stat-label" data-i18n="stat_years">Лет на рынке</div></div>
             <div class="about-mini-stat"><div class="about-mini-stat-num">UZB</div><div class="about-mini-stat-label" data-i18n="stat_coverage">Охват по стране</div></div>
           </div>
@@ -282,6 +207,7 @@
               <button onclick="showBrandCatalog('ATK')" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--text-primary);transition:border-color 0.2s;cursor:pointer;font-family:inherit;" onmouseenter="this.style.borderColor='var(--border-hover)'" onmouseleave="this.style.borderColor='var(--border)'">ATK</button>
               <button onclick="showBrandCatalog('GravaStar')" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--text-primary);transition:border-color 0.2s;cursor:pointer;font-family:inherit;" onmouseenter="this.style.borderColor='var(--border-hover)'" onmouseleave="this.style.borderColor='var(--border)'">GravaStar</button>
               <button onclick="showBrandCatalog('Arctic')" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--text-primary);transition:border-color 0.2s;cursor:pointer;font-family:inherit;" onmouseenter="this.style.borderColor='var(--border-hover)'" onmouseleave="this.style.borderColor='var(--border)'">Arctic</button>
+              <button onclick="showBrandCatalog('Picun')" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--text-primary);transition:border-color 0.2s;cursor:pointer;font-family:inherit;" onmouseenter="this.style.borderColor='var(--border-hover)'" onmouseleave="this.style.borderColor='var(--border)'">Picun</button>
             </div>
           </div>
         </div>
@@ -343,6 +269,12 @@
         <p class="partner-desc" data-i18n="arctic_desc">Европейский эксперт в области охлаждения. Кулеры, термопасты, вентиляторы — тишина и эффективность в одном.</p>
         <span class="partner-link"><span data-i18n="view_catalog">Смотреть каталог</span><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
       </div>
+      <div class="partner-card reveal reveal-delay-3" role="button" tabindex="0" onclick="showBrandCatalog('Picun')" onkeydown="if(event.key==='Enter')showBrandCatalog('Picun')">
+        <div class="partner-brand-name">Picun</div>
+        <div class="partner-sub">Игровая аудио техника</div>
+        <p class="partner-desc">Игровые наушники и TWS наушники с низкой задержкой. Современный дизайн и качественный звук для геймеров.</p>
+        <span class="partner-link"><span data-i18n="view_catalog">Смотреть каталог</span><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
+      </div>
     </div>
   </div>
 </section>
@@ -352,8 +284,8 @@
   <div class="container">
     <div class="catalog-header reveal">
       <div class="section-eyebrow" data-i18n="catalog_eyebrow">Каталог</div>
-      <h2 class="section-title"><span data-i18n="catalog_h2a">Актуальные</span> <span class="accent-text" data-i18n="catalog_h2b">цены</span></h2>
-      <p class="section-sub" data-i18n="catalog_sub">Оптовые цены для магазинов. Для уточнения минимального заказа — свяжитесь с менеджером.</p>
+      <h2 class="section-title"><span data-i18n="catalog_h2a">Наш</span> <span class="accent-text" data-i18n="catalog_h2b">каталог</span></h2>
+      <p class="section-sub" data-i18n="catalog_sub">Товары, которые мы поставляем напрямую с производства. Для получения прайса — свяжитесь с менеджером.</p>
     </div>
 
     <div class="catalog-search reveal">
@@ -369,6 +301,7 @@
     <div class="catalog-tabs reveal" id="catalogTabs">
       <button class="cat-tab active" data-cat="GravaStar">GravaStar</button>
       <button class="cat-tab" data-cat="ATK">ATK</button>
+      <button class="cat-tab" data-cat="Picun">Picun</button>
       <button class="cat-tab" data-cat="Arctic">Arctic</button>
     </div>
 
@@ -519,8 +452,7 @@
               <option value="ATK">ATK — игровые мыши</option>
               <option value="GravaStar">GravaStar — игровая периферия</option>
               <option value="Arctic">Arctic — системы охлаждения</option>
-              <option value="GPU">GPU — видеокарты</option>
-              <option value="CPU">CPU — процессоры</option>
+              <option value="Picun">Picun — аудио техника</option>
               <option value="All" data-i18n="field_interest_all">Все категории</option>
             </select>
           </div>
@@ -562,6 +494,30 @@
     </div>
   </div>
 </footer>
+
+<!-- ── PRODUCT MODAL ── -->
+<div class="product-modal" id="productModal" role="dialog" aria-modal="true">
+  <div class="pm-overlay" onclick="closeProductModal()"></div>
+  <div class="pm-dialog">
+    <button class="pm-close" onclick="closeProductModal()" aria-label="Закрыть">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <div class="pm-image-side">
+      <div class="pm-img-wrap"></div>
+    </div>
+    <div class="pm-content-side">
+      <div>
+        <div class="pm-badge"></div>
+        <div class="pm-brand"></div>
+        <div class="pm-name"></div>
+      </div>
+      <div class="pm-colors-wrap"></div>
+      <div class="pm-specs"></div>
+      <div class="pm-desc"></div>
+      <button class="pm-cta-btn">Запросить у менеджера</button>
+    </div>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

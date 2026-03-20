@@ -88,7 +88,7 @@ const T = {
     sticky_btn: 'Оставить заявку',
     hero_eyebrow: 'Официальный дистрибьютор в Узбекистане',
     hero_h1a: 'Прямые поставки', hero_h1b: 'для вашего магазина.',
-    hero_sub: 'RTXSHOP OOO — официальный дистрибьютор ATK, GravaStar и Arctic в Узбекистане. Игровые мыши, периферия и системы охлаждения оптом для магазинов.',
+    hero_sub: 'RTXSHOP OOO — официальный дистрибьютор ATK, GravaStar, Arctic и Picun в Узбекистане. Игровые мыши, периферия, аудио и системы охлаждения оптом для магазинов.',
     hero_cta1: 'Стать партнёром', hero_cta2: 'Смотреть каталог',
     stat_stores: 'Магазинов-партнёров', stat_products: 'Товаров в каталоге',
     stat_brands: 'Официальных бренда', stat_coverage: 'Охват по стране', stat_years: 'Лет на рынке',
@@ -98,7 +98,7 @@ const T = {
     brand_arctic: 'Охлаждение', brand_b2b: 'Оптовая модель',
     about_eyebrow: 'О компании',
     about_h2a: 'Мост между', about_h2b: 'мировыми', about_h2c: 'брендами', about_h2d: 'и вашим магазином',
-    about_sub: 'RTXSHOP OOO — официальный дистрибьютор ATK, GravaStar и Arctic в Узбекистане. Поставляем игровые мыши, периферию и системы охлаждения напрямую в розничные магазины по всей стране.',
+    about_sub: 'RTXSHOP OOO — официальный дистрибьютор ATK, GravaStar, Arctic и Picun в Узбекистане. Поставляем игровые мыши, периферию, аудио и системы охлаждения напрямую в розничные магазины по всей стране.',
     feat1_title: 'Официальное партнёрство', feat1_sub: 'Прямые договоры с ATK, GravaStar и Arctic — оригинальная продукция с гарантией',
     feat2_title: 'Оптовые поставки',        feat2_sub: 'Работаем с магазинами по всему Узбекистану — от Ташкента до регионов',
     feat3_title: 'Быстрая логистика',       feat3_sub: 'Выстроенные цепочки поставок для своевременного пополнения вашего склада',
@@ -110,11 +110,11 @@ const T = {
     arctic_cat: 'Системы охлаждения', arctic_desc: 'Европейский эксперт в области охлаждения. Кулеры, термопасты, вентиляторы — тишина и эффективность в одном.',
     open_site: 'Открыть сайт',
     bsl_eyebrow: 'Хит продаж', bsl_h2a: 'Самые', bsl_h2b: 'востребованные',
-    bsl_sub: 'Топовые позиции из нашего каталога — от GPU до игровой периферии',
+    bsl_sub: 'Топовые позиции из нашего каталога — игровая периферия и системы охлаждения',
     pc_wholesale: 'оптом', pc_view_brand: 'Смотреть каталог',
     view_catalog: 'Смотреть каталог',
-    catalog_eyebrow: 'Каталог', catalog_h2a: 'Актуальные', catalog_h2b: 'цены',
-    catalog_sub: 'Оптовые цены для магазинов. Для уточнения минимального заказа — свяжитесь с менеджером.',
+    catalog_eyebrow: 'Каталог', catalog_h2a: 'Наш', catalog_h2b: 'каталог',
+    catalog_sub: 'Товары, которые мы поставляем напрямую с производства. Для получения прайса — свяжитесь с менеджером.',
     catalog_cta_text: 'Нужен индивидуальный прайс или товар не в списке?',
     catalog_cta_btn: 'Запросить у менеджера',
     services_eyebrow: 'Услуги', services_h2a: 'Всё что нужно', services_h2b: 'вашему бизнесу',
@@ -168,7 +168,7 @@ const T = {
     sticky_btn: 'Ariza qoldirish',
     hero_eyebrow: 'O\'zbekistondagi rasmiy distribyutor',
     hero_h1a: 'To\'g\'ridan-to\'g\'ri yetkazib berish', hero_h1b: 'do\'koningiz uchun.',
-    hero_sub: 'RTXSHOP OOO — ATK, GravaStar va Arctic rasmiy distribyutori. O\'yin sichqonlari, periferiya va sovutish tizimlari ulgurji yetkazib beriladi.',
+    hero_sub: 'RTXSHOP OOO — ATK, GravaStar, Arctic va Picun rasmiy distribyutori. O\'yin sichqonlari, periferiya, audio va sovutish tizimlari ulgurji yetkazib beriladi.',
     hero_cta1: 'Hamkor bo\'lish', hero_cta2: 'Katalogni ko\'rish',
     stat_stores: 'Ta do\'kon-hamkor', stat_products: 'Ta mahsulot katalogda',
     stat_brands: 'Rasmiy brend', stat_coverage: 'Mamlakat bo\'ylab', stat_years: 'Yil bozorda',
@@ -178,7 +178,7 @@ const T = {
     brand_arctic: 'Sovutish', brand_b2b: 'Ulgurji model',
     about_eyebrow: 'Kompaniya haqida',
     about_h2a: 'Jahon brendlari', about_h2b: 'va sizning', about_h2c: 'do\'koningiz', about_h2d: 'o\'rtasidagi ko\'prik',
-    about_sub: 'RTXSHOP OOO — yetakchi jahon brendlarining mahsulotlarini to\'g\'ridan-to\'g\'ri O\'zbekiston chakana do\'konlariga yetkazib beruvchi rasmiy distribyutor.',
+    about_sub: 'RTXSHOP OOO — ATK, GravaStar, Arctic va Picun mahsulotlarini to\'g\'ridan-to\'g\'ri O\'zbekiston chakana do\'konlariga yetkazib beruvchi rasmiy distribyutor.',
     feat1_title: 'Rasmiy hamkorlik',   feat1_sub: 'ATK, GravaStar va Arctic bilan bevosita shartnomalar — kafolatlangan original mahsulot',
     feat2_title: 'Ulgurji yetkazib berish', feat2_sub: 'O\'zbekiston bo\'ylab do\'konlar bilan ishlaymiz — Toshkentdan viloyatlargacha',
     feat3_title: 'Tezkor logistika',   feat3_sub: 'Omboringizni o\'z vaqtida to\'ldirish uchun yetkazib berish zanjirlari qurilgan',
@@ -190,11 +190,11 @@ const T = {
     arctic_cat: 'Sovutish tizimlari', arctic_desc: 'Kompyuter sovutish sohasidagi Evropa eksperti. Kulerlar, termopastalar, ventilatorlar.',
     open_site: 'Saytni ochish',
     bsl_eyebrow: 'Eng ko\'p sotiladi', bsl_h2a: 'Eng', bsl_h2b: 'mashhur',
-    bsl_sub: 'Katalogimizdan eng talabchan pozitsiyalar — GPU dan o\'yin periferiyasigacha',
+    bsl_sub: 'Katalogimizdan eng talabchan pozitsiyalar — o\'yin periferiyasi va sovutish tizimlari',
     pc_wholesale: 'ulgurji', pc_view_brand: 'Katalogni ko\'rish',
     view_catalog: 'Katalogni ko\'rish',
-    catalog_eyebrow: 'Katalog', catalog_h2a: 'Joriy', catalog_h2b: 'narxlar',
-    catalog_sub: 'Do\'konlar uchun ulgurji narxlar. Minimal buyurtma miqdori uchun menejer bilan bog\'laning.',
+    catalog_eyebrow: 'Katalog', catalog_h2a: 'Bizning', catalog_h2b: 'katalog',
+    catalog_sub: 'Ishlab chiqaruvchidan to\'g\'ridan-to\'g\'ri yetkazib beriladigan mahsulotlar. Narx olish uchun — menejer bilan bog\'laning.',
     catalog_cta_text: 'Individual narx yoki ro\'yxatda yo\'q mahsulot kerakmi?',
     catalog_cta_btn: 'Menejerdan so\'rash',
     services_eyebrow: 'Xizmatlar', services_h2a: 'Biznesingizga', services_h2b: 'kerak bo\'lgan hamma narsa',
@@ -306,203 +306,188 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ======= CATALOG =======
-let _products = [];
-let _activeTab = 'GravaStar';
+let _catalogAll  = [];   // curated product list from /api/catalog
+let _activeTab   = 'GravaStar';
 let _searchQuery = '';
-window._activeTab = 'GravaStar';
 
-async function loadCatalog() {
-  try {
-    const res = await fetch('/api/products');
-    _products = await res.json();
-    window._catalogProducts = _products;
-    renderCatalog();
-  } catch {
-    document.getElementById('catalogBody').innerHTML =
-      '<div style="padding:40px;text-align:center;color:var(--text-muted);font-size:14px;">Не удалось загрузить каталог</div>';
-  }
-}
-
-function highlight(text, query) {
-  if (!query) return text;
-  const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
-  return text.replace(re, '<mark>$1</mark>');
-}
-
-function renderCatalog() {
-  const body = document.getElementById('catalogBody');
-  const q = _searchQuery.toLowerCase().trim();
-
-  // brand catalog mode
-  if (!q && BRAND_CATS.includes(_activeTab)) {
-    renderBrandCatalog(_activeTab);
-    return;
-  }
-
-  let source = _products;
-  // if searching — show all, else filter by tab
-  if (!q) source = source.filter(p => p.category === _activeTab);
-  if (q)  source = source.filter(p => p.name.toLowerCase().includes(q));
-
-  if (!source.length) {
-    body.innerHTML = '<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">Ничего не найдено</div>';
-    return;
-  }
-
-  const groups = {};
-  source.forEach(p => {
-    const key = q ? `${p.category} — ${p.sub}` : p.sub;
-    if (!groups[key]) groups[key] = [];
-    groups[key].push(p);
-  });
-
-  const reqBtn = T[currentLang].req_btn || 'Запросить';
-  let html = '';
-  Object.entries(groups).forEach(([sub, items]) => {
-    html += `<div class="catalog-sub-group"><div class="catalog-sub-header">${sub}</div>`;
-    items.forEach(p => {
-      const badgeHtml = p.badge
-        ? `<span class="product-badge badge-${p.badge.toLowerCase()}">${p.badge}</span>`
-        : '';
-      html += `<div class="catalog-row">
-        <span class="catalog-row-name">${highlight(p.name, q)}</span>
-        ${badgeHtml}
-        <span class="catalog-row-price">$${p.price.toLocaleString()}</span>
-        <button class="catalog-row-btn" onclick="requestProduct(${JSON.stringify(p.name)})">${reqBtn}</button>
-      </div>`;
-    });
-    html += '</div>';
-  });
-  body.innerHTML = html;
-}
-
-// brand catalog tabs
-const BRAND_CATS = ['GravaStar', 'ATK', 'Arctic'];
-
+// ── Icons (fallback when no image) ──
 const BRAND_ICON = {
-  GravaStar: `<svg width="48" height="56" viewBox="0 0 48 56" fill="none"><path d="M24 4C13.5 4 5 12.5 5 23v10c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.5"/><line x1="24" y1="4" x2="24" y2="28" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.3"/><rect x="18" y="32" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1" stroke-opacity="0.35"/></svg>`,
-  ATK: `<svg width="48" height="56" viewBox="0 0 48 56" fill="none"><path d="M24 4C13.5 4 5 12.5 5 23v10c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.5"/><line x1="24" y1="4" x2="24" y2="28" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.3"/><rect x="18" y="32" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1" stroke-opacity="0.35"/></svg>`,
-  Arctic: `<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="22" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.45"/><circle cx="28" cy="28" r="12" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.3"/><circle cx="28" cy="28" r="4" fill="currentColor" fill-opacity="0.25"/><path d="M28 6 Q33 15 28 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/><path d="M50 28 Q41 33 36 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/><path d="M28 50 Q23 41 28 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/><path d="M6 28 Q15 23 20 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/></svg>`,
+  GravaStar: `<svg width="52" height="60" viewBox="0 0 48 56" fill="none"><path d="M24 4C13.5 4 5 12.5 5 23v10c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.4"/><line x1="24" y1="4" x2="24" y2="28" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><rect x="18" y="32" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" stroke-opacity="0.3"/></svg>`,
+  ATK: `<svg width="52" height="60" viewBox="0 0 48 56" fill="none"><path d="M24 4C13.5 4 5 12.5 5 23v10c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.4"/><line x1="24" y1="4" x2="24" y2="28" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><rect x="18" y="32" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="1" stroke-opacity="0.3"/></svg>`,
+  Arctic: `<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="22" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.4"/><circle cx="28" cy="28" r="12" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25"/><circle cx="28" cy="28" r="4" fill="currentColor" fill-opacity="0.2"/><path d="M28 6 Q33 15 28 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/><path d="M50 28 Q41 33 36 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/><path d="M28 50 Q23 41 28 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/><path d="M6 28 Q15 23 20 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/></svg>`,
+  Picun: `<svg width="52" height="52" viewBox="0 0 52 52" fill="none"><path d="M8 26c0-9.9 8.1-18 18-18s18 8.1 18 18" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.4" stroke-linecap="round"/><rect x="4" y="24" width="8" height="12" rx="4" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.4"/><rect x="40" y="24" width="8" height="12" rx="4" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.4"/></svg>`,
 };
 
 const BRAND_TAG = {
   GravaStar: 'Игровая периферия · sci-fi дизайн',
-  ATK: 'Профессиональные игровые мыши',
-  Arctic: 'Системы охлаждения · Европейский бренд',
+  ATK:       'Профессиональные игровые мыши',
+  Arctic:    'Системы охлаждения · Европейский бренд',
+  Picun:     'Игровая аудио техника',
 };
 
+const BRAND_CATS = ['GravaStar', 'ATK', 'Picun', 'Arctic'];
+
+// ── Bestsellers: featured product IDs ──
+const BSL_IDS = ['gs-v60pro', 'atk-ag9air', 'atk-ag9ult', 'arctic-lf3pro360'];
+
+function renderBestsellers() {
+  const grid = document.getElementById('bslGrid');
+  if (!grid) return;
+  const items = BSL_IDS.map(id => _catalogAll.find(p => p.id === id)).filter(Boolean);
+  if (!items.length) { grid.innerHTML = ''; return; }
+
+  grid.innerHTML = items.map((p, i) => {
+    const badge = p.badge
+      ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}">${p.badge}</span>` : '';
+    const imgHtml = p.image_url
+      ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" />`
+      : `<div class="bpc-img-icon">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
+    const colorDots = p.colors?.length
+      ? `<div class="bpc-colors">${p.colors.map(c =>
+          `<span class="bpc-color bpc-color--${c.toLowerCase().replace(/\s/g,'-')}" title="${c}"></span>`
+        ).join('')}</div>` : '';
+    const specEntries = Object.entries(p.specs || {}).slice(0, 3);
+    const specsHtml = specEntries.length
+      ? `<div class="bsl-specs">${specEntries.map(([k,v]) =>
+          `<div class="bsl-spec"><span class="bsl-spec-v">${v}</span><span class="bsl-spec-k">${k}</span></div>`
+        ).join('')}</div>` : '';
+    return `<div class="bpc bsl-card reveal${i > 0 ? ' reveal-delay-' + i : ''}" onclick="openProductModal('${p.id}')">
+      <div class="bpc-img">${badge}${imgHtml}</div>
+      <div class="bpc-body">
+        <div class="bpc-type">${p.brand} · ${p.category}</div>
+        <div class="bpc-name">${p.name}</div>
+        ${specsHtml}
+        ${colorDots}
+        <button class="bpc-btn">Подробнее</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  // re-observe new reveal elements
+  grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ── Load curated catalog once ──
+async function loadCatalog() {
+  const body = document.getElementById('catalogBody');
+  body.innerHTML = '<div class="catalog-loading"><div class="catalog-spinner"></div></div>';
+  try {
+    const r = await fetch('/api/catalog');
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    _catalogAll = await r.json();
+    renderCatalog();
+    renderBestsellers();
+  } catch {
+    body.innerHTML = '<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">Не удалось загрузить каталог</div>';
+  }
+}
+
+// ── Render catalog (tab or search) ──
+function renderCatalog() {
+  const body = document.getElementById('catalogBody');
+  const q    = _searchQuery.toLowerCase().trim();
+
+  let products = _catalogAll;
+  if (!q) {
+    products = products.filter(p => p.brand === _activeTab);
+  } else {
+    products = products.filter(p =>
+      p.name.toLowerCase().includes(q) ||
+      p.brand.toLowerCase().includes(q) ||
+      p.category.toLowerCase().includes(q) ||
+      (p.desc || '').toLowerCase().includes(q)
+    );
+  }
+
+  if (!products.length) {
+    body.innerHTML = '<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">Ничего не найдено</div>';
+    return;
+  }
+
+  // Group by category
+  const groups = {};
+  products.forEach(p => {
+    const key = q ? `${p.brand} · ${p.category}` : p.category;
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(p);
+  });
+
+  const multiGroup = Object.keys(groups).length > 1;
+  const tag  = BRAND_TAG[_activeTab] || '';
+  const cnt  = products.length;
+
+  let html = '';
+  if (!q) {
+    const cntLabel = cnt === 1 ? 'товар' : cnt < 5 ? 'товара' : 'товаров';
+    html += `<div class="brand-catalog-header">
+      <div class="bch-top">
+        <div class="brand-catalog-logo">${_activeTab}</div>
+        <span class="brand-catalog-count">${cnt} ${cntLabel}</span>
+      </div>
+      <span class="brand-catalog-tag">${tag}</span>
+    </div>`;
+  }
+
+  Object.entries(groups).forEach(([group, items]) => {
+    if (multiGroup) html += `<div class="catalog-sub-header">${group}</div>`;
+    html += '<div class="brand-photo-grid">';
+    items.forEach(p => {
+      const badge = p.badge
+        ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}">${p.badge}</span>` : '';
+      const imgHtml = p.image_url
+        ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" />`
+        : `<div class="bpc-img-icon">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
+      const colorDots = p.colors?.length
+        ? `<div class="bpc-colors">${p.colors.map(c =>
+            `<span class="bpc-color bpc-color--${c.toLowerCase().replace(/\s/g,'-')}" title="${c}"></span>`
+          ).join('')}</div>` : '';
+      html += `<div class="bpc" onclick="openProductModal('${p.id}')">
+        <div class="bpc-img">${badge}${imgHtml}</div>
+        <div class="bpc-body">
+          <div class="bpc-type">${p.category}</div>
+          <div class="bpc-name">${p.name}</div>
+          ${colorDots}
+          <button class="bpc-btn">Подробнее</button>
+        </div>
+      </div>`;
+    });
+    html += '</div>';
+  });
+
+  body.innerHTML = html;
+}
+
+// ── Tab switching ──
 function showBrandCatalog(brand) {
-  const catalogSection = document.getElementById('catalog');
-  if (!catalogSection) return;
-  // activate brand tab
+  const section = document.getElementById('catalog');
+  if (!section) return;
   document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
   const tab = document.querySelector(`.cat-tab[data-cat="${brand}"]`);
   if (tab) tab.classList.add('active');
   _activeTab = brand;
-  window._activeTab = brand;
+  _searchQuery = '';
+  const si = document.getElementById('catalogSearch');
+  if (si) si.value = '';
+  document.getElementById('searchClear')?.classList.remove('visible');
   renderCatalog();
-  // scroll to catalog
-  const top = catalogSection.getBoundingClientRect().top + window.scrollY - 70;
+  const top = section.getBoundingClientRect().top + window.scrollY - 70;
   window.scrollTo({ top, behavior: 'smooth' });
 }
 
-async function renderBrandCatalog(brand) {
-  const body   = document.getElementById('catalogBody');
-  const reqBtn = T[currentLang].req_btn || 'Запросить';
-  const tag    = BRAND_TAG[brand] || '';
+document.querySelectorAll('.cat-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    _activeTab = tab.dataset.cat;
+    _searchQuery = '';
+    const si = document.getElementById('catalogSearch');
+    if (si) si.value = '';
+    document.getElementById('searchClear')?.classList.remove('visible');
+    renderCatalog();
+  });
+});
 
-  // All brands go through server proxy (GravaStar/ATK → Shopify, Arctic → scraper)
-  body.innerHTML = '<div class="catalog-loading"><div class="catalog-spinner"></div></div>';
-
-  try {
-    const r = await fetch(`/api/brands/${brand.toLowerCase()}`);
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const products = await r.json();
-
-    const currencySign = brand === 'Arctic' ? '€' : '$';
-
-    let html = `<div class="brand-catalog-header">
-      <div class="brand-catalog-logo">${brand}</div>
-      <span class="brand-catalog-tag">${tag}</span>
-      <span class="brand-catalog-count">${products.length} товаров</span>
-    </div>`;
-
-    if (!products.length) {
-      html += '<div style="padding:40px;text-align:center;color:var(--text-muted);">Нет доступных товаров</div>';
-      body.innerHTML = html;
-      return;
-    }
-
-    // Arctic: group by type
-    if (brand === 'Arctic') {
-      const groups = {};
-      products.forEach(p => { if (!groups[p.type]) groups[p.type] = []; groups[p.type].push(p); });
-      Object.entries(groups).forEach(([type, items]) => {
-        html += `<div class="catalog-sub-header">${type}</div><div class="brand-photo-grid">`;
-        items.forEach(p => {
-          const badge = p.badge ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}">${p.badge}</span>` : '';
-          const imgHtml = p.image
-            ? `<img src="${p.image}" alt="${(p.name||p.title).replace(/"/g,'&quot;')}" loading="lazy" />`
-            : (BRAND_ICON['Arctic'] || '');
-          const nm = p.name || p.title;
-          html += `<div class="bpc">
-            <div class="bpc-img">${badge}${imgHtml}</div>
-            <div class="bpc-body">
-              <div class="bpc-type">${p.type}</div>
-              <div class="bpc-name">${nm}</div>
-              <div class="bpc-price-row"><div class="bpc-price">от ${currencySign}${p.price}</div></div>
-              <button class="bpc-btn" onclick="requestProduct(${JSON.stringify(nm)})">${reqBtn}</button>
-            </div>
-          </div>`;
-        });
-        html += '</div>';
-      });
-    } else {
-      // GravaStar / ATK: flat grid
-      html += '<div class="brand-photo-grid">';
-      products.forEach(p => {
-        const imgHtml = p.image
-          ? `<img src="${p.image}" alt="${p.title.replace(/"/g,'&quot;')}" loading="lazy" />`
-          : (BRAND_ICON[brand] || '');
-        const priceHtml = p.price > 0 ? `<div class="bpc-price">от ${currencySign}${p.price.toLocaleString()}</div>` : '';
-        const oldPrice  = p.comparePrice && p.comparePrice > p.price
-          ? `<span class="bpc-price-old">${currencySign}${p.comparePrice.toLocaleString()}</span>` : '';
-        html += `<div class="bpc">
-          <div class="bpc-img">${imgHtml}</div>
-          <div class="bpc-body">
-            <div class="bpc-type">${p.type || brand}</div>
-            <div class="bpc-name">${p.title}</div>
-            <div class="bpc-price-row">${priceHtml}${oldPrice}</div>
-            <button class="bpc-btn" onclick="requestProduct(${JSON.stringify(p.title)})">${reqBtn}</button>
-          </div>
-        </div>`;
-      });
-      html += '</div>';
-    }
-
-    body.innerHTML = html;
-  } catch (e) {
-    body.innerHTML = `<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">
-      <p style="margin-bottom:16px;">Не удалось загрузить каталог бренда</p>
-      <button onclick="renderBrandCatalog('${brand}')" style="background:var(--accent);color:white;border:none;padding:10px 24px;border-radius:8px;cursor:pointer;font-size:13px;font-family:inherit;font-weight:600;">Повторить</button>
-    </div>`;
-  }
-}
-
-// clicking "Запросить" → scroll to form + prefill
-function requestProduct(name) {
-  const msg = document.getElementById('message');
-  const interest = document.getElementById('interest');
-  if (msg) msg.value = `Интересует: ${name}`;
-  if (interest) interest.value = '';
-  const contact = document.getElementById('contact');
-  if (contact) {
-    window.scrollTo({ top: contact.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
-    setTimeout(() => msg && msg.focus(), 600);
-  }
-}
-
-// search
+// ── Search ──
 const searchInput = document.getElementById('catalogSearch');
 const searchClear = document.getElementById('searchClear');
 
@@ -521,15 +506,82 @@ function clearSearch() {
   renderCatalog();
 }
 
-document.querySelectorAll('.cat-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    _activeTab = tab.dataset.cat;
-    window._activeTab = _activeTab;
-    renderCatalog();
-  });
+// ── Product modal ──
+function openProductModal(id) {
+  const p = _catalogAll.find(pr => pr.id === id);
+  if (!p) return;
+
+  const modal = document.getElementById('productModal');
+
+  // Image
+  const imgWrap = modal.querySelector('.pm-img-wrap');
+  imgWrap.innerHTML = p.image_url
+    ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" />`
+    : `<div class="pm-img-placeholder">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
+
+  // Header info
+  modal.querySelector('.pm-badge').innerHTML = p.badge
+    ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}" style="font-size:11px;padding:3px 9px;">${p.badge}</span>` : '';
+  modal.querySelector('.pm-brand').textContent = `${p.brand} · ${p.category}`;
+  modal.querySelector('.pm-name').textContent  = p.name;
+
+  // Colors
+  const colWrap = modal.querySelector('.pm-colors-wrap');
+  if (p.colors?.length) {
+    colWrap.style.display = '';
+    colWrap.innerHTML = `<div class="pm-colors-label">Цвета:</div>
+      <div class="pm-colors">${p.colors.map(c =>
+        `<span class="pm-color"><span class="pm-color-dot pm-color--${c.toLowerCase().replace(/\s/g,'-')}"></span>${c}</span>`
+      ).join('')}</div>`;
+  } else {
+    colWrap.style.display = 'none';
+  }
+
+  // Specs
+  const specsEl = modal.querySelector('.pm-specs');
+  if (p.specs && Object.keys(p.specs).length) {
+    specsEl.style.display = '';
+    specsEl.innerHTML = Object.entries(p.specs).map(([k, v]) =>
+      `<div class="pm-spec-row"><span class="pm-spec-k">${k}</span><span class="pm-spec-v">${v}</span></div>`
+    ).join('');
+  } else {
+    specsEl.style.display = 'none';
+  }
+
+  // Desc
+  const descEl = modal.querySelector('.pm-desc');
+  if (p.desc) { descEl.textContent = p.desc; descEl.style.display = ''; }
+  else descEl.style.display = 'none';
+
+  // CTA
+  modal.querySelector('.pm-cta-btn').onclick = () => { closeProductModal(); requestProduct(p.name); };
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProductModal() {
+  document.getElementById('productModal')?.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeProductModal();
 });
+
+// ── Contact form prefill ──
+function requestProduct(name) {
+  const msg      = document.getElementById('message');
+  const interest = document.getElementById('interest');
+  if (msg) msg.value = `Интересует: ${name}`;
+  if (interest) interest.value = '';
+  const contact = document.getElementById('contact');
+  if (contact) {
+    window.scrollTo({ top: contact.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+    setTimeout(() => msg?.focus(), 600);
+  }
+}
 
 // ======= FAQ =======
 function toggleFaq(btn) {
@@ -628,7 +680,7 @@ function animateCounter(el, target, suffix = '', duration = 1600) {
 function initCounters() {
   const counters = [
     { selector: '.hero-stat:nth-child(1) .hero-stat-number', target: 20, suffix: '+' },
-    { selector: '.hero-stat:nth-child(3) .hero-stat-number', target: 3, suffix: '' },
+    { selector: '.hero-stat:nth-child(3) .hero-stat-number', target: 4, suffix: '' },
     { selector: '.hero-stat:nth-child(5) .hero-stat-number', target: 5, suffix: '+' },
   ];
   const heroStats = document.querySelector('.hero-stats');

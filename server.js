@@ -14,6 +14,7 @@ const DATA_DIR      = IS_VERCEL ? '/tmp' : path.join(__dirname, 'data');
 const DB_FILE       = path.join(DATA_DIR, 'submissions.json');
 const PRODUCTS_BUNDLED = path.join(__dirname, 'data', 'products.json');
 const PRODUCTS_FILE = IS_VERCEL ? path.join('/tmp', 'products.json') : PRODUCTS_BUNDLED;
+const CATALOG_FILE   = path.join(__dirname, 'data', 'catalog.json');
 
 // ensure data dir & files
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -32,6 +33,25 @@ function writeJSON(file, data) { fs.writeFileSync(file, JSON.stringify(data, nul
 
 function readSubmissions() { return readJSON(DB_FILE); }
 function readProducts()    { return readJSON(PRODUCTS_FILE); }
+function readCatalog()    { return readJSON(CATALOG_FILE); }
+
+// Enrich catalog product with image from brand cache (Shopify or Arctic scraper)
+function enrichWithImage(p) {
+  if (p.image_url) return p;
+  const brand  = (p.brand || '').toLowerCase();
+  const cache  = brandCache[brand];
+  if (!cache?.data) return p;
+  let img = null;
+  if (p.shopify_handle && (brand === 'gravastar' || brand === 'atk')) {
+    const m = cache.data.find(s => s.handle === p.shopify_handle);
+    if (m?.image) img = m.image;
+  }
+  if (p.arctic_handle && brand === 'arctic') {
+    const m = cache.data.find(s => s.handle === p.arctic_handle);
+    if (m?.image) img = m.image;
+  }
+  return img ? { ...p, image_url: img } : p;
+}
 
 function saveSubmission(data) {
   const list  = readSubmissions();
@@ -90,6 +110,16 @@ app.get('/api/products', (req, res) => {
   res.json(all);
 });
 
+// ─── curated catalog ───────────────────────────────────────
+app.get('/api/catalog', (req, res) => {
+  res.json(readCatalog());
+});
+
+app.get('/api/catalog/:brand', (req, res) => {
+  const brand = req.params.brand.toLowerCase();
+  res.json(readCatalog().filter(p => p.brand.toLowerCase() === brand));
+});
+
 // ─── brand proxy (Shopify + Arctic scraper) ────────────────
 const brandCache = {};
 const SHOPIFY_TTL = 60 * 60 * 1000;       // 1 hour  — GravaStar, ATK
@@ -131,12 +161,15 @@ const ARCTIC_CATALOG = [
   { handle:'Liquid-Freezer-III-240-A-RGB-Black',  sku:'ACFRE00142A', name:'Liquid Freezer III 240 A-RGB',     type:'Водяное охлаждение', price:114, badge:null   },
   { handle:'Liquid-Freezer-III-420-A-RGB',        sku:'ACFRE00145A', name:'Liquid Freezer III 420 A-RGB',     type:'Водяное охлаждение', price:144, badge:null   },
   // Liquid Freezer III Pro
+  { handle:'Liquid-Freezer-III-Pro-240',          sku:'ACFRE00178A', name:'Liquid Freezer III Pro 240',       type:'Водяное охлаждение', price:120, badge:'NEW'  },
+  { handle:'Liquid-Freezer-III-Pro-280',          sku:'ACFRE00179A', name:'Liquid Freezer III Pro 280',       type:'Водяное охлаждение', price:125, badge:'NEW'  },
   { handle:'Liquid-Freezer-III-Pro-360',          sku:'ACFRE00180A', name:'Liquid Freezer III Pro 360',       type:'Водяное охлаждение', price:130, badge:'NEW'  },
   { handle:'Liquid-Freezer-III-Pro-360-ARGB',     sku:'ACFRE00184A', name:'Liquid Freezer III Pro 360 A-RGB', type:'Водяное охлаждение', price:147, badge:'NEW'  },
-  { handle:'Liquid-Freezer-III-Pro-240',          sku:'ACFRE00178A', name:'Liquid Freezer III Pro 240',       type:'Водяное охлаждение', price:120, badge:'NEW'  },
+  { handle:'Liquid-Freezer-III-Pro-420',          sku:'ACFRE00182A', name:'Liquid Freezer III Pro 420',       type:'Водяное охлаждение', price:145, badge:'NEW'  },
   // Workstation
   { handle:'Liquid-Freezer-WS360-SP6',            sku:'ACFRE00201A', name:'Liquid Freezer WS360 SP6',         type:'Водяное охлаждение', price:170, badge:'NEW'  },
   // Air coolers
+  { handle:'Freezer-8A',                          sku:'ACFRE00123A', name:'Freezer 8A',                       type:'Воздушное охлаждение', price:28, badge:null   },
   { handle:'Freezer-36',                          sku:'ACFRE00121A', name:'Freezer 36',                       type:'Воздушное охлаждение', price:38, badge:null   },
   { handle:'Freezer-36-A-RGB-Black',              sku:'ACFRE00124A', name:'Freezer 36 A-RGB',                 type:'Воздушное охлаждение', price:51, badge:null   },
   { handle:'Freezer-36-A-RGB-White',              sku:'ACFRE00125A', name:'Freezer 36 A-RGB (White)',         type:'Воздушное охлаждение', price:52, badge:null   },
