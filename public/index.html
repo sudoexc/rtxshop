@@ -438,14 +438,8 @@
         <h3 class="form-title" data-i18n="form_title">Оставить заявку</h3>
         <p class="form-sub" data-i18n="form_sub">Заполните форму — мы свяжемся с вами</p>
         <form id="contactForm">
-          <div class="form-row">
-            <div class="form-group"><label class="form-label" for="name" data-i18n="field_name">Ваше имя *</label><input type="text" id="name" name="name" class="form-input" placeholder="Иван Иванов" required /></div>
-            <div class="form-group"><label class="form-label" for="company" data-i18n="field_company">Компания / Магазин</label><input type="text" id="company" name="company" class="form-input" placeholder="ООО Компания" /></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label class="form-label" for="phone" data-i18n="field_phone">Телефон *</label><input type="tel" id="phone" name="phone" class="form-input" placeholder="+998 90 000 00 00" required /></div>
-            <div class="form-group"><label class="form-label" for="email">Email</label><input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" /></div>
-          </div>
+          <div class="form-group"><label class="form-label" for="name" data-i18n="field_name">Ваше имя *</label><input type="text" id="name" name="name" class="form-input" placeholder="Иван Иванов" required /></div>
+          <div class="form-group"><label class="form-label" for="phone" data-i18n="field_phone">Телефон *</label><input type="tel" id="phone" name="phone" class="form-input" placeholder="+998 90 000 00 00" required /></div>
           <div class="form-group"><label class="form-label" for="interest" data-i18n="field_interest">Интересующий бренд</label>
             <select id="interest" name="interest" class="form-select">
               <option value="" data-i18n="field_interest_placeholder">Выберите бренд</option>
@@ -456,7 +450,6 @@
               <option value="All" data-i18n="field_interest_all">Все категории</option>
             </select>
           </div>
-          <div class="form-group"><label class="form-label" for="message" data-i18n="field_message">Сообщение</label><textarea id="message" name="message" class="form-textarea" data-i18n-placeholder="field_message_ph" placeholder="Расскажите о вашем магазине и что вас интересует..."></textarea></div>
           <button type="submit" class="form-submit" id="submitBtn">
             <span id="submitText" data-i18n="form_submit">Отправить заявку</span>
             <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
