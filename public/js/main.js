@@ -321,6 +321,17 @@ function escHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
+/**
+ * Return a sized variant of a product image URL.
+ * size: 'sm' (400px), 'md' (800px), or 'full' (original).
+ * Only applies to /img/products/ URLs.
+ */
+function imgUrl(url, size) {
+  if (!url || size === 'full') return url;
+  if (!url.includes('/img/products/')) return url;
+  return url.replace(/(\.[^./?#]+)(\?.*)?$/, `-${size}.webp`);
+}
+
 // ======= CATALOG =======
 let _catalogAll  = [];   // curated product list from /api/catalog
 let _activeTab   = 'GravaStar';
@@ -449,7 +460,7 @@ function renderBestsellers() {
     const badge = p.badge
       ? `<span class="bpc-badge bpc-badge--${escHtml(p.badge.toLowerCase())}">${escHtml(p.badge)}</span>` : '';
     const imgHtml = p.image_url
-      ? `<img src="${escHtml(p.image_url)}" alt="${escHtml(p.name)}" loading="lazy" width="400" height="400" />`
+      ? `<img src="${escHtml(imgUrl(p.image_url, 'sm'))}" alt="${escHtml(p.name)}" loading="lazy" width="400" height="400" />`
       : `<div class="bpc-img-icon">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
     const colorDots = p.colors?.length
       ? `<div class="bpc-colors">${p.colors.map(c =>
@@ -558,7 +569,7 @@ function renderCatalog() {
       const badge = p.badge
         ? `<span class="bpc-badge bpc-badge--${escHtml(p.badge.toLowerCase())}">${escHtml(p.badge)}</span>` : '';
       const imgHtml = p.image_url
-        ? `<img src="${escHtml(p.image_url)}" alt="${escHtml(p.name)}" loading="lazy" width="400" height="400" />`
+        ? `<img src="${escHtml(imgUrl(p.image_url, 'sm'))}" alt="${escHtml(p.name)}" loading="lazy" width="400" height="400" />`
         : `<div class="bpc-img-icon">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
       const colorDots = p.colors?.length
         ? `<div class="bpc-colors">${p.colors.map(c =>
@@ -648,7 +659,7 @@ function _pmSetActive(idx) {
   const url = _pmImages[idx];
   const altName = main.dataset.name || '';
   main.innerHTML = url
-    ? `<img src="${url}" alt="${altName}" onclick="openLightbox(${idx})" loading="lazy" />
+    ? `<img src="${imgUrl(url, 'md')}" alt="${altName}" onclick="openLightbox(${idx})" loading="lazy" />
        <button class="pm-zoom-btn" onclick="openLightbox(${idx})" aria-label="Увеличить">
          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0zm0 0l.01.01M10 8v6m-3-3h6"/></svg>
        </button>`
@@ -675,7 +686,7 @@ function openProductModal(id) {
       thumbsEl.style.display = '';
       thumbsEl.innerHTML = _pmImages.map((url, i) =>
         `<button class="pm-thumb${i === 0 ? ' active' : ''}" onclick="_pmSetActive(${i})" aria-label="Фото ${i+1}">
-          <img src="${url}" alt="Фото ${i+1}" loading="lazy" />
+          <img src="${imgUrl(url, 'sm')}" alt="Фото ${i+1}" loading="lazy" />
         </button>`
       ).join('');
     } else {
