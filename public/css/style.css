@@ -456,15 +456,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-product-card {
-  background: #1d1d1f;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: 22px;
   padding: 32px;
-  color: white;
+  color: var(--text-primary);
 }
 
 [data-theme="dark"] .hero-product-card {
   background: #1c1c1e;
-  border: 1px solid rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.1);
 }
 
 .hpc-img {
@@ -496,7 +497,7 @@ h1, h2, h3, h4, h5 {
 
 .hpc-cat {
   font-size: 11px;
-  color: rgba(255,255,255,0.32);
+  color: var(--text-muted);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -509,21 +510,21 @@ h1, h2, h3, h4, h5 {
   letter-spacing: -0.03em;
   line-height: 1.2;
   margin-bottom: 22px;
-  color: white;
+  color: var(--text-primary);
 }
 
 .hpc-specs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: rgba(255,255,255,0.06);
+  background: var(--border);
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 20px;
 }
 
 .hpc-spec {
-  background: rgba(255,255,255,0.03);
+  background: var(--bg-tertiary, var(--bg-secondary));
   padding: 13px 14px;
   display: flex;
   flex-direction: column;
@@ -533,20 +534,20 @@ h1, h2, h3, h4, h5 {
 .hpc-spec-v {
   font-size: 15px;
   font-weight: 700;
-  color: white;
+  color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
 .hpc-spec-k {
   font-size: 10px;
-  color: rgba(255,255,255,0.32);
+  color: var(--text-muted);
 }
 
 .hpc-btn {
   display: block;
   width: 100%;
-  background: white;
-  color: #1d1d1f;
+  background: var(--accent);
+  color: white;
   border: none;
   border-radius: 10px;
   padding: 13px;
@@ -560,11 +561,11 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 10px;
 }
 
-.hpc-btn:hover { background: #f0f0f2; }
+.hpc-btn:hover { background: var(--accent-hover, #0051c3); }
 
 .hpc-note {
   font-size: 11px;
-  color: rgba(255,255,255,0.28);
+  color: var(--text-muted);
   text-align: center;
   line-height: 1.4;
 }
