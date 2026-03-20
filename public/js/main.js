@@ -509,11 +509,17 @@ function renderCatalog() {
         ? `<div class="bpc-colors">${p.colors.map(c =>
             `<span class="bpc-color bpc-color--${c.toLowerCase().replace(/\s/g,'-')}" title="${c}"></span>`
           ).join('')}</div>` : '';
+      const specEntries = Object.entries(p.specs || {}).slice(0, 3);
+      const specsHtml = specEntries.length
+        ? `<div class="bpc-specs">${specEntries.map(([k,v]) =>
+            `<div class="bpc-spec"><span class="bpc-spec-v">${v}</span><span class="bpc-spec-k">${k}</span></div>`
+          ).join('')}</div>` : '';
       html += `<div class="bpc" onclick="openProductModal('${p.id}')">
         <div class="bpc-img">${badge}${imgHtml}</div>
         <div class="bpc-body">
           <div class="bpc-type">${p.category}</div>
           <div class="bpc-name">${p.name}</div>
+          ${specsHtml}
           ${colorDots}
           <button class="bpc-btn">Подробнее</button>
         </div>

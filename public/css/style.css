@@ -661,11 +661,83 @@ section {
   opacity: 0.9;
 }
 
+/* GravaStar — slightly larger */
+.ticker-logo[src*="gravastar"] {
+  height: 40px;
+}
+
+/* MSI — larger */
+.ticker-logo[src*="msi"] {
+  height: 34px;
+}
+
+/* Arctic logo is white — invert to black in light mode */
+.ticker-logo[src*="arctic"] {
+  height: 44px;
+  filter: grayscale(1) invert(1);
+  opacity: 0.65;
+}
+.ticker-item:hover .ticker-logo[src*="arctic"] {
+  filter: grayscale(0) invert(1);
+  opacity: 1;
+}
+[data-theme="dark"] .ticker-logo[src*="arctic"] {
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+[data-theme="dark"] .ticker-item:hover .ticker-logo[src*="arctic"] {
+  filter: grayscale(0) brightness(1.2);
+  opacity: 1;
+}
+
+/* ATK logo is dark/black — invert to white in dark mode */
+[data-theme="dark"] .ticker-logo[src*="atk"] {
+  filter: grayscale(1) invert(1);
+  opacity: 0.7;
+}
+[data-theme="dark"] .ticker-item:hover .ticker-logo[src*="atk"] {
+  filter: grayscale(0) invert(1);
+  opacity: 1;
+}
+
+/* AMD logo is white — invert to black in light mode */
+.ticker-logo[src*="amd"] {
+  filter: grayscale(1) invert(1);
+  opacity: 0.65;
+}
+.ticker-item:hover .ticker-logo[src*="amd"] {
+  filter: grayscale(0) invert(1) sepia(1) saturate(3) hue-rotate(190deg);
+  opacity: 1;
+}
+/* AMD in dark mode — keep white, don't invert */
+[data-theme="dark"] .ticker-logo[src*="amd"] {
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+[data-theme="dark"] .ticker-item:hover .ticker-logo[src*="amd"] {
+  filter: grayscale(0) brightness(1.2);
+  opacity: 1;
+}
+
 .ticker-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 6px;
-  height: 6px;
+  height: 40px;
+}
+.ticker-dot::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
   background: var(--border);
   border-radius: 50%;
+}
+
+/* Picun — larger */
+.ticker-logo[src*="picun"] {
+  height: 42px;
 }
 
 /* ======= ABOUT ======= */
@@ -1945,7 +2017,7 @@ footer {
   .catalog-row-name { font-size: 13px; }
   .catalog-cta { flex-direction: column; padding: 20px; }
   .catalog-cta p { font-size: 15px; }
-  .sticky-cta span { display: none; }
+  .sticky-cta { display: none !important; }
   .tg-float { bottom: 80px; }
   .catalog-section { padding: 72px 0; }
   .faq-section { padding: 72px 0; }
@@ -2050,15 +2122,19 @@ footer {
   gap: 2px;
 }
 .bsl-spec-v {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .bsl-spec-k {
   font-size: 10px;
   color: var(--text-muted);
   font-weight: 500;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* ── product card ── */
@@ -2356,6 +2432,36 @@ footer {
   font-size: 12px;
   color: var(--text-muted);
   text-decoration: line-through;
+}
+
+.bpc-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 8px 0 10px;
+}
+.bpc-spec {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 7px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.bpc-spec-v {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.bpc-spec-k {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 500;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .bpc-btn {
