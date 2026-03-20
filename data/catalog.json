@@ -5,7 +5,7 @@
     "category": "Мыши",
     "name": "Mercury V60",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-V60-Crystal-Rose-8kHz-Hall-Effect-Gaming-Keyboard-Magnetic-1.webp?v=1770801759",
+    "image_url": "/img/products/gs-v60-1.webp",
     "colors": [
       "Onyx Crystal",
       "Crystal Rose"
@@ -18,12 +18,12 @@
     },
     "desc": "Лёгкая проводная игровая мышь с топовым сенсором PAW3950",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-V60-Crystal-Rose-8kHz-Hall-Effect-Gaming-Keyboard-Magnetic-1.webp?v=1770801759",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-V60-Crystal-Rose-8kHz-Hall-Effect-Gaming-Keyboard-Magnetic-2.webp?v=1770801759",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-V60-Crystal-Rose-8kHz-Hall-Effect-Gaming-Keyboard-Magnetic-5.webp?v=1770801759",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-V60-Crystal-Rose-8kHz-Hall-Effect-Gaming-Keyboard-Magnetic-3.webp?v=1770801759",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-V60-Crystal-Rose-8kHz-Hall-Effect-Gaming-Keyboard-Magnetic-4.webp?v=1770801759",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/MercuryV60-CrystalRose-3.webp?v=1770801770"
+      "/img/products/gs-v60-1.webp",
+      "/img/products/gs-v60-2.webp",
+      "/img/products/gs-v60-3.webp",
+      "/img/products/gs-v60-4.webp",
+      "/img/products/gs-v60-5.webp",
+      "/img/products/gs-v60-6.webp"
     ]
   },
   {
@@ -32,14 +32,14 @@
     "category": "Мыши",
     "name": "Mercury V60 Pro",
     "badge": "NEW",
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-1.webp?v=1765965816",
+    "image_url": "/img/products/gs-v60pro-1.webp",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-15.webp?v=1765965816",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-101.webp?v=1765965816",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-1001_fd9a25d8-f2b6-448a-bd4e-0cae7554cfb9.webp?v=1765965816",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-1006_00bb603d-cd02-410c-8e4e-41005e89d335.webp?v=1765965816",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard_902.webp?v=1765965816",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard_901.webp?v=1765965816"
+      "/img/products/gs-v60pro-1.webp",
+      "/img/products/gs-v60pro-2.webp",
+      "/img/products/gs-v60pro-3.webp",
+      "/img/products/gs-v60pro-4.webp",
+      "/img/products/gs-v60pro-5.webp",
+      "/img/products/gs-v60pro-6.webp"
     ],
     "colors": [
       "Chrome Silver",
@@ -61,7 +61,7 @@
     "category": "Мыши",
     "name": "Mercury M2",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury_M2_-_Opaline_White-3.webp?v=1770792150",
+    "image_url": "/img/products/gs-m2-1.webp",
     "colors": [
       "Opaline White"
     ],
@@ -73,11 +73,11 @@
     },
     "desc": "Универсальная проводная игровая мышь с sci-fi дизайном",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury_M2_-_Opaline_White-3.webp?v=1770792150",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury_M2_-_Opaline_White-2.webp?v=1770792150",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury_M2_-_Opaline_White-4.webp?v=1770792150",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury_M2_-_Opaline_White-5.webp?v=1770792150",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury_M2_-_Opaline_White-6.webp?v=1770792101"
+      "/img/products/gs-m2-1.webp",
+      "/img/products/gs-m2-2.webp",
+      "/img/products/gs-m2-3.webp",
+      "/img/products/gs-m2-4.webp",
+      "/img/products/gs-m2-5.webp"
     ]
   },
   {
@@ -86,7 +86,7 @@
     "category": "Мыши",
     "name": "Mercury M1 Pro",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-M1-Pro-Gaming-Mouse-Gradient-Black-High-DPI-Gaming-Mouse.webp?v=1765441566",
+    "image_url": "/img/products/gs-m1pro-1.webp",
     "colors": [
       "Gradient Black",
       "Ice Blue"
@@ -100,12 +100,12 @@
     },
     "desc": "Лёгкая проводная мышь с RGB подсветкой",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-M1-Pro-Gaming-Mouse-Gradient-Black-High-DPI-Gaming-Mouse.webp?v=1765441566",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastargradientgamingmouse.webp?v=1765441566",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-M1-Pro-Gradient-Black-Gaming-Mouse-Magnesium-Skeleton-PAW3395-Sensor-5.webp?v=1765441566",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-M1-Pro-Gradient-Black-Gaming-Mouse-Magnesium-Skeleton-PAW3395-Sensor-2.webp?v=1765441566",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-M1-Pro-Gradient-Black-Gaming-Mouse-Magnesium-Skeleton-PAW3395-Sensor-3.webp?v=1765441566",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Mercury-M1-Pro-Gradient-Black-Gaming-Mouse-Magnesium-Skeleton-PAW3395-Sensor-4.webp?v=1765441566"
+      "/img/products/gs-m1pro-1.webp",
+      "/img/products/gs-m1pro-2.webp",
+      "/img/products/gs-m1pro-3.webp",
+      "/img/products/gs-m1pro-4.webp",
+      "/img/products/gs-m1pro-5.webp",
+      "/img/products/gs-m1pro-6.webp"
     ]
   },
   {
@@ -114,7 +114,7 @@
     "category": "Клавиатуры",
     "name": "Mercury V75 Lite",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Gravastar-Mercury-V75-Lite-Transparent-Black-Hero-9.webp?v=1765440824",
+    "image_url": "/img/products/gs-v75lite-1.webp",
     "colors": [
       "Transparent Black"
     ],
@@ -126,12 +126,12 @@
     },
     "desc": "Компактная 75% клавиатура с Hall Effect переключателями без дрейфа",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Gravastar-Mercury-V75-Lite-Transparent-Black-Hero-9.webp?v=1765440824",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Gravastar-Mercury-V75-Lite-Transparent-Black-Hero-2.webp?v=1765440824",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Gravastar-Mercury-V75-Lite-Transparent-Black-Hero-3.webp?v=1765440824",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Gravastar-Mercury-V75-Lite-Transparent-Black-Hero-4.webp?v=1765440824",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Gravastar-Mercury-V75-Lite-Transparent-Black-Hero-5.webp?v=1765440824",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Gravastar-Mercury-V75-Lite-Transparent-Black-Hero-6.webp?v=1765440824"
+      "/img/products/gs-v75lite-1.webp",
+      "/img/products/gs-v75lite-2.webp",
+      "/img/products/gs-v75lite-3.webp",
+      "/img/products/gs-v75lite-4.webp",
+      "/img/products/gs-v75lite-5.webp",
+      "/img/products/gs-v75lite-6.webp"
     ]
   },
   {
@@ -140,7 +140,7 @@
     "category": "Клавиатуры",
     "name": "Mercury V75",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-he-gaming-keyboard-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-1.webp?v=1765440871",
+    "image_url": "/img/products/gs-v75-1.webp",
     "colors": [
       "Stealth Black"
     ],
@@ -152,12 +152,12 @@
     },
     "desc": "75% игровая клавиатура с магнитными переключателями",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-he-gaming-keyboard-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-1.webp?v=1765440871",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-he-gaming-keyboard-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-2.webp?v=1765440871",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-he-gaming-keyboard-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-3.webp?v=1765440871",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-he-gaming-keyboard-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-4.webp?v=1765440871",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-he-gaming-keyboard-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-5.webp?v=1765440871",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-he-gaming-keyboard-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-6.webp?v=1765440871"
+      "/img/products/gs-v75-1.webp",
+      "/img/products/gs-v75-2.webp",
+      "/img/products/gs-v75-3.webp",
+      "/img/products/gs-v75-4.webp",
+      "/img/products/gs-v75-5.webp",
+      "/img/products/gs-v75-6.webp"
     ]
   },
   {
@@ -166,14 +166,14 @@
     "category": "Клавиатуры",
     "name": "Mercury V75 Pro",
     "badge": "NEW",
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-1.webp?v=1765440850",
+    "image_url": "/img/products/gs-v75pro-1.webp",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-1.webp?v=1765440850",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-2.webp?v=1765440850",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-3.webp?v=1765440850",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-4.webp?v=1765440850",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-5.webp?v=1765440850",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-v75-pro-cyberpunk-75-percent-hall-effect-magnetic-switches-8khz-polling-rgb-aluminum-hot-swappable-futuristic-design-6.webp?v=1765440850"
+      "/img/products/gs-v75pro-1.webp",
+      "/img/products/gs-v75pro-2.webp",
+      "/img/products/gs-v75pro-3.webp",
+      "/img/products/gs-v75pro-4.webp",
+      "/img/products/gs-v75pro-5.webp",
+      "/img/products/gs-v75pro-6.webp"
     ],
     "colors": [
       "Neon Graffiti",
@@ -195,7 +195,7 @@
     "category": "Клавиатуры",
     "name": "Mercury K1 Lite",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-K1-Lite-Gaming-Keyboard-Transparent-Black-75-Mechanical.webp?v=1765441656",
+    "image_url": "/img/products/gs-k1lite-1.webp",
     "colors": [
       "Transparent Black",
       "Crystal Aurora"
@@ -208,12 +208,12 @@
     },
     "desc": "Компактная 65% клавиатура с прозрачным корпусом",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-K1-Lite-Gaming-Keyboard-Transparent-Black-75-Mechanical.webp?v=1765441656",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury_K1_Lite_Transparent_Black_gaming_keyboard.webp?v=1765441656",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar75keyboard.webp?v=1765441656",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastark1litekeyboard.webp?v=1765441656",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastartransparentkeyboard.webp?v=1765441656",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-K1-Lite-Transparent-Black-gaming-keyboard-ergonomic-keyboard-backlit-keyboard-customizable-keyboard-durable-keyboard-hot-swap-keyboard-cool-design-keyboard.webp?v=1765441656"
+      "/img/products/gs-k1lite-1.webp",
+      "/img/products/gs-k1lite-2.webp",
+      "/img/products/gs-k1lite-3.webp",
+      "/img/products/gs-k1lite-4.webp",
+      "/img/products/gs-k1lite-5.webp",
+      "/img/products/gs-k1lite-6.webp"
     ]
   },
   {
@@ -222,7 +222,7 @@
     "category": "Клавиатуры",
     "name": "Mercury K1",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-k1-stealth-black-gaming-keyboard-20.webp?v=1769689039",
+    "image_url": "/img/products/gs-k1-1.webp",
     "colors": [
       "Gradient Black",
       "Gradient White",
@@ -238,12 +238,12 @@
     },
     "desc": "65% механическая клавиатура с алюминиевой рамкой",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-k1-stealth-black-gaming-keyboard-20.webp?v=1769689039",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-k1-stealth-black-gaming-keyboard-5.webp?v=1769689039",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-k1-stealth-black-gaming-keyboard-2.webp?v=1769689039",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-k1-stealth-black-gaming-keyboard-3.webp?v=1769689039",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-k1-stealth-black-gaming-keyboard-4.webp?v=1769689039",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-mercury-k1-stealth-black-gaming-keyboard-1.webp?v=1769689039"
+      "/img/products/gs-k1-1.webp",
+      "/img/products/gs-k1-2.webp",
+      "/img/products/gs-k1-3.webp",
+      "/img/products/gs-k1-4.webp",
+      "/img/products/gs-k1-5.webp",
+      "/img/products/gs-k1-6.webp"
     ]
   },
   {
@@ -252,14 +252,14 @@
     "category": "Клавиатуры",
     "name": "Mercury K1 Pro",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-K1-Pro-Gaming-Keyboard-Interstellar-Silver-75-Mechanical.webp?v=1765441169",
+    "image_url": "/img/products/gs-k1pro-1.webp",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/Mercury-K1-Pro-Gaming-Keyboard-Interstellar-Silver-75-Mechanical.webp?v=1765441169",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Ultimate-Gaming-Set-Interstellar-Silver-Mercury-K1-Pro-Mercury-X-Pro-75-Compact-49g-Magnesium-2.webp?v=1765441169",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Ultimate-Gaming-Set-Interstellar-Silver-Mercury-K1-Pro-Mercury-X-Pro-75-Compact-49g-Magnesium-3.webp?v=1765441169",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Ultimate-Gaming-Set-Interstellar-Silver-Mercury-K1-Pro-Mercury-X-Pro-75-Compact-49g-Magnesium-44.webp?v=1765441169",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Ultimate-Gaming-Set-Interstellar-Silver-Mercury-K1-Pro-Mercury-X-Pro-75-Compact-49g-Magnesium-5.webp?v=1765441169",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/GravaStar-Ultimate-Gaming-Set-Interstellar-Silver-Mercury-K1-Pro-Mercury-X-Pro-75-Compact-49g-Magnesium-6.webp?v=1765441169"
+      "/img/products/gs-k1pro-1.webp",
+      "/img/products/gs-k1pro-2.webp",
+      "/img/products/gs-k1pro-3.webp",
+      "/img/products/gs-k1pro-4.webp",
+      "/img/products/gs-k1pro-5.webp",
+      "/img/products/gs-k1pro-6.webp"
     ],
     "colors": [
       "Interstellar Silver",
@@ -282,14 +282,14 @@
     "category": "Контроллеры",
     "name": "Mercury X",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Silver-gaming-mouse-RGB-mouse-ergonomic-mouse-lightweight-mouse-compact-mouse-customizable-mouse-great-sensor-mouse.webp?v=1765441490",
+    "image_url": "/img/products/gs-x-1.webp",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Silver-gaming-mouse-RGB-mouse-ergonomic-mouse-lightweight-mouse-compact-mouse-customizable-mouse-great-sensor-mouse.webp?v=1765441490",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Black-gaming-mouse-precision-mouse-durable-mouse-high-speed-mouse-USB-C-mouse-cool-design-mouse.webp?v=1765441490",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Black-gaming-mouse-RGB-backlighting-customizable-buttons-durable-construction-competitive-mouse.webp?v=1765441490",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Silver-gaming-mouse-advanced-sensor-great-feel-mouse-lightweight-design-gaming-performance.webp?v=1765441490",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Silver-gaming-mouse-advanced-sensor-great-feel-mouse-lightweight-design-gaming-performance-good.webp?v=1765441490",
-      "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-Mercury-X-Silver-gaming-mouse-precision-engineering-ergonomic-design-high-speed-USB-mouse.webp?v=1765441490"
+      "/img/products/gs-x-1.webp",
+      "/img/products/gs-x-2.webp",
+      "/img/products/gs-x-3.webp",
+      "/img/products/gs-x-4.webp",
+      "/img/products/gs-x-5.webp",
+      "/img/products/gs-x-6.webp"
     ],
     "colors": [
       "Galaxy Black"
@@ -308,7 +308,7 @@
     "category": "Колонки",
     "name": "G1 Pro",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastarmarsprobluetoothspeakerbestdesign.webp?v=1765960370",
+    "image_url": "/img/products/gs-g1pro-1.webp",
     "colors": [
       "Matte Black",
       "Battle-Worn Yellow"
@@ -320,7 +320,10 @@
       "Дизайн": "Mecha Sci-Fi",
       "Защита": "IPX4"
     },
-    "desc": "Bluetooth колонка в стиле боевого робота — ручная покраска, цинковый сплав"
+    "desc": "Bluetooth колонка в стиле боевого робота — ручная покраска, цинковый сплав",
+    "images": [
+      "/img/products/gs-g1pro-1.webp"
+    ]
   },
   {
     "id": "gs-g5",
@@ -328,7 +331,7 @@
     "category": "Колонки",
     "name": "G5",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/1_a625a4c9-38d2-43c2-835a-e5b47820717c.webp?v=1765958182",
+    "image_url": "/img/products/gs-g5-1.webp",
     "colors": [
       "Black",
       "Battle-Worn Yellow"
@@ -340,7 +343,10 @@
       "Дизайн": "Mecha Sci-Fi",
       "Защита": "IPX4"
     },
-    "desc": "Компактная Bluetooth колонка в sci-fi стиле с ручной отделкой"
+    "desc": "Компактная Bluetooth колонка в sci-fi стиле с ручной отделкой",
+    "images": [
+      "/img/products/gs-g5-1.webp"
+    ]
   },
   {
     "id": "gs-a7",
@@ -348,7 +354,7 @@
     "category": "Аксессуары",
     "name": "A7 Aviator Cable",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0295/5988/1807/files/b4ec4e14de4c6670780f7983a70c643a.webp?v=1762201526",
+    "image_url": "/img/products/gs-a7-1.webp",
     "colors": [
       "White",
       "Black"
@@ -360,7 +366,10 @@
       "Коннектор": "Авиационный GX16",
       "Совместимость": "Клавиатуры, мыши, зарядка"
     },
-    "desc": "Премиальный витой кабель с авиационным коннектором GX16 — для клавиатур и периферии"
+    "desc": "Премиальный витой кабель с авиационным коннектором GX16 — для клавиатур и периферии",
+    "images": [
+      "/img/products/gs-a7-1.webp"
+    ]
   },
   {
     "id": "atk-ag9air",
@@ -368,7 +377,7 @@
     "category": "Мыши",
     "name": "Ag9 Air",
     "badge": "HOT",
-    "image_url": "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Pink.jpg?v=1742785655",
+    "image_url": "/img/products/atk-ag9air-1.jpg",
     "colors": [
       "White",
       "Black",
@@ -384,12 +393,12 @@
     },
     "desc": "Ультралёгкая перфорированная мышь весом 45г для максимальной скорости",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Pink.jpg?v=1742785655",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_White.jpg?v=1742785677",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Black.jpg?v=1742785751",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Mouse_Aesthetic_Shot-Pink.jpg?v=1742904212",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Mouse_Aesthetic_Shot-White.jpg?v=1742904212",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Mouse_Aesthetic_Shot-Black.jpg?v=1742904212"
+      "/img/products/atk-ag9air-1.jpg",
+      "/img/products/atk-ag9air-2.jpg",
+      "/img/products/atk-ag9air-3.jpg",
+      "/img/products/atk-ag9air-4.jpg",
+      "/img/products/atk-ag9air-5.jpg",
+      "/img/products/atk-ag9air-6.jpg"
     ]
   },
   {
@@ -398,7 +407,7 @@
     "category": "Мыши",
     "name": "Ag9 Plus",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Pink.jpg?v=1742785655",
+    "image_url": "/img/products/atk-ag9plus-1.jpg",
     "colors": [
       "White",
       "Black"
@@ -412,9 +421,9 @@
     },
     "desc": "Улучшенная версия Ag9 с балансом веса и характеристик",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Pink.jpg?v=1742785655",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_White.jpg?v=1742785677",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ATK_Dragonfly_A9_Black.jpg?v=1742785751"
+      "/img/products/atk-ag9plus-1.jpg",
+      "/img/products/atk-ag9plus-2.jpg",
+      "/img/products/atk-ag9plus-3.jpg"
     ]
   },
   {
@@ -423,7 +432,7 @@
     "category": "Мыши",
     "name": "Ag9 Ultimate",
     "badge": "NEW",
-    "image_url": "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/4fe40f089696834c4906303a743d01c5_88cffe9f-ac22-49fa-8576-57bc6dd2fa3f.jpg?v=1758277087",
+    "image_url": "/img/products/atk-ag9ult-1.jpg",
     "colors": [
       "White",
       "Black"
@@ -437,12 +446,12 @@
     },
     "desc": "Топовая беспроводная мышь с PAW3950 и 8000Hz polling rate",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/4fe40f089696834c4906303a743d01c5_88cffe9f-ac22-49fa-8576-57bc6dd2fa3f.jpg?v=1758277087",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/33ffae0206d3c7cd1aadac09875e5e96_bf924ab7-9f63-4fa2-b182-920fb26467e0.jpg?v=1758277086",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/874db74153ecb746e2ec72d093024899.jpg?v=1758277087",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/4989323193e564f35ed92ad7216935e5.jpg?v=1758277087",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/cd14deba56a5bb7340cfc7cb56a583d7.jpg?v=1764835989",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/680dd1b488abd412237cd4f0866f5d3c.jpg?v=1764835989"
+      "/img/products/atk-ag9ult-1.jpg",
+      "/img/products/atk-ag9ult-2.jpg",
+      "/img/products/atk-ag9ult-3.jpg",
+      "/img/products/atk-ag9ult-4.jpg",
+      "/img/products/atk-ag9ult-5.jpg",
+      "/img/products/atk-ag9ult-6.jpg"
     ]
   },
   {
@@ -470,7 +479,7 @@
     "category": "Мыши",
     "name": "Ghost Ultimate",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_9207a22b-fff4-4701-b3ac-0090dfd22d21.jpg?v=1767954873",
+    "image_url": "/img/products/atk-ghost-1.jpg",
     "colors": [
       "Black"
     ],
@@ -482,12 +491,12 @@
     },
     "desc": "Беспроводная мышь с полым корпусом из углеродного волокна",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_9207a22b-fff4-4701-b3ac-0090dfd22d21.jpg?v=1767954873",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_e4fd74f1-87bd-49da-8e4b-f34fbd0bb003.jpg?v=1768203286",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_e0268ebf-2aad-4313-bfca-227348bf5074.jpg?v=1768203286",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_db4d672c-ccaa-46b8-ad4b-b136cbd724f1.jpg?v=1768203286",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/20260112-164302.jpg?v=1768210857",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1_27e4f708-639b-4d0e-a1f8-49be7f16bbfc.jpg?v=1768210857"
+      "/img/products/atk-ghost-1.jpg",
+      "/img/products/atk-ghost-2.jpg",
+      "/img/products/atk-ghost-3.jpg",
+      "/img/products/atk-ghost-4.jpg",
+      "/img/products/atk-ghost-5.jpg",
+      "/img/products/atk-ghost-6.jpg"
     ]
   },
   {
@@ -496,7 +505,7 @@
     "category": "Мыши",
     "name": "Z1 Ultimate",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_9f580ab8-0b2a-4025-8e88-6a442d0356b8.jpg?v=1765964125",
+    "image_url": "/img/products/atk-z1ult-1.jpg",
     "colors": [
       "White",
       "Black"
@@ -509,12 +518,12 @@
     },
     "desc": "Флагманская беспроводная мышь с магнитным зарядным кейсом",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_9f580ab8-0b2a-4025-8e88-6a442d0356b8.jpg?v=1765964125",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_d0633ef5-dd24-43ce-ad56-38ad26aa8a2b.jpg?v=1765964149",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_b680af78-7891-4609-8b06-e55cdaf0a2e9.jpg?v=1765964189",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_3945eb35-2b1b-4098-807c-c76958523fa7.jpg?v=1765964246",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_2a322b1a-8ae0-494a-93ae-c05ade51b96a.jpg?v=1765964249",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_2ac01356-326b-44db-ab46-5379275a879e.jpg?v=1765964254"
+      "/img/products/atk-z1ult-1.jpg",
+      "/img/products/atk-z1ult-2.jpg",
+      "/img/products/atk-z1ult-3.jpg",
+      "/img/products/atk-z1ult-4.jpg",
+      "/img/products/atk-z1ult-5.jpg",
+      "/img/products/atk-z1ult-6.jpg"
     ]
   },
   {
@@ -523,7 +532,7 @@
     "category": "Мыши",
     "name": "ZERO (ABS)",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1018eb4b165c295a804b3a2290659823.jpg?v=1773121825",
+    "image_url": "/img/products/atk-zero-1.jpg",
     "colors": [
       "White",
       "Black"
@@ -536,12 +545,12 @@
     },
     "desc": "Сверхлёгкая симметричная мышь весом 42г",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1018eb4b165c295a804b3a2290659823.jpg?v=1773121825",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/a83d32c6e59d936f2fdde2416d90d1c1.jpg?v=1773121825",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/07f44d6e88554a44495e38ed16e4552f.jpg?v=1773121825",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/20f5d99ee2a75bb4fc9627908e4b663e.jpg?v=1773121825",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/ceedbed5538eca13f14748a934597998.jpg?v=1773121825",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/7c520d388912554d8a187b917e0ed71e.jpg?v=1773121825"
+      "/img/products/atk-zero-1.jpg",
+      "/img/products/atk-zero-2.jpg",
+      "/img/products/atk-zero-3.jpg",
+      "/img/products/atk-zero-4.jpg",
+      "/img/products/atk-zero-5.jpg",
+      "/img/products/atk-zero-6.jpg"
     ]
   },
   {
@@ -550,7 +559,7 @@
     "category": "Наушники",
     "name": "Neptune Ng9 Pro",
     "badge": null,
-    "image_url": "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_02f7131e-3355-4130-932a-a79e76743e97.jpg?v=1765336963",
+    "image_url": "/img/products/atk-ng9pro-1.jpg",
     "colors": [
       "White",
       "Black"
@@ -563,12 +572,12 @@
     },
     "desc": "Беспроводная игровая гарнитура с виртуальным 7.1 звуком",
     "images": [
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_02f7131e-3355-4130-932a-a79e76743e97.jpg?v=1765336963",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_37822bba-9f42-43d1-8f1e-a92261ae0fea.jpg?v=1765336982",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_26aaf2a2-54b8-4f47-9c41-e0d1c57b9692.jpg?v=1765337009",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_b6d3d2c9-811f-4b9e-bd20-6c53f0c67561.jpg?v=1765337032",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_ab16a80b-9680-46a7-9508-5860d3f691b0.jpg?v=1765363589",
-      "https://cdn.shopify.com/s/files/1/0691/4942/5882/files/1500_92508c6a-6911-41b4-8ae0-540d6cb82453.jpg?v=1765363589"
+      "/img/products/atk-ng9pro-1.jpg",
+      "/img/products/atk-ng9pro-2.jpg",
+      "/img/products/atk-ng9pro-3.jpg",
+      "/img/products/atk-ng9pro-4.jpg",
+      "/img/products/atk-ng9pro-5.jpg",
+      "/img/products/atk-ng9pro-6.jpg"
     ]
   },
   {
@@ -596,7 +605,7 @@
     "category": "Наушники",
     "name": "G2 White-Black",
     "badge": null,
-    "image_url": "https://picun.com/cdn/shop/files/2_1_44b32018-cf56-44cc-96d4-96d4c438cabe.jpg?v=1747810055",
+    "image_url": "/img/products/picun-g2-wb-1.jpg",
     "colors": [
       "White",
       "Black"
@@ -608,7 +617,10 @@
       "Микрофон": "С шумоподавлением",
       "Подсветка": "RGB"
     },
-    "desc": "Игровые наушники с RGB подсветкой — белый корпус, чёрные детали"
+    "desc": "Игровые наушники с RGB подсветкой — белый корпус, чёрные детали",
+    "images": [
+      "/img/products/picun-g2-wb-1.jpg"
+    ]
   },
   {
     "id": "picun-g2-br",
@@ -616,7 +628,7 @@
     "category": "Наушники",
     "name": "G2 Black-Red",
     "badge": null,
-    "image_url": "https://picun.com/cdn/shop/files/001_bc93bca5-212a-4619-9c73-0f16c299a2c5.jpg?v=1748503196",
+    "image_url": "/img/products/picun-g2-br-1.jpg",
     "colors": [
       "Black",
       "Red"
@@ -628,7 +640,10 @@
       "Микрофон": "С шумоподавлением",
       "Подсветка": "RGB"
     },
-    "desc": "Игровые наушники с RGB подсветкой — чёрный корпус, красные детали"
+    "desc": "Игровые наушники с RGB подсветкой — чёрный корпус, красные детали",
+    "images": [
+      "/img/products/picun-g2-br-1.jpg"
+    ]
   },
   {
     "id": "picun-ug10a-wb",
@@ -636,7 +651,7 @@
     "category": "TWS Наушники",
     "name": "UG-10A White-Black",
     "badge": "NEW",
-    "image_url": "https://picun.com/cdn/shop/files/2_12.jpg?v=1747812874",
+    "image_url": "/img/products/picun-ug10a-wb-1.jpg",
     "colors": [
       "White",
       "Black"
@@ -648,7 +663,10 @@
       "Шумоподавление": "ENC",
       "Автономность": "до 35 ч"
     },
-    "desc": "TWS наушники с игровым режимом — белый + чёрный"
+    "desc": "TWS наушники с игровым режимом — белый + чёрный",
+    "images": [
+      "/img/products/picun-ug10a-wb-1.jpg"
+    ]
   },
   {
     "id": "picun-ug10a-br",
@@ -656,7 +674,7 @@
     "category": "TWS Наушники",
     "name": "UG-10A Black-Red",
     "badge": "NEW",
-    "image_url": "https://picun.com/cdn/shop/files/3_11.jpg?v=1747812874",
+    "image_url": "/img/products/picun-ug10a-br-1.jpg",
     "colors": [
       "Black",
       "Red"
@@ -668,7 +686,10 @@
       "Шумоподавление": "ENC",
       "Автономность": "до 35 ч"
     },
-    "desc": "TWS наушники с игровым режимом — чёрный + красный"
+    "desc": "TWS наушники с игровым режимом — чёрный + красный",
+    "images": [
+      "/img/products/picun-ug10a-br-1.jpg"
+    ]
   },
   {
     "id": "arctic-lf3pro240",
@@ -676,7 +697,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 240",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/a2/1a/08/1744093964/Liquid_Freezer_III_Pro_240_Black_g00.png",
+    "image_url": "/img/products/arctic-lf3pro240-1.png",
     "colors": [
       "Black"
     ],
@@ -687,7 +708,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "VRM Fan": "Да"
     },
-    "desc": "AIO 240mm Pro серии с VRM вентилятором на помпе"
+    "desc": "AIO 240mm Pro серии с VRM вентилятором на помпе",
+    "images": [
+      "/img/products/arctic-lf3pro240-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro240argb",
@@ -695,7 +719,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 240 A-RGB",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/d2/ef/a1/1744191538/Liquid_Freezer_III_Pro_240_Black_ARGB_Rainbow_g00.png",
+    "image_url": "/img/products/arctic-lf3pro240argb-1.png",
     "colors": [
       "Black"
     ],
@@ -706,7 +730,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V"
     },
-    "desc": "AIO 240mm Pro с адресуемой RGB подсветкой"
+    "desc": "AIO 240mm Pro с адресуемой RGB подсветкой",
+    "images": [
+      "/img/products/arctic-lf3pro240argb-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro240argbwht",
@@ -714,7 +741,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 240 A-RGB White",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/d5/ae/3d/1744191356/Liquid_Freezer_III_Pro_240_White_ARGB_Rainbow_g00.png",
+    "image_url": "/img/products/arctic-lf3pro240argbwht-1.png",
     "colors": [
       "White"
     ],
@@ -725,7 +752,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V"
     },
-    "desc": "AIO 240mm Pro A-RGB в белом исполнении"
+    "desc": "AIO 240mm Pro A-RGB в белом исполнении",
+    "images": [
+      "/img/products/arctic-lf3pro240argbwht-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro280",
@@ -733,7 +763,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 280",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/23/36/6a/1748957482/Liquid_Freezer_III_Pro_280_Black_g00.png",
+    "image_url": "/img/products/arctic-lf3pro280-1.png",
     "colors": [
       "Black"
     ],
@@ -744,7 +774,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "VRM Fan": "Да"
     },
-    "desc": "AIO 280mm Pro серии — баланс размера и производительности"
+    "desc": "AIO 280mm Pro серии — баланс размера и производительности",
+    "images": [
+      "/img/products/arctic-lf3pro280-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro280argb",
@@ -752,7 +785,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 280 A-RGB",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/2d/b4/d2/1748947385/Liquid_Freezer_III_Pro_280_Black_ARGB_Rainbow_g00.png",
+    "image_url": "/img/products/arctic-lf3pro280argb-1.png",
     "colors": [
       "Black"
     ],
@@ -763,7 +796,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V"
     },
-    "desc": "AIO 280mm Pro с адресуемой RGB подсветкой"
+    "desc": "AIO 280mm Pro с адресуемой RGB подсветкой",
+    "images": [
+      "/img/products/arctic-lf3pro280argb-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro280argbwht",
@@ -771,7 +807,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 280 A-RGB White",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/40/e0/78/1748947670/Liquid_Freezer_III_Pro_280_White_ARGB_Rainbow_g00.png",
+    "image_url": "/img/products/arctic-lf3pro280argbwht-1.png",
     "colors": [
       "White"
     ],
@@ -782,7 +818,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V"
     },
-    "desc": "AIO 280mm Pro A-RGB в белом исполнении"
+    "desc": "AIO 280mm Pro A-RGB в белом исполнении",
+    "images": [
+      "/img/products/arctic-lf3pro280argbwht-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro360",
@@ -790,7 +829,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 360",
     "badge": "HOT",
-    "image_url": "https://www.arctic.de/media/c6/8f/e4/1741780195/Liquid_Freezer_III_Pro_360_Black_g00.png",
+    "image_url": "/img/products/arctic-lf3pro360-1.png",
     "colors": [
       "Black"
     ],
@@ -801,7 +840,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "VRM Fan": "Да"
     },
-    "desc": "Флагманский 360mm AIO для самых горячих процессоров"
+    "desc": "Флагманский 360mm AIO для самых горячих процессоров",
+    "images": [
+      "/img/products/arctic-lf3pro360-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro360argb",
@@ -809,7 +851,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 360 A-RGB",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-lf3pro360argb-1.png",
     "colors": [
       "Black"
     ],
@@ -820,7 +862,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V"
     },
-    "desc": "360mm AIO Pro с адресуемой RGB подсветкой"
+    "desc": "360mm AIO Pro с адресуемой RGB подсветкой",
+    "images": [
+      "/img/products/arctic-lf3pro360argb-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro360argbwht",
@@ -828,7 +873,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 360 A-RGB White",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-lf3pro360argbwht-1.png",
     "colors": [
       "White"
     ],
@@ -839,7 +884,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V"
     },
-    "desc": "360mm AIO Pro A-RGB в белом исполнении"
+    "desc": "360mm AIO Pro A-RGB в белом исполнении",
+    "images": [
+      "/img/products/arctic-lf3pro360argbwht-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro420",
@@ -847,7 +895,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 420",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/69/ee/10/1749040370/Liquid_Freezer_III_Pro_420_Black_g00.png",
+    "image_url": "/img/products/arctic-lf3pro420-1.png",
     "colors": [
       "Black"
     ],
@@ -858,7 +906,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "VRM Fan": "Да"
     },
-    "desc": "Максимальная 420mm AIO система — абсолютная победа над температурами"
+    "desc": "Максимальная 420mm AIO система — абсолютная победа над температурами",
+    "images": [
+      "/img/products/arctic-lf3pro420-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro420argb",
@@ -866,7 +917,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 420 A-RGB",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/29/92/09/1749044001/Liquid_Freezer_III_Pro_420_Black_ARGB_Rainbow_g00.png",
+    "image_url": "/img/products/arctic-lf3pro420argb-1.png",
     "colors": [
       "Black"
     ],
@@ -877,7 +928,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V"
     },
-    "desc": "420mm AIO Pro с адресуемой RGB подсветкой"
+    "desc": "420mm AIO Pro с адресуемой RGB подсветкой",
+    "images": [
+      "/img/products/arctic-lf3pro420argb-1.png"
+    ]
   },
   {
     "id": "arctic-lf3pro420argbwht",
@@ -885,7 +939,7 @@
     "category": "Водяное охлаждение",
     "name": "Liquid Freezer III Pro 420 A-RGB White",
     "badge": "NEW",
-    "image_url": "https://www.arctic.de/media/3c/63/02/1749044045/Liquid_Freezer_III_Pro_420_White_ARGB_Rainbow_g00.png",
+    "image_url": "/img/products/arctic-lf3pro420argbwht-1.png",
     "colors": [
       "White"
     ],
@@ -896,7 +950,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V"
     },
-    "desc": "420mm AIO Pro A-RGB в белом исполнении"
+    "desc": "420mm AIO Pro A-RGB в белом исполнении",
+    "images": [
+      "/img/products/arctic-lf3pro420argbwht-1.png"
+    ]
   },
   {
     "id": "arctic-freezer8a",
@@ -904,7 +961,7 @@
     "category": "Воздушное охлаждение",
     "name": "Freezer 8A",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/78/f6/7b/1746019737/Freezer_8_g00.png",
+    "image_url": "/img/products/arctic-freezer8a-1.png",
     "colors": [
       "Black"
     ],
@@ -915,7 +972,10 @@
       "Совместимость": "AM5/AM4",
       "Высота": "72mm"
     },
-    "desc": "Компактный низкопрофильный кулер для mini-ITX корпусов"
+    "desc": "Компактный низкопрофильный кулер для mini-ITX корпусов",
+    "images": [
+      "/img/products/arctic-freezer8a-1.png"
+    ]
   },
   {
     "id": "arctic-freezer36",
@@ -923,7 +983,7 @@
     "category": "Воздушное охлаждение",
     "name": "Freezer 36",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/9f/f3/51/1706615786/Freezer_36_Black_G00.png",
+    "image_url": "/img/products/arctic-freezer36-1.png",
     "colors": [
       "Black"
     ],
@@ -934,7 +994,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "Тепловые трубки": "3 шт"
     },
-    "desc": "Эффективный башенный кулер с низким уровнем шума"
+    "desc": "Эффективный башенный кулер с низким уровнем шума",
+    "images": [
+      "/img/products/arctic-freezer36-1.png"
+    ]
   },
   {
     "id": "arctic-freezer36argb",
@@ -942,7 +1005,7 @@
     "category": "Воздушное охлаждение",
     "name": "Freezer 36 A-RGB",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/8f/6d/6c/1707835553/Freezer_36_A-RGB_Black_G01.png",
+    "image_url": "/img/products/arctic-freezer36argb-1.png",
     "colors": [
       "Black"
     ],
@@ -953,7 +1016,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V (3-pin)"
     },
-    "desc": "Башенный кулер с адресуемой RGB подсветкой"
+    "desc": "Башенный кулер с адресуемой RGB подсветкой",
+    "images": [
+      "/img/products/arctic-freezer36argb-1.png"
+    ]
   },
   {
     "id": "arctic-freezer36argbwht",
@@ -961,7 +1027,7 @@
     "category": "Воздушное охлаждение",
     "name": "Freezer 36 A-RGB White",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/8a/8c/a5/1707835223/Freezer_36_A-RGB_White_G01.png",
+    "image_url": "/img/products/arctic-freezer36argbwht-1.png",
     "colors": [
       "White"
     ],
@@ -972,7 +1038,10 @@
       "Совместимость": "AM5/AM4/LGA1851/LGA1700",
       "RGB": "A-RGB 5V (3-pin)"
     },
-    "desc": "Башенный кулер A-RGB в белом исполнении"
+    "desc": "Башенный кулер A-RGB в белом исполнении",
+    "images": [
+      "/img/products/arctic-freezer36argbwht-1.png"
+    ]
   },
   {
     "id": "arctic-p12argb3",
@@ -980,7 +1049,7 @@
     "category": "Вентиляторы",
     "name": "P12 Pro A-RGB 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/67/23/6b/1753273432/P12_Pro_ARGB_black_rainbow_3Pack_g00.png",
+    "image_url": "/img/products/arctic-p12argb3-1.png",
     "colors": [
       "Black"
     ],
@@ -991,7 +1060,10 @@
       "RGB": "A-RGB 5V",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 120mm вентиляторы с A-RGB подсветкой"
+    "desc": "3 шт — 120mm вентиляторы с A-RGB подсветкой",
+    "images": [
+      "/img/products/arctic-p12argb3-1.png"
+    ]
   },
   {
     "id": "arctic-p12argbwht3",
@@ -999,7 +1071,7 @@
     "category": "Вентиляторы",
     "name": "P12 Pro A-RGB White 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p12argbwht3-1.png",
     "colors": [
       "White"
     ],
@@ -1010,7 +1082,10 @@
       "RGB": "A-RGB 5V",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 120mm A-RGB вентиляторы, белые"
+    "desc": "3 шт — 120mm A-RGB вентиляторы, белые",
+    "images": [
+      "/img/products/arctic-p12argbwht3-1.png"
+    ]
   },
   {
     "id": "arctic-p12pst5",
@@ -1018,7 +1093,7 @@
     "category": "Вентиляторы",
     "name": "P12 Pro PST 5-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p12pst5-1.png",
     "colors": [
       "Black"
     ],
@@ -1029,7 +1104,10 @@
       "Уровень шума": "≤22.5 dBA",
       "В упаковке": "5 шт"
     },
-    "desc": "5 шт — 120mm вентиляторы с PST синхронизацией"
+    "desc": "5 шт — 120mm вентиляторы с PST синхронизацией",
+    "images": [
+      "/img/products/arctic-p12pst5-1.png"
+    ]
   },
   {
     "id": "arctic-p14argb3",
@@ -1037,7 +1115,7 @@
     "category": "Вентиляторы",
     "name": "P14 Pro A-RGB 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p14argb3-1.png",
     "colors": [
       "Black"
     ],
@@ -1048,7 +1126,10 @@
       "RGB": "A-RGB 5V",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 140mm вентиляторы с A-RGB подсветкой"
+    "desc": "3 шт — 140mm вентиляторы с A-RGB подсветкой",
+    "images": [
+      "/img/products/arctic-p14argb3-1.png"
+    ]
   },
   {
     "id": "arctic-p14argbwht3",
@@ -1056,7 +1137,7 @@
     "category": "Вентиляторы",
     "name": "P14 Pro A-RGB White 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p14argbwht3-1.png",
     "colors": [
       "White"
     ],
@@ -1067,7 +1148,10 @@
       "RGB": "A-RGB 5V",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 140mm A-RGB вентиляторы, белые"
+    "desc": "3 шт — 140mm A-RGB вентиляторы, белые",
+    "images": [
+      "/img/products/arctic-p14argbwht3-1.png"
+    ]
   },
   {
     "id": "arctic-p14pst5",
@@ -1075,7 +1159,7 @@
     "category": "Вентиляторы",
     "name": "P14 Pro PST 5-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p14pst5-1.png",
     "colors": [
       "Black"
     ],
@@ -1086,7 +1170,10 @@
       "Уровень шума": "≤23 dBA",
       "В упаковке": "5 шт"
     },
-    "desc": "5 шт — 140mm вентиляторы с PST синхронизацией"
+    "desc": "5 шт — 140mm вентиляторы с PST синхронизацией",
+    "images": [
+      "/img/products/arctic-p14pst5-1.png"
+    ]
   },
   {
     "id": "arctic-p12rev3",
@@ -1094,7 +1181,7 @@
     "category": "Вентиляторы",
     "name": "P12 Pro Reverse 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p12rev3-1.png",
     "colors": [
       "Black"
     ],
@@ -1104,7 +1191,10 @@
       "Коннектор": "4-pin PWM",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 120mm с обратным вращением (для exhaust)"
+    "desc": "3 шт — 120mm с обратным вращением (для exhaust)",
+    "images": [
+      "/img/products/arctic-p12rev3-1.png"
+    ]
   },
   {
     "id": "arctic-p12revargb3",
@@ -1112,7 +1202,7 @@
     "category": "Вентиляторы",
     "name": "P12 Pro Reverse A-RGB 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p12revargb3-1.png",
     "colors": [
       "Black"
     ],
@@ -1122,7 +1212,10 @@
       "RGB": "A-RGB 5V",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 120mm Reverse с A-RGB подсветкой"
+    "desc": "3 шт — 120mm Reverse с A-RGB подсветкой",
+    "images": [
+      "/img/products/arctic-p12revargb3-1.png"
+    ]
   },
   {
     "id": "arctic-p12revargbwht3",
@@ -1130,7 +1223,7 @@
     "category": "Вентиляторы",
     "name": "P12 Pro Reverse A-RGB White 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p12revargbwht3-1.png",
     "colors": [
       "White"
     ],
@@ -1140,7 +1233,10 @@
       "RGB": "A-RGB 5V",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 120mm Reverse A-RGB, белые"
+    "desc": "3 шт — 120mm Reverse A-RGB, белые",
+    "images": [
+      "/img/products/arctic-p12revargbwht3-1.png"
+    ]
   },
   {
     "id": "arctic-p14rev3",
@@ -1148,7 +1244,7 @@
     "category": "Вентиляторы",
     "name": "P14 Pro Reverse 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p14rev3-1.png",
     "colors": [
       "Black"
     ],
@@ -1158,7 +1254,10 @@
       "Коннектор": "4-pin PWM",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 140mm с обратным вращением"
+    "desc": "3 шт — 140mm с обратным вращением",
+    "images": [
+      "/img/products/arctic-p14rev3-1.png"
+    ]
   },
   {
     "id": "arctic-p14revargb3",
@@ -1166,7 +1265,7 @@
     "category": "Вентиляторы",
     "name": "P14 Pro Reverse A-RGB 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p14revargb3-1.png",
     "colors": [
       "Black"
     ],
@@ -1176,7 +1275,10 @@
       "RGB": "A-RGB 5V",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 140mm Reverse с A-RGB подсветкой"
+    "desc": "3 шт — 140mm Reverse с A-RGB подсветкой",
+    "images": [
+      "/img/products/arctic-p14revargb3-1.png"
+    ]
   },
   {
     "id": "arctic-p14revargbwht3",
@@ -1184,7 +1286,7 @@
     "category": "Вентиляторы",
     "name": "P14 Pro Reverse A-RGB White 3-Pack",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-p14revargbwht3-1.png",
     "colors": [
       "White"
     ],
@@ -1194,7 +1296,10 @@
       "RGB": "A-RGB 5V",
       "В упаковке": "3 шт"
     },
-    "desc": "3 шт — 140mm Reverse A-RGB, белые"
+    "desc": "3 шт — 140mm Reverse A-RGB, белые",
+    "images": [
+      "/img/products/arctic-p14revargbwht3-1.png"
+    ]
   },
   {
     "id": "arctic-xtender-blk",
@@ -1202,7 +1307,7 @@
     "category": "Корпуса",
     "name": "Xtender Black",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-xtender-blk-1.png",
     "colors": [
       "Black"
     ],
@@ -1212,7 +1317,10 @@
       "GPU": "без вертикального крепления",
       "Тип": "Компактный игровой"
     },
-    "desc": "Компактный игровой корпус с чёрной стеклянной панелью"
+    "desc": "Компактный игровой корпус с чёрной стеклянной панелью",
+    "images": [
+      "/img/products/arctic-xtender-blk-1.png"
+    ]
   },
   {
     "id": "arctic-xtender-mirror",
@@ -1220,7 +1328,7 @@
     "category": "Корпуса",
     "name": "Xtender Mirror Black",
     "badge": null,
-    "image_url": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png",
+    "image_url": "/img/products/arctic-xtender-mirror-1.png",
     "colors": [
       "Black"
     ],
@@ -1230,6 +1338,9 @@
       "GPU": "без вертикального крепления",
       "Тип": "Компактный игровой"
     },
-    "desc": "Компактный игровой корпус с зеркальной стеклянной панелью"
+    "desc": "Компактный игровой корпус с зеркальной стеклянной панелью",
+    "images": [
+      "/img/products/arctic-xtender-mirror-1.png"
+    ]
   }
 ]
