@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+button, a, .bpc, .bsl-card, .cat-tab, .faq-q {
+  touch-action: manipulation;
+}
+
 /* ── LIGHT THEME (default / Apple) ── */
 :root {
   --bg-primary:   #ffffff;
@@ -2055,12 +2059,14 @@ footer {
 .bsl-track-wrap {
   flex: 1;
   overflow: hidden;
+  touch-action: pan-y;
 }
 .bsl-grid {
   display: flex;
   gap: 20px;
   transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
   will-change: transform;
+  touch-action: pan-y;
 }
 .bsl-card {
   flex: 0 0 calc(25% - 15px);

@@ -403,6 +403,37 @@ window.addEventListener('resize', () => {
   _bslUpdateState(total);
 });
 
+// ── Carousel touch swipe ──
+(function () {
+  let _txStart = 0;
+  let _txDelta = 0;
+  let _dragging = false;
+
+  function getWrap() { return document.getElementById('bslGrid')?.closest('.bsl-track-wrap'); }
+
+  document.addEventListener('touchstart', e => {
+    const wrap = getWrap();
+    if (!wrap || !wrap.contains(e.target)) return;
+    _txStart = e.touches[0].clientX;
+    _txDelta = 0;
+    _dragging = true;
+  }, { passive: true });
+
+  document.addEventListener('touchmove', e => {
+    if (!_dragging) return;
+    _txDelta = e.touches[0].clientX - _txStart;
+  }, { passive: true });
+
+  document.addEventListener('touchend', () => {
+    if (!_dragging) return;
+    _dragging = false;
+    if (Math.abs(_txDelta) > 50) {
+      bslNav(_txDelta < 0 ? 1 : -1);
+    }
+    _txDelta = 0;
+  });
+})();
+
 function renderBestsellers() {
   const grid = document.getElementById('bslGrid');
   if (!grid) return;
