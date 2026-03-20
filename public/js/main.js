@@ -327,14 +327,74 @@ const BRAND_TAG = {
 
 const BRAND_CATS = ['GravaStar', 'ATK', 'Picun', 'Arctic'];
 
-// ── Bestsellers: featured product IDs ──
-const BSL_IDS = ['gs-v60pro', 'atk-ag9air', 'atk-ag9ult', 'arctic-lf3pro360'];
+// ── Bestsellers carousel ──
+const BSL_IDS = [
+  'gs-v60pro', 'atk-ag9air', 'atk-ag9ult', 'arctic-lf3pro360',
+  'gs-m1pro', 'gs-v75pro', 'atk-z1ult', 'gs-x', 'atk-ng9pro', 'arctic-freezer36'
+];
+
+let _bslIdx = 0;
+
+function _bslVisible() {
+  if (window.innerWidth >= 1100) return 4;
+  if (window.innerWidth >= 480)  return 2;
+  return 1;
+}
+
+function _bslUpdateState(total) {
+  const vis   = _bslVisible();
+  const max   = Math.max(0, total - vis);
+  const prev  = document.getElementById('bslPrev');
+  const next  = document.getElementById('bslNext');
+  if (prev) prev.disabled = _bslIdx <= 0;
+  if (next) next.disabled = _bslIdx >= max;
+  document.querySelectorAll('.bsl-dot').forEach((d, i) => d.classList.toggle('active', i === _bslIdx));
+}
+
+function bslNav(dir) {
+  const grid = document.getElementById('bslGrid');
+  if (!grid || !grid.querySelector('.bsl-card')) return;
+  const total = grid.querySelectorAll('.bsl-card').length;
+  const vis   = _bslVisible();
+  _bslIdx = Math.max(0, Math.min(_bslIdx + dir, total - vis));
+  const card   = grid.querySelector('.bsl-card');
+  const offset = _bslIdx * (card.offsetWidth + 20);
+  grid.style.transform = `translateX(-${offset}px)`;
+  _bslUpdateState(total);
+}
+
+function bslGoTo(idx) {
+  const grid = document.getElementById('bslGrid');
+  if (!grid || !grid.querySelector('.bsl-card')) return;
+  const total = grid.querySelectorAll('.bsl-card').length;
+  const vis   = _bslVisible();
+  _bslIdx = Math.max(0, Math.min(idx, total - vis));
+  const card   = grid.querySelector('.bsl-card');
+  const offset = _bslIdx * (card.offsetWidth + 20);
+  grid.style.transform = `translateX(-${offset}px)`;
+  _bslUpdateState(total);
+}
+
+window.addEventListener('resize', () => {
+  const grid = document.getElementById('bslGrid');
+  if (!grid || !grid.querySelector('.bsl-card')) return;
+  const total = grid.querySelectorAll('.bsl-card').length;
+  const vis   = _bslVisible();
+  _bslIdx = Math.min(_bslIdx, Math.max(0, total - vis));
+  const card   = grid.querySelector('.bsl-card');
+  const offset = _bslIdx * (card.offsetWidth + 20);
+  grid.style.transform = `translateX(-${offset}px)`;
+  _bslUpdateState(total);
+});
 
 function renderBestsellers() {
   const grid = document.getElementById('bslGrid');
   if (!grid) return;
   const items = BSL_IDS.map(id => _catalogAll.find(p => p.id === id)).filter(Boolean);
   if (!items.length) { grid.innerHTML = ''; return; }
+
+  _bslIdx = 0;
+  grid.style.transform = '';
 
   grid.innerHTML = items.map((p, i) => {
     const badge = p.badge
@@ -351,7 +411,7 @@ function renderBestsellers() {
       ? `<div class="bsl-specs">${specEntries.map(([k,v]) =>
           `<div class="bsl-spec"><span class="bsl-spec-v">${v}</span><span class="bsl-spec-k">${k}</span></div>`
         ).join('')}</div>` : '';
-    return `<div class="bpc bsl-card reveal${i > 0 ? ' reveal-delay-' + i : ''}" onclick="openProductModal('${p.id}')">
+    return `<div class="bpc bsl-card" onclick="openProductModal('${p.id}')">
       <div class="bpc-img">${badge}${imgHtml}</div>
       <div class="bpc-body">
         <div class="bpc-type">${p.brand} · ${p.category}</div>
@@ -363,8 +423,16 @@ function renderBestsellers() {
     </div>`;
   }).join('');
 
-  // re-observe new reveal elements
-  grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  // Dots
+  const dotsEl = document.getElementById('bslDots');
+  if (dotsEl) {
+    const positions = Math.max(1, items.length - _bslVisible() + 1);
+    dotsEl.innerHTML = Array.from({ length: positions }, (_, i) =>
+      `<button class="bsl-dot${i === 0 ? ' active' : ''}" onclick="bslGoTo(${i})" aria-label="Слайд ${i+1}"></button>`
+    ).join('');
+  }
+
+  _bslUpdateState(items.length);
 }
 
 // ── Load curated catalog once ──

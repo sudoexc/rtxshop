@@ -1961,11 +1961,65 @@ footer {
 
 .bsl-header .section-sub { margin: 0 auto; }
 
-.bsl-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+/* ── Carousel ── */
+.bsl-carousel {
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
+.bsl-track-wrap {
+  flex: 1;
+  overflow: hidden;
+}
+.bsl-grid {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
+}
+.bsl-card {
+  flex: 0 0 calc(25% - 15px);
+  min-width: 0;
+}
+.bsl-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: all 0.2s;
+  z-index: 1;
+  padding: 0;
+}
+.bsl-arrow:hover { background: var(--accent); color: white; border-color: var(--accent); }
+.bsl-arrow:disabled { opacity: 0.25; pointer-events: none; }
+.bsl-arrow--prev { margin-right: 14px; }
+.bsl-arrow--next { margin-left: 14px; }
+.bsl-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 28px;
+}
+.bsl-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s;
+}
+.bsl-dot.active { background: var(--accent); width: 22px; border-radius: 4px; }
 
 /* bestsellers dynamic cards */
 .bsl-card .bpc-img { height: 220px; }
@@ -2758,20 +2812,24 @@ footer {
 
 /* responsive new sections */
 @media (max-width: 1100px) {
-  .bsl-grid { grid-template-columns: repeat(2, 1fr); }
+  .bsl-card { flex: 0 0 calc(50% - 10px); }
   .brand-photo-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
   .bestsellers { padding: 72px 0; }
-  .bsl-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .bsl-card { flex: 0 0 calc(50% - 7px); }
+  .bsl-grid { gap: 14px; }
   .pc-visual { height: 140px; }
   .brand-photo-grid { grid-template-columns: repeat(2, 1fr); }
   .cat-tab-sep { display: none; }
+  .bsl-arrow { width: 36px; height: 36px; font-size: 20px; }
+  .bsl-arrow--prev { margin-right: 8px; }
+  .bsl-arrow--next { margin-left: 8px; }
 }
 
 @media (max-width: 480px) {
-  .bsl-grid { grid-template-columns: 1fr; }
+  .bsl-card { flex: 0 0 calc(100% - 0px); }
   .brand-photo-grid { grid-template-columns: 1fr; gap: 10px; }
   .bsl-card .bpc-img { height: 180px; }
   .bsl-specs { grid-template-columns: repeat(3, 1fr); }

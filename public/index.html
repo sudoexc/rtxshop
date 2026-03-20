@@ -183,9 +183,16 @@
       <h2 class="section-title"><span data-i18n="bsl_h2a">Самые</span> <span class="accent-text" data-i18n="bsl_h2b">востребованные</span></h2>
       <p class="section-sub" data-i18n="bsl_sub">Топовые позиции из нашего каталога — от GPU до игровой периферии</p>
     </div>
-    <div class="bsl-grid" id="bslGrid">
-      <div class="catalog-loading"><div class="catalog-spinner"></div></div>
+    <div class="bsl-carousel">
+      <button class="bsl-arrow bsl-arrow--prev" id="bslPrev" onclick="bslNav(-1)" aria-label="Назад">&#8249;</button>
+      <div class="bsl-track-wrap">
+        <div class="bsl-grid" id="bslGrid">
+          <div class="catalog-loading"><div class="catalog-spinner"></div></div>
+        </div>
+      </div>
+      <button class="bsl-arrow bsl-arrow--next" id="bslNext" onclick="bslNav(1)" aria-label="Вперёд">&#8250;</button>
     </div>
+    <div class="bsl-dots" id="bslDots"></div>
   </div>
 </section>
 
