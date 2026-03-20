@@ -75,7 +75,8 @@ async function sendToTelegram(text) {
 
 // ─── admin auth ────────────────────────────────────────────
 function adminAuth(req, res, next) {
-  const pass = process.env.ADMIN_PASSWORD || 'rtxadmin2025';
+  const pass = process.env.ADMIN_PASSWORD;
+  if (!pass) return res.status(503).json({ error: 'ADMIN_PASSWORD not configured' });
   const auth = req.headers['x-admin-key'] || req.query.key;
   if (auth === pass) return next();
   res.status(401).json({ error: 'Unauthorized' });
