@@ -1,9 +1,10 @@
 require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const fetch = require('node-fetch');
-const path = require('path');
-const fs = require('fs');
+const express    = require('express');
+const cors       = require('cors');
+const fetch      = require('node-fetch');
+const path       = require('path');
+const fs         = require('fs');
+const compression = require('compression');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,6 +24,7 @@ if (!fs.existsSync(DB_FILE))  fs.writeFileSync(DB_FILE, '[]');
 if (IS_VERCEL && !fs.existsSync(PRODUCTS_FILE)) fs.copyFileSync(PRODUCTS_BUNDLED, PRODUCTS_FILE);
 if (!IS_VERCEL && !fs.existsSync(PRODUCTS_FILE)) fs.writeFileSync(PRODUCTS_FILE, '[]');
 
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));

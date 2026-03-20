@@ -578,10 +578,12 @@ const searchInput = document.getElementById('catalogSearch');
 const searchClear = document.getElementById('searchClear');
 
 if (searchInput) {
+  let _searchDebounce;
   searchInput.addEventListener('input', () => {
     _searchQuery = searchInput.value;
     searchClear?.classList.toggle('visible', !!_searchQuery);
-    renderCatalog();
+    clearTimeout(_searchDebounce);
+    _searchDebounce = setTimeout(renderCatalog, 200);
   });
 }
 

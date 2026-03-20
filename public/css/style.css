@@ -622,6 +622,7 @@ section {
   gap: 80px;
   animation: ticker 20s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 
 .ticker-track:hover {
