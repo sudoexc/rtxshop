@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RTXSHOP — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111;
+      --surface2: #161616;
+      --border: rgba(255,255,255,0.08);
+      --accent: #0071e3;
+      --accent-hover: #0077ed;
+      --text: #f5f5f7;
+      --text-2: #a1a1a6;
+      --text-3: #6e6e73;
+      --red: #ff3b30;
+      --green: #30d158;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: Inter, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LOGIN ── */
+    #loginScreen {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,113,227,0.12) 0%, transparent 70%);
+    }
+
+    .login-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-logo {
+      width: 52px;
+      height: 52px;
+      background: var(--accent);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      color: white;
+      margin: 0 auto 24px;
+    }
+
+    .login-box h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .login-box p {
+      font-size: 14px;
+      color: var(--text-3);
+      margin-bottom: 32px;
+    }
+
+    .login-input {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 13px 16px;
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--text);
+      outline: none;
+      margin-bottom: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .login-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,113,227,0.15);
+    }
+
+    .login-btn {
+      width: 100%;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 13px;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .login-btn:hover { background: var(--accent-hover); }
+
+    .login-error {
+      font-size: 13px;
+      color: var(--red);
+      margin-top: 10px;
+      display: none;
+    }
+
+    /* ── MAIN APP ── */
+    #app { display: none; }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* sidebar */
+    .sidebar {
+      width: 240px;
+      flex-shrink: 0;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 20px 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    .sidebar-logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      color: white;
+    }
+
+    .sidebar-logo-text {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .sidebar-logo-sub {
+      font-size: 11px;
+      color: var(--text-3);
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all 0.15s;
+      border-radius: 0;
+      margin: 1px 8px;
+      border-radius: 8px;
+    }
+
+    .nav-item:hover { background: rgba(255,255,255,0.04); color: var(--text); }
+    .nav-item.active { background: rgba(0,113,227,0.15); color: var(--accent); }
+
+    .nav-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    .sidebar-bottom {
+      margin-top: auto;
+      padding: 16px 8px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    /* main content */
+    .main {
+      flex: 1;
+      margin-left: 240px;
+      padding: 32px;
+      max-width: 100%;
+    }
+
+    .page { display: none; }
+    .page.active { display: block; }
+
+    .page-header {
+      margin-bottom: 28px;
+    }
+
+    .page-header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .page-header p {
+      font-size: 14px;
+      color: var(--text-3);
+      margin-top: 4px;
+    }
+
+    /* stat cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .stat-card-label {
+      font-size: 13px;
+      color: var(--text-3);
+      margin-bottom: 8px;
+    }
+
+    .stat-card-value {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .stat-card-sub {
+      font-size: 12px;
+      color: var(--text-3);
+      margin-top: 4px;
+    }
+
+    /* table */
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .table-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .table-header h2 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.15s;
+      border: none;
+    }
+
+    .btn-accent { background: var(--accent); color: white; }
+    .btn-accent:hover { background: var(--accent-hover); }
+    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text-2); }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+    .btn-danger { background: rgba(255,59,48,0.12); color: var(--red); }
+    .btn-danger:hover { background: rgba(255,59,48,0.2); }
+    .btn-sm { padding: 5px 10px; font-size: 12px; }
+
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-3);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+    tbody td {
+      padding: 14px 24px;
+      font-size: 14px;
+      color: var(--text-2);
+      vertical-align: top;
+    }
+
+    tbody td:first-child { color: var(--text); font-weight: 500; }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 980px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .badge-blue { background: rgba(0,113,227,0.15); color: #4ca3ff; }
+    .badge-purple { background: rgba(156,39,176,0.15); color: #ce93d8; }
+    .badge-cyan { background: rgba(0,188,212,0.15); color: #80deea; }
+    .badge-gray { background: rgba(255,255,255,0.06); color: var(--text-3); }
+
+    .empty-state {
+      padding: 60px 24px;
+      text-align: center;
+      color: var(--text-3);
+    }
+
+    .empty-state svg { margin: 0 auto 16px; opacity: 0.3; display: block; }
+    .empty-state p { font-size: 15px; }
+
+    /* settings */
+    .settings-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .settings-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .settings-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .settings-card .desc {
+      font-size: 13px;
+      color: var(--text-3);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .field-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .field-input {
+      flex: 1;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .field-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,113,227,0.12);
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+    .status-ok { background: var(--green); }
+    .status-err { background: var(--red); }
+    .status-unknown { background: var(--text-3); }
+
+    .result-box {
+      margin-top: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 12px;
+      font-family: monospace;
+      color: var(--text-3);
+      white-space: pre-wrap;
+      word-break: break-all;
+      max-height: 200px;
+      overflow-y: auto;
+      display: none;
+    }
+
+    .result-box.show { display: block; }
+
+    .updates-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .update-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .update-item-info { flex: 1; }
+    .update-item-type { font-size: 11px; color: var(--text-3); margin-bottom: 2px; }
+    .update-item-text { font-size: 13px; color: var(--text-2); }
+    .update-item-id {
+      font-size: 12px;
+      font-family: monospace;
+      color: var(--accent);
+      background: rgba(0,113,227,0.08);
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .update-item-id:hover { background: rgba(0,113,227,0.2); }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.green { border-color: rgba(48,209,88,0.3); color: var(--green); }
+    .toast.red { border-color: rgba(255,59,48,0.3); color: var(--red); }
+
+    /* products */
+    .filter-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: inherit;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: rgba(255,255,255,0.15); color: var(--text); }
+    .filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+    .price-cell { display: flex; align-items: center; gap: 6px; }
+    .price-input {
+      width: 90px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .price-input:focus { border-color: var(--accent); }
+    .price-save {
+      background: rgba(0,113,227,0.12);
+      border: none;
+      border-radius: 5px;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      font-family: inherit;
+      color: var(--accent);
+      cursor: pointer;
+      transition: background 0.15s;
+      display: none;
+    }
+    .price-save:hover { background: rgba(0,113,227,0.22); }
+    .price-input:focus + .price-save { display: inline-block; }
+    .price-save:hover { display: inline-block; }
+
+    .toggle-switch {
+      width: 36px; height: 20px;
+      background: #333;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: none;
+      flex-shrink: 0;
+    }
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 3px; left: 3px;
+      width: 14px; height: 14px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .toggle-switch.on { background: var(--green); }
+    .toggle-switch.on::after { transform: translateX(16px); }
+
+    /* ── MOBILE TOPBAR ── */
+    .mobile-topbar {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 56px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      z-index: 200;
+    }
+
+    .mobile-topbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mobile-topbar-logo .sidebar-logo-icon {
+      width: 28px; height: 28px; font-size: 10px; border-radius: 7px;
+    }
+
+    .mobile-topbar-logo span {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .mobile-menu-btn {
+      width: 36px; height: 36px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 16px; height: 1.5px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+
+    .mobile-menu-btn.open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+    .mobile-menu-btn.open span:nth-child(2) { opacity: 0; }
+    .mobile-menu-btn.open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+    /* sidebar overlay on mobile */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 149;
+      backdrop-filter: blur(4px);
+    }
+
+    @media (max-width: 768px) {
+      .mobile-topbar { display: flex; }
+
+      .sidebar {
+        top: 56px;
+        transform: translateX(-100%);
+        transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+        z-index: 150;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 4px 0 40px rgba(0,0,0,0.5);
+      }
+
+      .sidebar-overlay.open { display: block; }
+
+      .main {
+        margin-left: 0;
+        padding: 72px 16px 24px;
+      }
+
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+
+      .stats-grid .stat-card:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .settings-grid { grid-template-columns: 1fr; }
+
+      .settings-card[style*="grid-column"] {
+        grid-column: 1 !important;
+      }
+
+      .table-wrap { overflow-x: auto; }
+      table { min-width: 560px; }
+
+      thead th, tbody td { padding: 12px 14px; }
+
+      .page-header h1 { font-size: 22px; }
+
+      .login-box { padding: 32px 24px; }
+    }
+
+    @media (max-width: 420px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .stats-grid .stat-card:last-child { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── LOGIN ── -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">RT</div>
+    <h1>RTXSHOP Admin</h1>
+    <p>Введите пароль для доступа</p>
+    <input type="password" id="passInput" class="login-input" placeholder="Пароль" />
+    <button class="login-btn" onclick="doLogin()">Войти</button>
+    <div class="login-error" id="loginError">Неверный пароль</div>
+  </div>
+</div>
+
+<!-- ── APP ── -->
+<div id="app">
+
+  <!-- mobile topbar -->
+  <div class="mobile-topbar">
+    <div class="mobile-topbar-logo">
+      <div class="sidebar-logo-icon">RT</div>
+      <span>RTXSHOP Admin</span>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleSidebar()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+  <div class="layout">
+
+    <!-- sidebar -->
+    <aside class="sidebar" id="adminSidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">RT</div>
+        <div>
+          <div class="sidebar-logo-text">RTXSHOP</div>
+          <div class="sidebar-logo-sub">Admin Panel</div>
+        </div>
+      </div>
+
+      <div class="nav-item active" onclick="showPage('dashboard')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Обзор
+      </div>
+
+      <div class="nav-item" onclick="showPage('submissions')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg>
+        Заявки
+        <span id="submissionsBadge" style="margin-left:auto;background:var(--accent);color:white;font-size:11px;padding:2px 7px;border-radius:980px;display:none;"></span>
+      </div>
+
+      <div class="nav-item" onclick="showPage('products')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+        Каталог
+      </div>
+
+      <div class="nav-item" onclick="showPage('settings')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"/><circle cx="12" cy="12" r="3"/></svg>
+        Настройки
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="nav-item" onclick="logout()">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"/></svg>
+          Выйти
+        </div>
+      </div>
+    </aside>
+
+    <!-- main -->
+    <main class="main">
+
+      <!-- DASHBOARD -->
+      <div class="page active" id="page-dashboard">
+        <div class="page-header">
+          <h1>Обзор</h1>
+          <p>Статистика и состояние системы</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-label">Всего заявок</div>
+            <div class="stat-card-value" id="statTotal">—</div>
+            <div class="stat-card-sub">за всё время</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Сегодня</div>
+            <div class="stat-card-value" id="statToday">—</div>
+            <div class="stat-card-sub">новых заявок</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Telegram бот</div>
+            <div class="stat-card-value" style="font-size:20px; padding-top:6px;" id="statBot">
+              <span class="status-dot status-unknown"></span>Проверка...
+            </div>
+            <div class="stat-card-sub" id="statBotSub">—</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <div class="table-header">
+            <h2>Последние заявки</h2>
+            <button class="btn btn-outline btn-sm" onclick="showPage('submissions')">Все заявки</button>
+          </div>
+          <div id="recentTable"></div>
+        </div>
+      </div>
+
+      <!-- SUBMISSIONS -->
+      <div class="page" id="page-submissions">
+        <div class="page-header">
+          <h1>Заявки</h1>
+          <p>Все входящие заявки с сайта</p>
+        </div>
+
+        <div class="table-wrap">
+          <div class="table-header">
+            <h2 id="submissionsCount">Загрузка...</h2>
+            <div style="display:flex;gap:8px;">
+              <a id="exportBtn" class="btn btn-outline btn-sm" onclick="exportCSV()" style="cursor:pointer;">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                CSV
+              </a>
+              <button class="btn btn-accent btn-sm" onclick="loadSubmissions()">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+                Обновить
+              </button>
+            </div>
+          </div>
+          <div id="submissionsTable"></div>
+        </div>
+      </div>
+
+      <!-- PRODUCTS -->
+      <div class="page" id="page-products">
+        <div class="page-header">
+          <h1>Каталог товаров</h1>
+          <p>Управление ценами и видимостью товаров на сайте</p>
+        </div>
+
+        <!-- Add product form -->
+        <div class="settings-card" style="margin-bottom:20px;">
+          <h3>Добавить товар</h3>
+          <p class="desc">Новый товар сразу появится на сайте</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:12px;">
+            <div><label style="font-size:12px;color:var(--text-3);display:block;margin-bottom:4px;">Категория *</label>
+              <select id="np_cat" class="field-input">
+                <option value="GPU">GPU</option><option value="CPU">CPU</option>
+                <option value="MB">MB</option><option value="RAM">RAM</option><option value="SSD">SSD</option>
+              </select></div>
+            <div><label style="font-size:12px;color:var(--text-3);display:block;margin-bottom:4px;">Подкатегория</label>
+              <input id="np_sub" class="field-input" placeholder="RTX 5090" /></div>
+            <div style="grid-column:span 2;"><label style="font-size:12px;color:var(--text-3);display:block;margin-bottom:4px;">Название *</label>
+              <input id="np_name" class="field-input" placeholder="ASUS ROG RTX 5090..." /></div>
+            <div><label style="font-size:12px;color:var(--text-3);display:block;margin-bottom:4px;">Цена $ *</label>
+              <input id="np_price" type="number" class="field-input" placeholder="999" /></div>
+            <div><label style="font-size:12px;color:var(--text-3);display:block;margin-bottom:4px;">Бейдж</label>
+              <select id="np_badge" class="field-input">
+                <option value="">—</option><option value="NEW">NEW</option><option value="HOT">HOT</option>
+              </select></div>
+          </div>
+          <button class="btn btn-accent" onclick="addProduct()">+ Добавить</button>
+        </div>
+
+        <div class="table-wrap">
+          <div class="table-header" style="flex-wrap:wrap;gap:12px;">
+            <h2 id="productsCount">Загрузка...</h2>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;" id="productFilterBtns"></div>
+            <button class="btn btn-outline btn-sm" onclick="loadProducts()">Обновить</button>
+          </div>
+          <div id="productsTable"></div>
+        </div>
+      </div>
+
+      <!-- SETTINGS -->
+      <div class="page" id="page-settings">
+        <div class="page-header">
+          <h1>Настройки</h1>
+          <p>Конфигурация Telegram бота и системы</p>
+        </div>
+
+        <div class="settings-grid">
+
+          <div class="settings-card">
+            <h3>Telegram Chat ID</h3>
+            <p class="desc">Укажите Chat ID группы или канала, куда будут приходить заявки. Чтобы узнать ID — добавьте бота в чат и нажмите «Получить обновления».</p>
+            <div class="field-row">
+              <input type="text" id="chatIdInput" class="field-input" placeholder="-1001234567890" />
+              <button class="btn btn-accent" onclick="saveChatId()">Сохранить</button>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Тест соединения</h3>
+            <p class="desc">Отправьте тестовое сообщение в указанный чат, чтобы убедиться что всё настроено верно.</p>
+            <button class="btn btn-outline" onclick="sendTest()">Отправить тест</button>
+            <div class="result-box" id="testResult"></div>
+          </div>
+
+          <div class="settings-card" style="grid-column: 1 / -1;">
+            <h3>Получить Chat ID автоматически</h3>
+            <p class="desc">Напишите любое сообщение боту (или в группу с ботом), затем нажмите «Получить обновления». Нажмите на ID чата чтобы сохранить его автоматически.</p>
+            <button class="btn btn-outline" onclick="getUpdates()">Получить обновления</button>
+            <div id="updatesList"></div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Информация о боте</h3>
+            <p class="desc">Данные текущего Telegram бота.</p>
+            <button class="btn btn-outline" onclick="getBotInfo()">Проверить бота</button>
+            <div class="result-box" id="botInfoResult"></div>
+          </div>
+
+          <div class="settings-card">
+            <h3>Смена пароля</h3>
+            <p class="desc">Пароль хранится в файле .env на сервере. Для смены отредактируйте ADMIN_PASSWORD в .env файле.</p>
+            <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--text-3);">
+              Текущий пароль задаётся через переменную<br /><code style="color:var(--accent);">ADMIN_PASSWORD</code> в файле <code style="color:var(--accent);">.env</code>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let adminKey = '';
+
+  // ── MOBILE SIDEBAR
+  function toggleSidebar() {
+    const sb = document.getElementById('adminSidebar');
+    const ov = document.getElementById('sidebarOverlay');
+    const btn = document.getElementById('mobileMenuBtn');
+    const open = sb.classList.toggle('open');
+    ov.classList.toggle('open', open);
+    btn.classList.toggle('open', open);
+  }
+
+  function closeSidebar() {
+    document.getElementById('adminSidebar').classList.remove('open');
+    document.getElementById('sidebarOverlay').classList.remove('open');
+    document.getElementById('mobileMenuBtn').classList.remove('open');
+  }
+
+  // ── LOGIN
+  document.getElementById('passInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') doLogin();
+  });
+
+  async function doLogin() {
+    const pass = document.getElementById('passInput').value.trim();
+    if (!pass) return;
+
+    const res = await fetch('/api/admin/submissions', {
+      headers: { 'x-admin-key': pass }
+    });
+
+    if (res.ok) {
+      adminKey = pass;
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('app').style.display = 'block';
+      loadDashboard();
+    } else {
+      document.getElementById('loginError').style.display = 'block';
+    }
+  }
+
+  function logout() {
+    adminKey = '';
+    document.getElementById('app').style.display = 'none';
+    document.getElementById('loginScreen').style.display = 'flex';
+    document.getElementById('passInput').value = '';
+  }
+
+  // ── NAVIGATION
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    document.querySelectorAll('.nav-item')[['dashboard','submissions','products','settings'].indexOf(name)]?.classList.add('active');
+    closeSidebar();
+
+    if (name === 'submissions') loadSubmissions();
+    if (name === 'products') loadProducts();
+    if (name === 'settings') loadChatIdInput();
+  }
+
+  // ── API helpers
+  async function api(url, opts = {}) {
+    const res = await fetch(url, {
+      ...opts,
+      headers: { 'x-admin-key': adminKey, 'Content-Type': 'application/json', ...(opts.headers || {}) }
+    });
+    return res.json();
+  }
+
+  // ── DASHBOARD
+  async function loadDashboard() {
+    const data = await api('/api/admin/submissions');
+    const today = new Date().toDateString();
+    const todayCount = data.filter(s => new Date(s.date).toDateString() === today).length;
+
+    document.getElementById('statTotal').textContent = data.length;
+    document.getElementById('statToday').textContent = todayCount;
+
+    if (data.length > 0) {
+      const badge = document.getElementById('submissionsBadge');
+      badge.textContent = data.length;
+      badge.style.display = 'inline';
+    }
+
+    renderTable(document.getElementById('recentTable'), data.slice(0, 5), false);
+    checkBot();
+  }
+
+  async function checkBot() {
+    const info = await api('/api/admin/bot-info');
+    const el = document.getElementById('statBot');
+    const sub = document.getElementById('statBotSub');
+    if (info.ok) {
+      el.innerHTML = `<span class="status-dot status-ok"></span>Активен`;
+      sub.textContent = '@' + info.result.username;
+    } else {
+      el.innerHTML = `<span class="status-dot status-err"></span>Ошибка`;
+      sub.textContent = 'Проверьте токен';
+    }
+  }
+
+  // ── SUBMISSIONS
+  async function loadSubmissions() {
+    const data = await api('/api/admin/submissions');
+    document.getElementById('submissionsCount').textContent = `Заявки (${data.length})`;
+    renderTable(document.getElementById('submissionsTable'), data, true);
+  }
+
+  function renderTable(container, data, showDelete) {
+    if (!data.length) {
+      container.innerHTML = `<div class="empty-state">
+        <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/></svg>
+        <p>Заявок пока нет</p>
+      </div>`;
+      return;
+    }
+
+    const brandBadge = b => {
+      if (!b) return '<span class="badge badge-gray">—</span>';
+      if (b === 'ATK') return '<span class="badge badge-blue">ATK</span>';
+      if (b === 'GravaStar') return '<span class="badge badge-purple">GravaStar</span>';
+      if (b === 'Arctic') return '<span class="badge badge-cyan">Arctic</span>';
+      return `<span class="badge badge-gray">${b}</span>`;
+    };
+
+    const rows = data.map(s => `
+      <tr>
+        <td>${s.name}</td>
+        <td>${s.company || '—'}</td>
+        <td>${s.phone}</td>
+        <td>${brandBadge(s.interest)}</td>
+        <td>${new Date(s.date).toLocaleString('ru-RU', { day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit' })}</td>
+        ${showDelete ? `<td><button class="btn btn-danger btn-sm" onclick="deleteSubmission(${s.id})">Удалить</button></td>` : ''}
+      </tr>
+    `).join('');
+
+    container.innerHTML = `<table>
+      <thead><tr>
+        <th>Имя</th>
+        <th>Компания</th>
+        <th>Телефон</th>
+        <th>Бренд</th>
+        <th>Дата</th>
+        ${showDelete ? '<th></th>' : ''}
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+  }
+
+  async function deleteSubmission(id) {
+    if (!confirm('Удалить эту заявку?')) return;
+    await api(`/api/admin/submissions/${id}`, { method: 'DELETE' });
+    toast('Заявка удалена', 'red');
+    loadSubmissions();
+  }
+
+  // ── PRODUCTS
+  let allProducts = [];
+  let productFilter = 'ALL';
+
+  async function loadProducts() {
+    allProducts = await api('/api/admin/products');
+    const cats = ['ALL', ...new Set(allProducts.map(p => p.category))];
+    const btns = document.getElementById('productFilterBtns');
+    btns.innerHTML = cats.map(c => `<button class="filter-btn${c === productFilter ? ' active' : ''}" onclick="setProductFilter('${c}')">${c === 'ALL' ? 'Все' : c}</button>`).join('');
+    renderProducts();
+  }
+
+  function setProductFilter(cat) {
+    productFilter = cat;
+    loadProducts();
+  }
+
+  function renderProducts() {
+    const filtered = productFilter === 'ALL' ? allProducts : allProducts.filter(p => p.category === productFilter);
+    document.getElementById('productsCount').textContent = `Товары (${filtered.length})`;
+
+    if (!filtered.length) {
+      document.getElementById('productsTable').innerHTML = '<div class="empty-state"><p>Нет товаров</p></div>';
+      return;
+    }
+
+    const badgeOpts = (cur) => ['','NEW','HOT'].map(v =>
+      `<option value="${v}"${cur===v?' selected':''}>${v||'—'}</option>`
+    ).join('');
+
+    const rows = filtered.map(p => `
+      <tr>
+        <td>${p.name}</td>
+        <td><span style="font-size:11px;color:var(--text-3)">${p.category}</span></td>
+        <td><span style="font-size:11px;color:var(--text-3)">${p.sub}</span></td>
+        <td>
+          <div class="price-cell">
+            <span style="color:var(--text-3);font-size:12px;">$</span>
+            <input class="price-input" type="number" value="${p.price}" min="0"
+              onkeydown="if(event.key==='Enter') savePrice(${p.id}, this.value)"
+              oninput="this.nextElementSibling.style.display='inline-block'"
+            />
+            <button class="price-save" onclick="savePrice(${p.id}, this.previousElementSibling.value)">Сохранить</button>
+          </div>
+        </td>
+        <td>
+          <select class="field-input" style="padding:4px 8px;font-size:12px;width:70px;"
+            onchange="saveBadge(${p.id}, this.value)">
+            ${badgeOpts(p.badge||'')}
+          </select>
+        </td>
+        <td>
+          <button class="toggle-switch ${p.active !== false ? 'on' : ''}" onclick="toggleActive(${p.id}, this)" title="${p.active !== false ? 'Видно на сайте' : 'Скрыто'}"></button>
+        </td>
+        <td>
+          <button class="btn btn-danger btn-sm" onclick="deleteProduct(${p.id})">Удалить</button>
+        </td>
+      </tr>
+    `).join('');
+
+    document.getElementById('productsTable').innerHTML = `
+      <table>
+        <thead><tr><th>Название</th><th>Категория</th><th>Подкат.</th><th>Цена</th><th>Бейдж</th><th>Активен</th><th></th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }
+
+  async function savePrice(id, val) {
+    const price = Number(val);
+    if (!price || price < 0) return;
+    await api(`/api/admin/products/${id}`, { method: 'PUT', body: JSON.stringify({ price }) });
+    const p = allProducts.find(p => p.id === id);
+    if (p) p.price = price;
+    toast(`Цена обновлена: $${price}`, 'green');
+  }
+
+  async function toggleActive(id, btn) {
+    const p = allProducts.find(p => p.id === id);
+    if (!p) return;
+    const newActive = p.active === false ? true : false;
+    await api(`/api/admin/products/${id}`, { method: 'PUT', body: JSON.stringify({ active: newActive }) });
+    p.active = newActive;
+    btn.classList.toggle('on', newActive);
+    toast(newActive ? 'Товар включён' : 'Товар скрыт', newActive ? 'green' : '');
+  }
+
+  // ── SETTINGS
+  async function loadChatIdInput() {
+    // We'll pre-fill from the env — ask server for current config
+    // Simple: just leave blank, user can paste
+  }
+
+  async function saveChatId() {
+    const chatId = document.getElementById('chatIdInput').value.trim();
+    if (!chatId) return;
+    const res = await api('/api/admin/set-chat-id', {
+      method: 'POST',
+      body: JSON.stringify({ chatId })
+    });
+    if (res.success) {
+      toast('Chat ID сохранён: ' + chatId, 'green');
+    } else {
+      toast('Ошибка: ' + (res.error || 'неизвестно'), 'red');
+    }
+  }
+
+  async function sendTest() {
+    const box = document.getElementById('testResult');
+    box.classList.add('show');
+    box.textContent = 'Отправка...';
+    const res = await api('/api/admin/test-message', { method: 'POST', body: '{}' });
+    box.textContent = JSON.stringify(res, null, 2);
+    if (res.ok) toast('Тестовое сообщение отправлено', 'green');
+    else toast('Ошибка отправки', 'red');
+  }
+
+  async function getBotInfo() {
+    const box = document.getElementById('botInfoResult');
+    box.classList.add('show');
+    box.textContent = 'Запрос...';
+    const res = await api('/api/admin/bot-info');
+    box.textContent = JSON.stringify(res, null, 2);
+  }
+
+  async function getUpdates() {
+    const list = document.getElementById('updatesList');
+    list.innerHTML = '<div style="margin-top:14px;font-size:13px;color:var(--text-3)">Загрузка...</div>';
+    const res = await api('/api/admin/get-updates');
+
+    if (!res.ok || !res.result?.length) {
+      list.innerHTML = `<div class="updates-list"><div class="update-item"><div class="update-item-info"><div class="update-item-type">Нет обновлений</div><div class="update-item-text">Напишите боту любое сообщение и нажмите снова</div></div></div></div>`;
+      return;
+    }
+
+    const items = res.result.map(u => {
+      const msg = u.message || u.channel_post || u.my_chat_member;
+      if (!msg) return '';
+      const chatId = msg.chat?.id;
+      const chatType = msg.chat?.type || '?';
+      const chatTitle = msg.chat?.title || msg.chat?.username || msg.chat?.first_name || '?';
+      const text = msg.text || '(нет текста)';
+
+      return `<div class="update-item">
+        <div class="update-item-info">
+          <div class="update-item-type">${chatType} — ${chatTitle}</div>
+          <div class="update-item-text">${text.substring(0, 80)}</div>
+        </div>
+        <div class="update-item-id" onclick="useChatId(${chatId})" title="Нажмите чтобы использовать этот Chat ID">
+          ${chatId}
+        </div>
+      </div>`;
+    }).join('');
+
+    list.innerHTML = `<div class="updates-list">${items}</div>`;
+  }
+
+  function useChatId(id) {
+    document.getElementById('chatIdInput').value = id;
+    toast(`Chat ID ${id} скопирован в поле`, 'green');
+  }
+
+  // ── ADD PRODUCT
+  async function addProduct() {
+    const category = document.getElementById('np_cat').value;
+    const sub      = document.getElementById('np_sub').value.trim();
+    const name     = document.getElementById('np_name').value.trim();
+    const price    = document.getElementById('np_price').value;
+    const badge    = document.getElementById('np_badge').value || null;
+
+    if (!name || !price) { toast('Введите название и цену', 'red'); return; }
+
+    const res = await api('/api/admin/products', {
+      method: 'POST',
+      body: JSON.stringify({ category, sub: sub || category, name, price: Number(price), badge })
+    });
+
+    if (res.success) {
+      toast('Товар добавлен: ' + name, 'green');
+      document.getElementById('np_name').value = '';
+      document.getElementById('np_price').value = '';
+      document.getElementById('np_sub').value = '';
+      document.getElementById('np_badge').value = '';
+      loadProducts();
+    } else {
+      toast('Ошибка: ' + (res.error || 'неизвестно'), 'red');
+    }
+  }
+
+  // ── SAVE BADGE
+  async function saveBadge(id, val) {
+    await api(`/api/admin/products/${id}`, { method: 'PUT', body: JSON.stringify({ badge: val || null }) });
+    const p = allProducts.find(p => p.id === id);
+    if (p) p.badge = val || null;
+    toast(val ? `Бейдж: ${val}` : 'Бейдж убран', 'green');
+  }
+
+  // ── DELETE PRODUCT
+  async function deleteProduct(id) {
+    const p = allProducts.find(p => p.id === id);
+    if (!confirm(`Удалить «${p?.name || id}»?`)) return;
+    await api(`/api/admin/products/${id}`, { method: 'DELETE' });
+    toast('Товар удалён', 'red');
+    loadProducts();
+  }
+
+  // ── EXPORT CSV
+  function exportCSV() {
+    const a = document.createElement('a');
+    a.href = `/api/admin/submissions/export?key=${encodeURIComponent(adminKey)}`;
+    a.click();
+  }
+
+  // ── TOAST
+  function toast(msg, type = '') {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.className = 'toast show' + (type ? ' ' + type : '');
+    clearTimeout(el._t);
+    el._t = setTimeout(() => { el.className = 'toast'; }, 3000);
+  }
+</script>
+</body>
+</html>

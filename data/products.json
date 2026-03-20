@@ -1,0 +1,112 @@
+[
+  {
+    "id": 57,
+    "category": "GravaStar",
+    "sub": "Мыши",
+    "name": "Mercury M3 Pro",
+    "price": 79,
+    "active": true,
+    "badge": "HOT",
+    "desc": "4000Hz · PAW3395 · 55g · RGB подсветка"
+  },
+  {
+    "id": 58,
+    "category": "GravaStar",
+    "sub": "Мыши",
+    "name": "Mercury V60 Pro",
+    "price": 99,
+    "active": true,
+    "badge": "NEW",
+    "desc": "Беспроводная · PAW3950 · 4000Hz · 71g"
+  },
+  {
+    "id": 59,
+    "category": "GravaStar",
+    "sub": "Наушники",
+    "name": "Sirius Pro G3",
+    "price": 89,
+    "active": true,
+    "badge": null,
+    "desc": "TWS · ANC · 50 часов автономности"
+  },
+  {
+    "id": 60,
+    "category": "GravaStar",
+    "sub": "Колонки",
+    "name": "Mars Pro Speaker",
+    "price": 79,
+    "active": true,
+    "badge": null,
+    "desc": "Bluetooth 5.3 · sci-fi дизайн · RGB"
+  },
+  {
+    "id": 61,
+    "category": "ATK",
+    "sub": "Мыши",
+    "name": "F1 Pro",
+    "price": 69,
+    "active": true,
+    "badge": "HOT",
+    "desc": "FPS · PAW3395 · 59g · 1000Hz"
+  },
+  {
+    "id": 62,
+    "category": "ATK",
+    "sub": "Мыши",
+    "name": "HERON",
+    "price": 89,
+    "active": true,
+    "badge": "NEW",
+    "desc": "Эргономичная · PAW3950 · 8000Hz"
+  },
+  {
+    "id": 63,
+    "category": "ATK",
+    "sub": "Мыши",
+    "name": "F3 Ultra",
+    "price": 99,
+    "active": true,
+    "badge": null,
+    "desc": "Ультралёгкая 47g · PAW3950 · 8000Hz"
+  },
+  {
+    "id": 64,
+    "category": "Arctic",
+    "sub": "Водяное охлаждение",
+    "name": "Liquid Freezer III 360",
+    "price": 89,
+    "active": true,
+    "badge": "HOT",
+    "desc": "AIO · 360mm · 3×120mm FDB · AM5 / LGA1851"
+  },
+  {
+    "id": 65,
+    "category": "Arctic",
+    "sub": "Водяное охлаждение",
+    "name": "Liquid Freezer WS360 SP6",
+    "price": 199,
+    "active": true,
+    "badge": "NEW",
+    "desc": "Workstation · 6×60mm SP6 · до 420W TDP"
+  },
+  {
+    "id": 66,
+    "category": "Arctic",
+    "sub": "Воздушное охлаждение",
+    "name": "Freezer 36",
+    "price": 49,
+    "active": true,
+    "badge": null,
+    "desc": "Башенный · LGA1851 / AM5 · 3 трубки"
+  },
+  {
+    "id": 67,
+    "category": "Arctic",
+    "sub": "Аксессуары",
+    "name": "MX-6 Thermal Compound 20g",
+    "price": 12,
+    "active": true,
+    "badge": null,
+    "desc": "Термопаста · 14.5 W/m·K · со шпателем"
+  }
+]

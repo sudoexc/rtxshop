@@ -1,0 +1,652 @@
+/* ======================================
+   RTXSHOP OOO — Main JavaScript
+   ====================================== */
+
+// ======= CUSTOM CURSOR =======
+(function () {
+  // only on real pointer devices
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+
+  const dot  = document.getElementById('c-dot');
+  const ring = document.getElementById('c-ring');
+  if (!dot || !ring) return;
+
+  const B = document.body;
+  let mx = -200, my = -200;
+  let rx = -200, ry = -200;
+  let raf;
+
+  // instant dot
+  function moveDot(x, y) {
+    dot.style.transform = `translate(calc(${x}px - 50%), calc(${y}px - 50%))`;
+  }
+
+  // spring ring
+  function tick() {
+    rx += (mx - rx) * 0.13;
+    ry += (my - ry) * 0.13;
+    ring.style.transform = `translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`;
+    raf = requestAnimationFrame(tick);
+  }
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+    moveDot(mx, my);
+    B.classList.remove('c-hidden');
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => B.classList.add('c-hidden'), { passive: true });
+  document.addEventListener('mouseenter', () => B.classList.remove('c-hidden'), { passive: true });
+
+  // hide when window loses focus (fixes "double cursor" on alt-tab)
+  document.addEventListener('visibilitychange', () => {
+    B.classList.toggle('c-hidden', document.hidden);
+  });
+
+  // hover state
+  const SEL = 'a,button,[role="button"],input,select,textarea,label,.partner-card,.cat-tab,.faq-q,.catalog-row,.about-feature,.step,.service-row';
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest(SEL)) B.classList.add('c-hover');
+  }, { passive: true });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest(SEL)) B.classList.remove('c-hover');
+  }, { passive: true });
+
+  document.addEventListener('mousedown', () => { B.classList.add('c-click'); B.classList.remove('c-hover'); }, { passive: true });
+  document.addEventListener('mouseup',   () => { B.classList.remove('c-click'); }, { passive: true });
+
+  // start loop
+  raf = requestAnimationFrame(tick);
+})();
+
+// ======= THEME =======
+(function () {
+  const saved = localStorage.getItem('rtx_theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+})();
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('rtx_theme', next);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
+});
+
+// ======= TRANSLATIONS =======
+const T = {
+  ru: {
+    nav_about: 'О нас', nav_partners: 'Партнёры', nav_catalog: 'Каталог',
+    nav_services: 'Услуги', nav_faq: 'FAQ', nav_contact: 'Связаться',
+    nav_how: 'Как работаем', nav_contact_short: 'Контакты',
+    tg_label: 'Написать в Telegram',
+    sticky_text: 'Станьте партнёром RTXSHOP — ответим за 2 часа',
+    sticky_btn: 'Оставить заявку',
+    hero_eyebrow: 'Официальный дистрибьютор в Узбекистане',
+    hero_h1a: 'Прямые поставки', hero_h1b: 'для вашего магазина.',
+    hero_sub: 'RTXSHOP OOO — официальный дистрибьютор ATK, GravaStar и Arctic в Узбекистане. Игровые мыши, периферия и системы охлаждения оптом для магазинов.',
+    hero_cta1: 'Стать партнёром', hero_cta2: 'Смотреть каталог',
+    stat_stores: 'Магазинов-партнёров', stat_products: 'Товаров в каталоге',
+    stat_brands: 'Официальных бренда', stat_coverage: 'Охват по стране', stat_years: 'Лет на рынке',
+    ticker_label: 'Официальные партнёры',
+    map_from: 'Мировые бренды', map_to: 'Узбекистан',
+    brand_atk: 'Игровые мыши', brand_grava: 'Периферия',
+    brand_arctic: 'Охлаждение', brand_b2b: 'Оптовая модель',
+    about_eyebrow: 'О компании',
+    about_h2a: 'Мост между', about_h2b: 'мировыми', about_h2c: 'брендами', about_h2d: 'и вашим магазином',
+    about_sub: 'RTXSHOP OOO — официальный дистрибьютор ATK, GravaStar и Arctic в Узбекистане. Поставляем игровые мыши, периферию и системы охлаждения напрямую в розничные магазины по всей стране.',
+    feat1_title: 'Официальное партнёрство', feat1_sub: 'Прямые договоры с ATK, GravaStar и Arctic — оригинальная продукция с гарантией',
+    feat2_title: 'Оптовые поставки',        feat2_sub: 'Работаем с магазинами по всему Узбекистану — от Ташкента до регионов',
+    feat3_title: 'Быстрая логистика',       feat3_sub: 'Выстроенные цепочки поставок для своевременного пополнения вашего склада',
+    partners_eyebrow: 'Партнёры',
+    partners_h2a: 'Бренды, которые мы', partners_h2b: 'представляем',
+    partners_sub: 'Мы сотрудничаем только с проверенными мировыми брендами, чтобы вы могли предложить своим клиентам лучшее',
+    atk_cat: 'Игровые мыши', atk_desc: 'Профессиональные игровые мыши с передовыми сенсорами и эргономичным дизайном. Выбор геймеров, которые требуют точности.',
+    grava_cat: 'Игровая периферия', grava_desc: 'Уникальный sci-fi дизайн и топовые характеристики. Колонки, наушники, мыши — продукты, которые выделяют вас из толпы.',
+    arctic_cat: 'Системы охлаждения', arctic_desc: 'Европейский эксперт в области охлаждения. Кулеры, термопасты, вентиляторы — тишина и эффективность в одном.',
+    open_site: 'Открыть сайт',
+    bsl_eyebrow: 'Хит продаж', bsl_h2a: 'Самые', bsl_h2b: 'востребованные',
+    bsl_sub: 'Топовые позиции из нашего каталога — от GPU до игровой периферии',
+    pc_wholesale: 'оптом', pc_view_brand: 'Смотреть каталог',
+    view_catalog: 'Смотреть каталог',
+    catalog_eyebrow: 'Каталог', catalog_h2a: 'Актуальные', catalog_h2b: 'цены',
+    catalog_sub: 'Оптовые цены для магазинов. Для уточнения минимального заказа — свяжитесь с менеджером.',
+    catalog_cta_text: 'Нужен индивидуальный прайс или товар не в списке?',
+    catalog_cta_btn: 'Запросить у менеджера',
+    services_eyebrow: 'Услуги', services_h2a: 'Всё что нужно', services_h2b: 'вашему бизнесу',
+    services_sub: 'Мы берём на себя всё: от переговоров с брендами до доставки товара к вам на склад',
+    svc1_title: 'Оптовые заказы',         svc1_sub: 'Гибкие условия минимального заказа и конкурентные оптовые цены для магазинов любого размера',
+    svc2_title: 'Логистика и доставка',   svc2_sub: 'Организуем доставку прямо на ваш склад. Отслеживание груза на каждом этапе пути',
+    svc3_title: 'Гарантия оригинала',     svc3_sub: 'Вся продукция поставляется напрямую от официальных производителей с сертификатами подлинности',
+    svc4_title: 'Маркетинговая поддержка',svc4_sub: 'Предоставляем материалы бренда: фотографии, описания, POS-материалы для вашего магазина',
+    svc5_title: 'Персональный менеджер',  svc5_sub: 'Закреплённый менеджер для оперативного решения всех вопросов и помощи с заказами',
+    svc6_title: 'Гарантийный сервис',     svc6_sub: 'Помощь с гарантийными случаями и сервисным обслуживанием проданных товаров',
+    how_eyebrow: 'Как работаем', how_h2a: 'Четыре шага до', how_h2b: 'первой поставки',
+    step1_title: 'Заявка',          step1_sub: 'Оставьте заявку на сайте или напишите нам напрямую — ответим в течение 2 часов',
+    step2_title: 'Согласование',    step2_sub: 'Обсудим ассортимент, объёмы и условия сотрудничества, подпишем договор',
+    step3_title: 'Оплата и заказ',  step3_sub: 'Оформляем заказ напрямую у бренда под ваши нужды после подтверждения',
+    step4_title: 'Доставка',        step4_sub: 'Организуем доставку и передаём товар вам — готово к продаже',
+    faq_eyebrow: 'FAQ', faq_h2a: 'Частые', faq_h2b: 'вопросы',
+    faq1_q: 'Какой минимальный объём заказа?',
+    faq1_a: 'Минимальный заказ обсуждается индивидуально в зависимости от бренда и категории товара. Для большинства позиций — от 3–5 единиц. Напишите нам и мы подберём условия под ваш магазин.',
+    faq2_q: 'Как быстро доставляют товар?',
+    faq2_a: 'Товар в наличии на складе доставляется по Ташкенту за 1–2 рабочих дня, в регионы Узбекистана — за 3–5 дней. Под заказ сроки зависят от бренда и текущих остатков.',
+    faq3_q: 'Какие способы оплаты доступны?',
+    faq3_a: 'Работаем по безналичному расчёту (счёт для юридических лиц), наличными и переводом. Возможна постоплата для постоянных партнёров после первых успешных сделок.',
+    faq4_q: 'Как оформляется гарантия на товары?',
+    faq4_a: 'Вся продукция поставляется с официальной гарантией производителя. Мы берём на себя гарантийные случаи и взаимодействуем с сервисными центрами напрямую.',
+    faq5_q: 'В каких городах Узбекистана работаете?',
+    faq5_a: 'Работаем по всему Узбекистану: Ташкент, Самарканд, Бухара, Андижан, Фергана, Наманган, Нукус и другие города. Доставка организована через надёжных логистических партнёров.',
+    contact_eyebrow: 'Контакты', contact_h2a: 'Начнём', contact_h2b: 'сотрудничество?',
+    contact_sub: 'Оставьте заявку и наш менеджер свяжется с вами в ближайшее время для обсуждения условий',
+    cd1_label: 'Адрес', cd1_val: 'Ташкент, Узбекистан',
+    cd3_label: 'Время работы', cd3_val: 'Пн–Пт: 9:00 — 18:00 (UZT)',
+    cd4_label: 'Ответ на заявку', cd4_val: 'В течение 2 рабочих часов',
+    form_title: 'Оставить заявку', form_sub: 'Заполните форму — мы свяжемся с вами',
+    field_name: 'Ваше имя *', field_company: 'Компания / Магазин',
+    field_phone: 'Телефон *', field_interest: 'Интересующий бренд',
+    field_interest_placeholder: 'Выберите бренд', field_interest_all: 'Все категории',
+    field_message: 'Сообщение', field_message_ph: 'Расскажите о вашем магазине и что вас интересует...',
+    form_submit: 'Отправить заявку',
+    form_success_title: 'Заявка отправлена', form_success_sub: 'Наш менеджер свяжется с вами в течение 2 рабочих часов',
+    footer_desc: 'Официальный дистрибьютор ATK, GravaStar и Arctic в Узбекистане. Поставляем качественную технику для вашего бизнеса.',
+    footer_col1: 'Компания', footer_col2: 'Партнёры', footer_col3: 'Связь',
+    footer_partner: 'Стать партнёром', footer_rights: 'Все права защищены.',
+    footer_privacy: 'Политика конфиденциальности',
+    req_btn: 'Запросить',
+  },
+  uz: {
+    nav_about: 'Biz haqimizda', nav_partners: 'Hamkorlar', nav_catalog: 'Katalog',
+    nav_services: 'Xizmatlar', nav_faq: 'FAQ', nav_contact: 'Bog\'lanish',
+    nav_how: 'Qanday ishlaymiz', nav_contact_short: 'Kontaktlar',
+    tg_label: 'Telegramga yozish',
+    sticky_text: 'RTXSHOP hamkori bo\'ling — 2 soat ichida javob beramiz',
+    sticky_btn: 'Ariza qoldirish',
+    hero_eyebrow: 'O\'zbekistondagi rasmiy distribyutor',
+    hero_h1a: 'To\'g\'ridan-to\'g\'ri yetkazib berish', hero_h1b: 'do\'koningiz uchun.',
+    hero_sub: 'RTXSHOP OOO — ATK, GravaStar va Arctic rasmiy distribyutori. O\'yin sichqonlari, periferiya va sovutish tizimlari ulgurji yetkazib beriladi.',
+    hero_cta1: 'Hamkor bo\'lish', hero_cta2: 'Katalogni ko\'rish',
+    stat_stores: 'Ta do\'kon-hamkor', stat_products: 'Ta mahsulot katalogda',
+    stat_brands: 'Rasmiy brend', stat_coverage: 'Mamlakat bo\'ylab', stat_years: 'Yil bozorda',
+    ticker_label: 'Rasmiy hamkorlar',
+    map_from: 'Jahon brendlari', map_to: 'O\'zbekiston',
+    brand_atk: 'O\'yin sichqonlari', brand_grava: 'Periferiya',
+    brand_arctic: 'Sovutish', brand_b2b: 'Ulgurji model',
+    about_eyebrow: 'Kompaniya haqida',
+    about_h2a: 'Jahon brendlari', about_h2b: 'va sizning', about_h2c: 'do\'koningiz', about_h2d: 'o\'rtasidagi ko\'prik',
+    about_sub: 'RTXSHOP OOO — yetakchi jahon brendlarining mahsulotlarini to\'g\'ridan-to\'g\'ri O\'zbekiston chakana do\'konlariga yetkazib beruvchi rasmiy distribyutor.',
+    feat1_title: 'Rasmiy hamkorlik',   feat1_sub: 'ATK, GravaStar va Arctic bilan bevosita shartnomalar — kafolatlangan original mahsulot',
+    feat2_title: 'Ulgurji yetkazib berish', feat2_sub: 'O\'zbekiston bo\'ylab do\'konlar bilan ishlaymiz — Toshkentdan viloyatlargacha',
+    feat3_title: 'Tezkor logistika',   feat3_sub: 'Omboringizni o\'z vaqtida to\'ldirish uchun yetkazib berish zanjirlari qurilgan',
+    partners_eyebrow: 'Hamkorlar',
+    partners_h2a: 'Biz vakili bo\'lgan', partners_h2b: 'brendlar',
+    partners_sub: 'Biz faqat ishonchli jahon brendlari bilan hamkorlik qilamiz, siz mijozlaringizga eng yaxshisini taklif qilishingiz uchun',
+    atk_cat: 'O\'yin sichqonlari', atk_desc: 'Ilg\'or sensorli va ergonomik dizaynli professional o\'yin sichqonlari. Aniqlik talab qiladigan geymerlar tanlovi.',
+    grava_cat: 'O\'yin periferiyasi', grava_desc: 'Noyob sci-fi dizayn va yuqori xususiyatlar. Kolonkalar, quloqchinlar, sichqonlar — sizi ajratib turuvchi mahsulotlar.',
+    arctic_cat: 'Sovutish tizimlari', arctic_desc: 'Kompyuter sovutish sohasidagi Evropa eksperti. Kulerlar, termopastalar, ventilatorlar.',
+    open_site: 'Saytni ochish',
+    bsl_eyebrow: 'Eng ko\'p sotiladi', bsl_h2a: 'Eng', bsl_h2b: 'mashhur',
+    bsl_sub: 'Katalogimizdan eng talabchan pozitsiyalar — GPU dan o\'yin periferiyasigacha',
+    pc_wholesale: 'ulgurji', pc_view_brand: 'Katalogni ko\'rish',
+    view_catalog: 'Katalogni ko\'rish',
+    catalog_eyebrow: 'Katalog', catalog_h2a: 'Joriy', catalog_h2b: 'narxlar',
+    catalog_sub: 'Do\'konlar uchun ulgurji narxlar. Minimal buyurtma miqdori uchun menejer bilan bog\'laning.',
+    catalog_cta_text: 'Individual narx yoki ro\'yxatda yo\'q mahsulot kerakmi?',
+    catalog_cta_btn: 'Menejerdan so\'rash',
+    services_eyebrow: 'Xizmatlar', services_h2a: 'Biznesingizga', services_h2b: 'kerak bo\'lgan hamma narsa',
+    services_sub: 'Biz hamma narsani o\'z zimmamizga olamiz: brendlar bilan muzokaralardan tortib tovarni omboringizga yetkazib berishgacha',
+    svc1_title: 'Ulgurji buyurtmalar',     svc1_sub: 'Har qanday o\'lchamdagi do\'konlar uchun moslashuvchan minimal buyurtma shartlari va raqobatbardosh narxlar',
+    svc2_title: 'Logistika va yetkazib berish', svc2_sub: 'Tovarni to\'g\'ridan-to\'g\'ri omboringizga yetkazib berishni tashkil etamiz',
+    svc3_title: 'Original kafolati',       svc3_sub: 'Barcha mahsulotlar rasmiy ishlab chiqaruvchilardan sertifikatlar bilan yetkazib beriladi',
+    svc4_title: 'Marketing qo\'llab-quvvatlash', svc4_sub: 'Brend materiallari: fotosuratlar, tavsiflar, POS-materiallar',
+    svc5_title: 'Shaxsiy menejer',        svc5_sub: 'Barcha savollarga tezkor javob berish va buyurtmalar bilan yordam uchun biriktirilgan menejer',
+    svc6_title: 'Kafolat xizmati',         svc6_sub: 'Kafolat holatlari va sotilgan tovarlarni texnik xizmat ko\'rsatishda yordam',
+    how_eyebrow: 'Qanday ishlaymiz', how_h2a: 'Birinchi yetkazib berishgacha', how_h2b: 'to\'rt qadam',
+    step1_title: 'Ariza',          step1_sub: 'Saytda ariza qoldiring yoki bizga to\'g\'ridan-to\'g\'ri yozing — 2 soat ichida javob beramiz',
+    step2_title: 'Kelishuv',       step2_sub: 'Assortiment, hajmlar va hamkorlik shartlarini muhokama qilamiz, shartnoma imzolaymiz',
+    step3_title: 'To\'lov va buyurtma', step3_sub: 'Tasdiqlangandan so\'ng brenddan to\'g\'ridan-to\'g\'ri buyurtma rasmiylashtiramiz',
+    step4_title: 'Yetkazib berish', step4_sub: 'Yetkazib berishni tashkil etamiz va tovarni sizga topshiramiz — sotishga tayyor',
+    faq_eyebrow: 'FAQ', faq_h2a: 'Ko\'p', faq_h2b: 'so\'raladigan savollar',
+    faq1_q: 'Minimal buyurtma hajmi qancha?',
+    faq1_a: 'Minimal buyurtma brend va tovar toifasiga qarab individual tarzda muhokama qilinadi. Ko\'p pozitsiyalar uchun — 3–5 dona dan. Bizga yozing va do\'koningiz uchun shartlarni tanlaymiz.',
+    faq2_q: 'Tovar qancha vaqtda yetkaziladi?',
+    faq2_a: 'Ombordagi tovar Toshkent bo\'ylab 1–2 ish kunida, O\'zbekiston viloyatlariga 3–5 kun ichida yetkaziladi. Buyurtma asosida muddatlar brendga va joriy qoldiqlarga bog\'liq.',
+    faq3_q: 'Qanday to\'lov usullari mavjud?',
+    faq3_a: 'Naqd pul, bank o\'tkazmasi va yuridik shaxslar uchun hisob-faktura asosida ishlashimiz mumkin. Doimiy hamkorlar uchun birinchi muvaffaqiyatli bitimlardan so\'ng kechiktirilgan to\'lov mumkin.',
+    faq4_q: 'Tovarlar uchun kafolat qanday rasmiylashtiriladi?',
+    faq4_a: 'Barcha mahsulotlar ishlab chiqaruvchining rasmiy kafolati bilan yetkaziladi. Kafolat holatlari va servis markazlari bilan o\'zaro munosabatlarni to\'g\'ridan-to\'g\'ri o\'z zimmamizga olamiz.',
+    faq5_q: 'O\'zbekistonning qaysi shaharlarida ishlaysizlar?',
+    faq5_a: 'Butun O\'zbekiston bo\'ylab ishlaymiz: Toshkent, Samarqand, Buxoro, Andijon, Farg\'ona, Namangan, Nukus va boshqa shaharlar. Yetkazib berish ishonchli logistika hamkorlari orqali tashkil etilgan.',
+    contact_eyebrow: 'Kontaktlar', contact_h2a: 'Hamkorlikni', contact_h2b: 'boshlaymizmi?',
+    contact_sub: 'Ariza qoldiring — menejerimiz shartlarni muhokama qilish uchun yaqin vaqt ichida siz bilan bog\'lanadi',
+    cd1_label: 'Manzil', cd1_val: 'Toshkent, O\'zbekiston',
+    cd3_label: 'Ish vaqti', cd3_val: 'Du–Ju: 9:00 — 18:00 (UZT)',
+    cd4_label: 'Arizaga javob', cd4_val: '2 ish soati ichida',
+    form_title: 'Ariza qoldirish', form_sub: 'Formani to\'ldiring — siz bilan bog\'lanamiz',
+    field_name: 'Ismingiz *', field_company: 'Kompaniya / Do\'kon',
+    field_phone: 'Telefon *', field_interest: 'Qiziqtirgan brend',
+    field_interest_placeholder: 'Brendni tanlang', field_interest_all: 'Barcha toifalar',
+    field_message: 'Xabar', field_message_ph: 'Do\'koningiz va qiziqishlaringiz haqida aytib bering...',
+    form_submit: 'Ariza yuborish',
+    form_success_title: 'Ariza yuborildi', form_success_sub: 'Menejerimiz 2 ish soati ichida siz bilan bog\'lanadi',
+    footer_desc: 'O\'zbekistonda ATK, GravaStar va Arctic rasmiy distribyutori. Biznesingiz uchun sifatli texnika yetkazib beramiz.',
+    footer_col1: 'Kompaniya', footer_col2: 'Hamkorlar', footer_col3: 'Aloqa',
+    footer_partner: 'Hamkor bo\'lish', footer_rights: 'Barcha huquqlar himoyalangan.',
+    footer_privacy: 'Maxfiylik siyosati',
+    req_btn: 'So\'rash',
+  }
+};
+
+let currentLang = localStorage.getItem('rtx_lang') || 'ru';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('rtx_lang', lang);
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (T[lang][key]) el.textContent = T[lang][key];
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (T[lang][key]) el.placeholder = T[lang][key];
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  // re-render catalog labels
+  if (window._catalogProducts) renderCatalog(window._catalogProducts, window._activeTab);
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+// ======= NAVBAR SCROLL =======
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+// ======= MOBILE MENU =======
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+  const spans = hamburger.querySelectorAll('span');
+  const isOpen = mobileMenu.classList.contains('open');
+  spans[0].style.transform = isOpen ? 'translateY(7px) rotate(45deg)' : '';
+  spans[1].style.opacity   = isOpen ? '0' : '';
+  spans[2].style.transform = isOpen ? 'translateY(-7px) rotate(-45deg)' : '';
+});
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+}
+
+// ======= REVEAL ON SCROLL =======
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ======= STICKY CTA =======
+const stickyCta = document.getElementById('stickyCta');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > window.innerHeight * 0.6) stickyCta.classList.add('visible');
+  else stickyCta.classList.remove('visible');
+}, { passive: true });
+
+// ======= CATALOG =======
+let _products = [];
+let _activeTab = 'GravaStar';
+let _searchQuery = '';
+window._activeTab = 'GravaStar';
+
+async function loadCatalog() {
+  try {
+    const res = await fetch('/api/products');
+    _products = await res.json();
+    window._catalogProducts = _products;
+    renderCatalog();
+  } catch {
+    document.getElementById('catalogBody').innerHTML =
+      '<div style="padding:40px;text-align:center;color:var(--text-muted);font-size:14px;">Не удалось загрузить каталог</div>';
+  }
+}
+
+function highlight(text, query) {
+  if (!query) return text;
+  const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
+  return text.replace(re, '<mark>$1</mark>');
+}
+
+function renderCatalog() {
+  const body = document.getElementById('catalogBody');
+  const q = _searchQuery.toLowerCase().trim();
+
+  // brand catalog mode
+  if (!q && BRAND_CATS.includes(_activeTab)) {
+    renderBrandCatalog(_activeTab);
+    return;
+  }
+
+  let source = _products;
+  // if searching — show all, else filter by tab
+  if (!q) source = source.filter(p => p.category === _activeTab);
+  if (q)  source = source.filter(p => p.name.toLowerCase().includes(q));
+
+  if (!source.length) {
+    body.innerHTML = '<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">Ничего не найдено</div>';
+    return;
+  }
+
+  const groups = {};
+  source.forEach(p => {
+    const key = q ? `${p.category} — ${p.sub}` : p.sub;
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(p);
+  });
+
+  const reqBtn = T[currentLang].req_btn || 'Запросить';
+  let html = '';
+  Object.entries(groups).forEach(([sub, items]) => {
+    html += `<div class="catalog-sub-group"><div class="catalog-sub-header">${sub}</div>`;
+    items.forEach(p => {
+      const badgeHtml = p.badge
+        ? `<span class="product-badge badge-${p.badge.toLowerCase()}">${p.badge}</span>`
+        : '';
+      html += `<div class="catalog-row">
+        <span class="catalog-row-name">${highlight(p.name, q)}</span>
+        ${badgeHtml}
+        <span class="catalog-row-price">$${p.price.toLocaleString()}</span>
+        <button class="catalog-row-btn" onclick="requestProduct(${JSON.stringify(p.name)})">${reqBtn}</button>
+      </div>`;
+    });
+    html += '</div>';
+  });
+  body.innerHTML = html;
+}
+
+// brand catalog tabs
+const BRAND_CATS = ['GravaStar', 'ATK', 'Arctic'];
+
+const BRAND_ICON = {
+  GravaStar: `<svg width="48" height="56" viewBox="0 0 48 56" fill="none"><path d="M24 4C13.5 4 5 12.5 5 23v10c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.5"/><line x1="24" y1="4" x2="24" y2="28" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.3"/><rect x="18" y="32" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1" stroke-opacity="0.35"/></svg>`,
+  ATK: `<svg width="48" height="56" viewBox="0 0 48 56" fill="none"><path d="M24 4C13.5 4 5 12.5 5 23v10c0 10.5 8.5 19 19 19s19-8.5 19-19V23C43 12.5 34.5 4 24 4z" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.5"/><line x1="24" y1="4" x2="24" y2="28" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.3"/><rect x="18" y="32" width="12" height="9" rx="4" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1" stroke-opacity="0.35"/></svg>`,
+  Arctic: `<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="22" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.45"/><circle cx="28" cy="28" r="12" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.3"/><circle cx="28" cy="28" r="4" fill="currentColor" fill-opacity="0.25"/><path d="M28 6 Q33 15 28 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/><path d="M50 28 Q41 33 36 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/><path d="M28 50 Q23 41 28 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/><path d="M6 28 Q15 23 20 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-opacity="0.5"/></svg>`,
+};
+
+const BRAND_TAG = {
+  GravaStar: 'Игровая периферия · sci-fi дизайн',
+  ATK: 'Профессиональные игровые мыши',
+  Arctic: 'Системы охлаждения · Европейский бренд',
+};
+
+function showBrandCatalog(brand) {
+  const catalogSection = document.getElementById('catalog');
+  if (!catalogSection) return;
+  // activate brand tab
+  document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+  const tab = document.querySelector(`.cat-tab[data-cat="${brand}"]`);
+  if (tab) tab.classList.add('active');
+  _activeTab = brand;
+  window._activeTab = brand;
+  renderCatalog();
+  // scroll to catalog
+  const top = catalogSection.getBoundingClientRect().top + window.scrollY - 70;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
+
+async function renderBrandCatalog(brand) {
+  const body   = document.getElementById('catalogBody');
+  const reqBtn = T[currentLang].req_btn || 'Запросить';
+  const tag    = BRAND_TAG[brand] || '';
+
+  // All brands go through server proxy (GravaStar/ATK → Shopify, Arctic → scraper)
+  body.innerHTML = '<div class="catalog-loading"><div class="catalog-spinner"></div></div>';
+
+  try {
+    const r = await fetch(`/api/brands/${brand.toLowerCase()}`);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const products = await r.json();
+
+    const currencySign = brand === 'Arctic' ? '€' : '$';
+
+    let html = `<div class="brand-catalog-header">
+      <div class="brand-catalog-logo">${brand}</div>
+      <span class="brand-catalog-tag">${tag}</span>
+      <span class="brand-catalog-count">${products.length} товаров</span>
+    </div>`;
+
+    if (!products.length) {
+      html += '<div style="padding:40px;text-align:center;color:var(--text-muted);">Нет доступных товаров</div>';
+      body.innerHTML = html;
+      return;
+    }
+
+    // Arctic: group by type
+    if (brand === 'Arctic') {
+      const groups = {};
+      products.forEach(p => { if (!groups[p.type]) groups[p.type] = []; groups[p.type].push(p); });
+      Object.entries(groups).forEach(([type, items]) => {
+        html += `<div class="catalog-sub-header">${type}</div><div class="brand-photo-grid">`;
+        items.forEach(p => {
+          const badge = p.badge ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}">${p.badge}</span>` : '';
+          const imgHtml = p.image
+            ? `<img src="${p.image}" alt="${(p.name||p.title).replace(/"/g,'&quot;')}" loading="lazy" />`
+            : (BRAND_ICON['Arctic'] || '');
+          const nm = p.name || p.title;
+          html += `<div class="bpc">
+            <div class="bpc-img">${badge}${imgHtml}</div>
+            <div class="bpc-body">
+              <div class="bpc-type">${p.type}</div>
+              <div class="bpc-name">${nm}</div>
+              <div class="bpc-price-row"><div class="bpc-price">от ${currencySign}${p.price}</div></div>
+              <button class="bpc-btn" onclick="requestProduct(${JSON.stringify(nm)})">${reqBtn}</button>
+            </div>
+          </div>`;
+        });
+        html += '</div>';
+      });
+    } else {
+      // GravaStar / ATK: flat grid
+      html += '<div class="brand-photo-grid">';
+      products.forEach(p => {
+        const imgHtml = p.image
+          ? `<img src="${p.image}" alt="${p.title.replace(/"/g,'&quot;')}" loading="lazy" />`
+          : (BRAND_ICON[brand] || '');
+        const priceHtml = p.price > 0 ? `<div class="bpc-price">от ${currencySign}${p.price.toLocaleString()}</div>` : '';
+        const oldPrice  = p.comparePrice && p.comparePrice > p.price
+          ? `<span class="bpc-price-old">${currencySign}${p.comparePrice.toLocaleString()}</span>` : '';
+        html += `<div class="bpc">
+          <div class="bpc-img">${imgHtml}</div>
+          <div class="bpc-body">
+            <div class="bpc-type">${p.type || brand}</div>
+            <div class="bpc-name">${p.title}</div>
+            <div class="bpc-price-row">${priceHtml}${oldPrice}</div>
+            <button class="bpc-btn" onclick="requestProduct(${JSON.stringify(p.title)})">${reqBtn}</button>
+          </div>
+        </div>`;
+      });
+      html += '</div>';
+    }
+
+    body.innerHTML = html;
+  } catch (e) {
+    body.innerHTML = `<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">
+      <p style="margin-bottom:16px;">Не удалось загрузить каталог бренда</p>
+      <button onclick="renderBrandCatalog('${brand}')" style="background:var(--accent);color:white;border:none;padding:10px 24px;border-radius:8px;cursor:pointer;font-size:13px;font-family:inherit;font-weight:600;">Повторить</button>
+    </div>`;
+  }
+}
+
+// clicking "Запросить" → scroll to form + prefill
+function requestProduct(name) {
+  const msg = document.getElementById('message');
+  const interest = document.getElementById('interest');
+  if (msg) msg.value = `Интересует: ${name}`;
+  if (interest) interest.value = '';
+  const contact = document.getElementById('contact');
+  if (contact) {
+    window.scrollTo({ top: contact.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+    setTimeout(() => msg && msg.focus(), 600);
+  }
+}
+
+// search
+const searchInput = document.getElementById('catalogSearch');
+const searchClear = document.getElementById('searchClear');
+
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    _searchQuery = searchInput.value;
+    searchClear?.classList.toggle('visible', !!_searchQuery);
+    renderCatalog();
+  });
+}
+
+function clearSearch() {
+  _searchQuery = '';
+  if (searchInput) searchInput.value = '';
+  searchClear?.classList.remove('visible');
+  renderCatalog();
+}
+
+document.querySelectorAll('.cat-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    _activeTab = tab.dataset.cat;
+    window._activeTab = _activeTab;
+    renderCatalog();
+  });
+});
+
+// ======= FAQ =======
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const ans  = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => {
+    el.classList.remove('open');
+    el.querySelector('.faq-a').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    ans.style.maxHeight = ans.scrollHeight + 'px';
+  }
+}
+
+// ======= CONTACT FORM =======
+const form = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const submitText = document.getElementById('submitText');
+const formSuccess = document.getElementById('formSuccess');
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const data = {
+    name:     form.name.value.trim(),
+    company:  form.company.value.trim(),
+    phone:    form.phone.value.trim(),
+    email:    form.email.value.trim(),
+    interest: form.interest.value,
+    message:  form.message.value.trim(),
+  };
+  if (!data.name || !data.phone) return;
+  submitBtn.disabled = true;
+  submitText.textContent = currentLang === 'uz' ? 'Yuborilmoqda...' : 'Отправляем...';
+  try {
+    const res    = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+    const result = await res.json();
+    if (result.success) {
+      form.style.display = 'none';
+      formSuccess.style.display = 'block';
+    } else throw new Error(result.error);
+  } catch {
+    submitBtn.disabled = false;
+    submitText.textContent = T[currentLang].form_submit;
+    showNotification(currentLang === 'uz' ? 'Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.' : 'Ошибка. Попробуйте ещё раз.', 'error');
+  }
+});
+
+// ======= NOTIFICATION =======
+function showNotification(msg, type = 'info') {
+  const el = document.createElement('div');
+  el.style.cssText = `position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);z-index:9999;background:${type === 'error' ? '#ff3b30' : '#0071e3'};color:white;padding:13px 22px;border-radius:12px;font-size:14px;font-weight:500;font-family:Inter,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,0.4);transition:transform 0.3s cubic-bezier(.4,0,.2,1);white-space:nowrap;`;
+  el.textContent = msg;
+  document.body.appendChild(el);
+  requestAnimationFrame(() => { el.style.transform = 'translateX(-50%) translateY(0)'; });
+  setTimeout(() => { el.style.transform = 'translateX(-50%) translateY(100px)'; setTimeout(() => el.remove(), 400); }, 3500);
+}
+
+// ======= SMOOTH SCROLL =======
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const href = anchor.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) { e.preventDefault(); window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 60, behavior: 'smooth' }); }
+  });
+});
+
+// ======= PHONE MASK =======
+const phoneInput = document.getElementById('phone');
+if (phoneInput) {
+  phoneInput.addEventListener('input', e => {
+    let val = e.target.value.replace(/\D/g, '');
+    if (val.startsWith('998')) val = '+998 ' + val.slice(3,5) + ' ' + val.slice(5,8) + ' ' + val.slice(8,10) + ' ' + val.slice(10,12);
+    e.target.value = val.trim();
+  });
+}
+
+// ======= HERO COUNTERS =======
+function animateCounter(el, target, suffix = '', duration = 1600) {
+  const start = performance.now();
+  const isPlus = suffix.includes('+');
+  const cleanSuffix = suffix.replace('+', '');
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    // ease out expo
+    const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+    const value = Math.round(ease * target);
+    el.textContent = value + (isPlus && value >= target ? '+' : '') + cleanSuffix;
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function initCounters() {
+  const counters = [
+    { selector: '.hero-stat:nth-child(1) .hero-stat-number', target: 20, suffix: '+' },
+    { selector: '.hero-stat:nth-child(3) .hero-stat-number', target: 3, suffix: '' },
+    { selector: '.hero-stat:nth-child(5) .hero-stat-number', target: 5, suffix: '+' },
+  ];
+  const heroStats = document.querySelector('.hero-stats');
+  if (!heroStats) return;
+  let fired = false;
+  const obs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !fired) {
+      fired = true;
+      counters.forEach(({ selector, target, suffix }) => {
+        const el = document.querySelector(selector);
+        if (el) animateCounter(el, target, suffix);
+      });
+    }
+  }, { threshold: 0.5 });
+  obs.observe(heroStats);
+}
+
+// ======= INIT =======
+applyLang(currentLang);
+loadCatalog();
+initCounters();

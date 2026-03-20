@@ -1,0 +1,185 @@
+{
+  "data": [
+    {
+      "handle": "Liquid-Freezer-III-360",
+      "sku": "ACFRE00136A",
+      "name": "Liquid Freezer III 360",
+      "type": "Водяное охлаждение",
+      "price": 119,
+      "badge": "HOT",
+      "image": "https://www.arctic.de/media/9d/26/30/1725369416/Liquid_Freezer_III_360_Black_G01_eha_3_awards.png"
+    },
+    {
+      "handle": "Liquid-Freezer-III-360-A-RGB",
+      "sku": "ACFRE00143A",
+      "name": "Liquid Freezer III 360 A-RGB",
+      "type": "Водяное охлаждение",
+      "price": 134,
+      "badge": null,
+      "image": "https://www.arctic.de/media/0e/61/aa/1669800773/og-image.png"
+    },
+    {
+      "handle": "Liquid-Freezer-III-240",
+      "sku": "ACFRE00134A",
+      "name": "Liquid Freezer III 240",
+      "type": "Водяное охлаждение",
+      "price": 104,
+      "badge": null,
+      "image": "https://www.arctic.de/media/73/39/0a/1725362018/Liquid_Freezer_III_240_Black_G01_eha_3_awards.png"
+    },
+    {
+      "handle": "Liquid-Freezer-III-240-A-RGB-Black",
+      "sku": "ACFRE00142A",
+      "name": "Liquid Freezer III 240 A-RGB",
+      "type": "Водяное охлаждение",
+      "price": 114,
+      "badge": null,
+      "image": "https://www.arctic.de/media/9e/e2/bc/1725361717/Liquid_Freezer_III_240_ARGB_Black_Rainbow_G01_eha_3_awards.png"
+    },
+    {
+      "handle": "Liquid-Freezer-III-420-A-RGB",
+      "sku": "ACFRE00145A",
+      "name": "Liquid Freezer III 420 A-RGB",
+      "type": "Водяное охлаждение",
+      "price": 144,
+      "badge": null,
+      "image": "https://www.arctic.de/media/c2/6f/37/1725369968/Liquid_Freezer_III_420_ARGB_Black_Rainbow_G01_eha_3_awards.png"
+    },
+    {
+      "handle": "Liquid-Freezer-III-Pro-360",
+      "sku": "ACFRE00180A",
+      "name": "Liquid Freezer III Pro 360",
+      "type": "Водяное охлаждение",
+      "price": 130,
+      "badge": "NEW",
+      "image": "https://www.arctic.de/media/c6/8f/e4/1741780195/Liquid_Freezer_III_Pro_360_Black_g00.png"
+    },
+    {
+      "handle": "Liquid-Freezer-III-Pro-360-ARGB",
+      "sku": "ACFRE00184A",
+      "name": "Liquid Freezer III Pro 360 A-RGB",
+      "type": "Водяное охлаждение",
+      "price": 147,
+      "badge": "NEW",
+      "image": "https://www.arctic.de/media/2c/5d/f0/1741775358/Liquid_Freezer_III_360_Black_ARGB_Rainbow_g00.png"
+    },
+    {
+      "handle": "Liquid-Freezer-III-Pro-240",
+      "sku": "ACFRE00178A",
+      "name": "Liquid Freezer III Pro 240",
+      "type": "Водяное охлаждение",
+      "price": 120,
+      "badge": "NEW",
+      "image": "https://www.arctic.de/media/a2/1a/08/1744093964/Liquid_Freezer_III_Pro_240_Black_g00.png"
+    },
+    {
+      "handle": "Liquid-Freezer-WS360-SP6",
+      "sku": "ACFRE00201A",
+      "name": "Liquid Freezer WS360 SP6",
+      "type": "Водяное охлаждение",
+      "price": 170,
+      "badge": "NEW",
+      "image": "https://www.arctic.de/media/2d/cf/af/1771403765/Liquid_Freezer_WS360-SP6_g00.png"
+    },
+    {
+      "handle": "Freezer-36",
+      "sku": "ACFRE00121A",
+      "name": "Freezer 36",
+      "type": "Воздушное охлаждение",
+      "price": 38,
+      "badge": null,
+      "image": "https://www.arctic.de/media/9f/f3/51/1706615786/Freezer_36_Black_G00.png"
+    },
+    {
+      "handle": "Freezer-36-A-RGB-Black",
+      "sku": "ACFRE00124A",
+      "name": "Freezer 36 A-RGB",
+      "type": "Воздушное охлаждение",
+      "price": 51,
+      "badge": null,
+      "image": "https://www.arctic.de/media/8f/6d/6c/1707835553/Freezer_36_A-RGB_Black_G01.png"
+    },
+    {
+      "handle": "Freezer-36-A-RGB-White",
+      "sku": "ACFRE00125A",
+      "name": "Freezer 36 A-RGB (White)",
+      "type": "Воздушное охлаждение",
+      "price": 52,
+      "badge": null,
+      "image": "https://www.arctic.de/media/8a/8c/a5/1707835223/Freezer_36_A-RGB_White_G01.png"
+    },
+    {
+      "handle": "P12-Pro",
+      "sku": "ACFAN00305A",
+      "name": "P12 Pro 120mm",
+      "type": "Вентиляторы",
+      "price": 14,
+      "badge": null,
+      "image": "https://www.arctic.de/media/37/79/ed/1749735230/P12_Pro_g00_(1).png"
+    },
+    {
+      "handle": "P12-Pro-PST",
+      "sku": "ACFAN00306A",
+      "name": "P12 Pro PST 120mm",
+      "type": "Вентиляторы",
+      "price": 12,
+      "badge": null,
+      "image": "https://www.arctic.de/media/6f/e9/c0/1750758608/P12_Pro_PST_black_g00.png"
+    },
+    {
+      "handle": "P12-Pro-A-RGB",
+      "sku": "ACFAN00309A",
+      "name": "P12 Pro A-RGB 120mm",
+      "type": "Вентиляторы",
+      "price": 20,
+      "badge": null,
+      "image": "https://www.arctic.de/media/a2/cd/82/1750770613/P12_Pro_ARGB_black_rainbow_g00_(1).png"
+    },
+    {
+      "handle": "P14-Pro",
+      "sku": "ACFAN00313A",
+      "name": "P14 Pro 140mm",
+      "type": "Вентиляторы",
+      "price": 16,
+      "badge": null,
+      "image": "https://www.arctic.de/media/a6/7b/2d/1753619715/P14_Pro_g00.png"
+    },
+    {
+      "handle": "P14-Pro-PST",
+      "sku": "ACFAN00314A",
+      "name": "P14 Pro PST 140mm",
+      "type": "Вентиляторы",
+      "price": 16,
+      "badge": null,
+      "image": "https://www.arctic.de/media/a0/65/5a/1753620028/P14_Pro_PST_black_g00.png"
+    },
+    {
+      "handle": "MX-4",
+      "sku": "ACTCP00008B",
+      "name": "MX-4 Thermal Compound",
+      "type": "Термопасты",
+      "price": 13,
+      "badge": null,
+      "image": "https://www.arctic.de/media/b8/e5/ef/1688024739/MX4_8g_G00_2023.png"
+    },
+    {
+      "handle": "MX-6",
+      "sku": "ACTCP00081A",
+      "name": "MX-6 Thermal Compound",
+      "type": "Термопасты",
+      "price": 18,
+      "badge": null,
+      "image": "https://www.arctic.de/media/99/c4/cf/1751009978/MX-6_8g_New_Formula_Eha_kitguru_Webshop_G00.png"
+    },
+    {
+      "handle": "MX-7",
+      "sku": "ACTCP00091A",
+      "name": "MX-7 Thermal Compound",
+      "type": "Термопасты",
+      "price": 21,
+      "badge": null,
+      "image": "https://www.arctic.de/media/82/27/0d/1762932015/MX-7_8g_G00.png"
+    }
+  ],
+  "ts": 1773996450552
+}
