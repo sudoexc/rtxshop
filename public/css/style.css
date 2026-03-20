@@ -2968,13 +2968,17 @@ footer {
   .bsl-track-wrap::-webkit-scrollbar { display: none; }
   .bsl-grid {
     transition: none;
-    padding: 0 12px;
+    gap: 12px;
   }
   .bsl-card {
-    flex: 0 0 calc(100vw - 110px);
+    flex: 0 0 calc(100vw - 120px);
     scroll-snap-align: center;
   }
-  .bsl-card .bpc-img { height: 180px; }
+  .bsl-card .bpc-img { height: 160px; }
+  .bsl-card .bsl-specs { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .bsl-card .bsl-spec { padding: 6px 8px; }
+  .bsl-card .bsl-spec-v { font-size: 11px; }
+  .bsl-card .bsl-spec-k { font-size: 9px; }
   .brand-photo-grid { grid-template-columns: 1fr; gap: 10px; }
   .bsl-specs { grid-template-columns: repeat(3, 1fr); }
   .bpc-specs { grid-template-columns: repeat(2, 1fr); }
