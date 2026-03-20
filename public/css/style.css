@@ -2957,9 +2957,25 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .bsl-card { flex: 0 0 calc(100% - 0px); }
-  .brand-photo-grid { grid-template-columns: 1fr; gap: 10px; }
+  /* scroll-snap carousel on mobile */
+  .bsl-track-wrap {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .bsl-track-wrap::-webkit-scrollbar { display: none; }
+  .bsl-grid {
+    transition: none;
+    padding: 0 12px;
+  }
+  .bsl-card {
+    flex: 0 0 calc(100vw - 110px);
+    scroll-snap-align: center;
+  }
   .bsl-card .bpc-img { height: 180px; }
+  .brand-photo-grid { grid-template-columns: 1fr; gap: 10px; }
   .bsl-specs { grid-template-columns: repeat(3, 1fr); }
   .bpc-specs { grid-template-columns: repeat(2, 1fr); }
   .brand-catalog-header { flex-wrap: wrap; gap: 8px; }

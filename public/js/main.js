@@ -363,16 +363,23 @@ function _bslUpdateState(total) {
   document.querySelectorAll('.bsl-dot').forEach((d, i) => d.classList.toggle('active', i === _bslIdx));
 }
 
+function _isMobileCarousel() { return window.innerWidth < 480; }
+
 function _bslApply(grid) {
-  const card = grid.querySelector('.bsl-card');
-  if (!card) return;
-  const trackWrap = grid.parentElement;
-  // On mobile (1 card visible) use track width as step — avoids overflow miscalc
-  // On desktop use card width + gap
-  const step = _bslVisible() === 1
-    ? trackWrap.offsetWidth
-    : card.offsetWidth + 20;
-  grid.style.transform = `translateX(-${_bslIdx * step}px)`;
+  if (_isMobileCarousel()) {
+    // Mobile: native scroll-snap — scrollTo the card position
+    const wrap = grid.parentElement;
+    const card = grid.querySelector('.bsl-card');
+    if (!card) return;
+    const step = card.offsetWidth + 20; // card + gap
+    wrap.scrollTo({ left: _bslIdx * step, behavior: 'smooth' });
+  } else {
+    // Desktop: translateX
+    const card = grid.querySelector('.bsl-card');
+    if (!card) return;
+    const step = card.offsetWidth + 20;
+    grid.style.transform = `translateX(-${_bslIdx * step}px)`;
+  }
 }
 
 function bslNav(dir) {
@@ -404,39 +411,29 @@ window.addEventListener('resize', () => {
   const vis       = _bslVisible();
   const positions = Math.max(1, total - vis + 1);
   _bslIdx = _bslIdx % positions;
+  // On resize from mobile to desktop restore transform
+  if (!_isMobileCarousel()) grid.parentElement.scrollLeft = 0;
   _bslApply(grid);
   _bslUpdateState(total);
 });
 
-// ── Carousel touch swipe ──
+// ── Mobile scroll-snap: sync dots on scroll ──
 (function () {
-  let _txStart = 0;
-  let _txDelta = 0;
-  let _dragging = false;
-
-  function getWrap() { return document.getElementById('bslGrid')?.closest('.bsl-track-wrap'); }
-
-  document.addEventListener('touchstart', e => {
-    const wrap = getWrap();
-    if (!wrap || !wrap.contains(e.target)) return;
-    _txStart = e.touches[0].clientX;
-    _txDelta = 0;
-    _dragging = true;
+  let _scrollTimer;
+  const wrap = document.querySelector('.bsl-track-wrap');
+  if (!wrap) return;
+  wrap.addEventListener('scroll', () => {
+    if (!_isMobileCarousel()) return;
+    clearTimeout(_scrollTimer);
+    _scrollTimer = setTimeout(() => {
+      const card = wrap.querySelector('.bsl-card');
+      if (!card) return;
+      const step = card.offsetWidth + 20;
+      _bslIdx = Math.round(wrap.scrollLeft / step);
+      const total = wrap.querySelectorAll('.bsl-card').length;
+      _bslUpdateState(total);
+    }, 80);
   }, { passive: true });
-
-  document.addEventListener('touchmove', e => {
-    if (!_dragging) return;
-    _txDelta = e.touches[0].clientX - _txStart;
-  }, { passive: true });
-
-  document.addEventListener('touchend', () => {
-    if (!_dragging) return;
-    _dragging = false;
-    if (Math.abs(_txDelta) > 50) {
-      bslNav(_txDelta < 0 ? 1 : -1);
-    }
-    _txDelta = 0;
-  });
 })();
 
 function renderBestsellers() {
