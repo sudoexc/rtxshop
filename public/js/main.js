@@ -342,48 +342,48 @@ function _bslVisible() {
 }
 
 function _bslUpdateState(total) {
-  const vis   = _bslVisible();
-  const max   = Math.max(0, total - vis);
-  const prev  = document.getElementById('bslPrev');
-  const next  = document.getElementById('bslNext');
-  if (prev) prev.disabled = _bslIdx <= 0;
-  if (next) next.disabled = _bslIdx >= max;
+  const vis      = _bslVisible();
+  const positions = Math.max(1, total - vis + 1);
   document.querySelectorAll('.bsl-dot').forEach((d, i) => d.classList.toggle('active', i === _bslIdx));
+}
+
+function _bslApply(grid) {
+  const card   = grid.querySelector('.bsl-card');
+  if (!card) return;
+  const offset = _bslIdx * (card.offsetWidth + 20);
+  grid.style.transform = `translateX(-${offset}px)`;
 }
 
 function bslNav(dir) {
   const grid = document.getElementById('bslGrid');
   if (!grid || !grid.querySelector('.bsl-card')) return;
-  const total = grid.querySelectorAll('.bsl-card').length;
-  const vis   = _bslVisible();
-  _bslIdx = Math.max(0, Math.min(_bslIdx + dir, total - vis));
-  const card   = grid.querySelector('.bsl-card');
-  const offset = _bslIdx * (card.offsetWidth + 20);
-  grid.style.transform = `translateX(-${offset}px)`;
+  const total     = grid.querySelectorAll('.bsl-card').length;
+  const vis       = _bslVisible();
+  const positions = Math.max(1, total - vis + 1);
+  _bslIdx = ((_bslIdx + dir) % positions + positions) % positions;
+  _bslApply(grid);
   _bslUpdateState(total);
 }
 
 function bslGoTo(idx) {
   const grid = document.getElementById('bslGrid');
   if (!grid || !grid.querySelector('.bsl-card')) return;
-  const total = grid.querySelectorAll('.bsl-card').length;
-  const vis   = _bslVisible();
-  _bslIdx = Math.max(0, Math.min(idx, total - vis));
-  const card   = grid.querySelector('.bsl-card');
-  const offset = _bslIdx * (card.offsetWidth + 20);
-  grid.style.transform = `translateX(-${offset}px)`;
+  const total     = grid.querySelectorAll('.bsl-card').length;
+  const vis       = _bslVisible();
+  const positions = Math.max(1, total - vis + 1);
+  _bslIdx = ((idx % positions) + positions) % positions;
+  _bslApply(grid);
   _bslUpdateState(total);
 }
 
 window.addEventListener('resize', () => {
   const grid = document.getElementById('bslGrid');
   if (!grid || !grid.querySelector('.bsl-card')) return;
-  const total = grid.querySelectorAll('.bsl-card').length;
-  const vis   = _bslVisible();
-  _bslIdx = Math.min(_bslIdx, Math.max(0, total - vis));
-  const card   = grid.querySelector('.bsl-card');
-  const offset = _bslIdx * (card.offsetWidth + 20);
-  grid.style.transform = `translateX(-${offset}px)`;
+  const total     = grid.querySelectorAll('.bsl-card').length;
+  const vis       = _bslVisible();
+  const positions = Math.max(1, total - vis + 1);
+  _bslIdx = _bslIdx % positions;
+  _bslApply(grid);
   _bslUpdateState(total);
 });
 

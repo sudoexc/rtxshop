@@ -2000,7 +2000,7 @@ footer {
   padding: 0;
 }
 .bsl-arrow:hover { background: var(--accent); color: white; border-color: var(--accent); }
-.bsl-arrow:disabled { opacity: 0.25; pointer-events: none; }
+
 .bsl-arrow--prev { margin-right: 14px; }
 .bsl-arrow--next { margin-left: 14px; }
 .bsl-dots {
