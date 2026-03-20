@@ -638,15 +638,27 @@ section {
   align-items: center;
   gap: 12px;
   white-space: nowrap;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--ticker-text);
-  transition: color 0.3s;
   cursor: default;
 }
 
-.ticker-item:hover {
-  color: var(--text-primary);
+.ticker-logo {
+  height: 26px;
+  width: auto;
+  opacity: 0.55;
+  filter: grayscale(1);
+  transition: opacity 0.25s, filter 0.25s;
+}
+.ticker-item:hover .ticker-logo {
+  opacity: 1;
+  filter: grayscale(0);
+}
+[data-theme="dark"] .ticker-logo {
+  filter: grayscale(1) invert(1);
+  opacity: 0.5;
+}
+[data-theme="dark"] .ticker-item:hover .ticker-logo {
+  filter: grayscale(0) invert(1);
+  opacity: 0.9;
 }
 
 .ticker-dot {
