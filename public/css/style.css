@@ -2914,6 +2914,7 @@ footer {
   .pm-dialog {
     grid-template-columns: 1fr;
     max-height: 92vh;
+    overflow-y: auto;
     border-radius: var(--radius-md);
   }
   .pm-image-side {
@@ -2924,7 +2925,7 @@ footer {
   .pm-gallery-main { min-height: 160px; }
   .pm-gallery-main img { max-height: 160px; }
   .pm-thumb { width: 44px; height: 44px; }
-  .pm-content-side { padding: 20px; max-height: 60vh; }
+  .pm-content-side { padding: 20px; max-height: none; overflow-y: visible; }
   .pm-name { font-size: 18px; }
 }
 
@@ -2951,5 +2952,6 @@ footer {
   .brand-photo-grid { grid-template-columns: 1fr; gap: 10px; }
   .bsl-card .bpc-img { height: 180px; }
   .bsl-specs { grid-template-columns: repeat(3, 1fr); }
+  .bpc-specs { grid-template-columns: repeat(2, 1fr); }
   .brand-catalog-header { flex-wrap: wrap; gap: 8px; }
 }

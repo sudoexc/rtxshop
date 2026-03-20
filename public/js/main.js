@@ -295,14 +295,20 @@ function closeMobileMenu() {
 // ======= REVEAL ON SCROLL =======
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
+}, { threshold: 0 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // ======= STICKY CTA =======
 const stickyCta = document.getElementById('stickyCta');
+let _stickyRaf = false;
 window.addEventListener('scroll', () => {
-  if (window.scrollY > window.innerHeight * 0.6) stickyCta.classList.add('visible');
-  else stickyCta.classList.remove('visible');
+  if (_stickyRaf) return;
+  _stickyRaf = true;
+  requestAnimationFrame(() => {
+    if (window.scrollY > window.innerHeight * 0.6) stickyCta.classList.add('visible');
+    else stickyCta.classList.remove('visible');
+    _stickyRaf = false;
+  });
 }, { passive: true });
 
 // ======= CATALOG =======
@@ -400,7 +406,7 @@ function renderBestsellers() {
     const badge = p.badge
       ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}">${p.badge}</span>` : '';
     const imgHtml = p.image_url
-      ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" />`
+      ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" width="400" height="400" />`
       : `<div class="bpc-img-icon">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
     const colorDots = p.colors?.length
       ? `<div class="bpc-colors">${p.colors.map(c =>
@@ -440,9 +446,15 @@ async function loadCatalog() {
   const body = document.getElementById('catalogBody');
   body.innerHTML = '<div class="catalog-loading"><div class="catalog-spinner"></div></div>';
   try {
-    const r = await fetch('/api/catalog');
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    _catalogAll = await r.json();
+    const cached = sessionStorage.getItem('rtx_catalog');
+    if (cached) {
+      _catalogAll = JSON.parse(cached);
+    } else {
+      const r = await fetch('/api/catalog');
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      _catalogAll = await r.json();
+      try { sessionStorage.setItem('rtx_catalog', JSON.stringify(_catalogAll)); } catch {}
+    }
     renderCatalog();
     renderBestsellers();
   } catch {
@@ -503,7 +515,7 @@ function renderCatalog() {
       const badge = p.badge
         ? `<span class="bpc-badge bpc-badge--${p.badge.toLowerCase()}">${p.badge}</span>` : '';
       const imgHtml = p.image_url
-        ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" />`
+        ? `<img src="${p.image_url}" alt="${p.name.replace(/"/g,'&quot;')}" loading="lazy" width="400" height="400" />`
         : `<div class="bpc-img-icon">${BRAND_ICON[p.brand] || BRAND_ICON.GravaStar}</div>`;
       const colorDots = p.colors?.length
         ? `<div class="bpc-colors">${p.colors.map(c =>
