@@ -2971,11 +2971,26 @@ footer {
     gap: 12px;
   }
   .bsl-card {
-    flex: 0 0 calc(100vw - 120px);
+    flex: 0 0 calc(100vw - 100px);
     scroll-snap-align: center;
+    min-width: 0;
   }
   .bsl-card .bpc-img { height: 160px; }
+  /* Truncate long category line */
+  .bsl-card .bpc-type {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* Truncate product name to 1 line */
+  .bsl-card .bpc-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* Show only 2 specs, in 2 columns */
   .bsl-card .bsl-specs { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .bsl-card .bsl-spec:nth-child(n+3) { display: none; }
   .bsl-card .bsl-spec { padding: 6px 8px; }
   .bsl-card .bsl-spec-v { font-size: 11px; }
   .bsl-card .bsl-spec-k { font-size: 9px; }
