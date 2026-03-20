@@ -2178,6 +2178,7 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-bottom: 32px;
+  padding: 0 24px;
 }
 
 /* ── brand product card (bpc) ── */
