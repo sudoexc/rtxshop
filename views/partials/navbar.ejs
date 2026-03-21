@@ -8,10 +8,34 @@
     </a>
 
     <ul class="nav-links">
-      <li><a href="/#about"    data-i18n="nav_about">О нас</a></li>
-      <li><a href="/catalog"   data-i18n="nav_catalog" class="<%= page==='catalog' ? 'active-page' : '' %>">Каталог</a></li>
-      <li><a href="/b2b"       data-i18n="nav_services" class="<%= page==='b2b' ? 'active-page' : '' %>">Услуги</a></li>
-      <li><a href="/b2c"       data-i18n="nav_b2c" class="<%= page==='b2c' ? 'active-page' : '' %>">Покупателям</a></li>
+      <li><a href="/#about" data-i18n="nav_about">О нас</a></li>
+      <li class="nav-dropdown-wrap">
+        <a href="/catalog" data-i18n="nav_catalog" class="nav-dropdown-trigger <%= page==='catalog' ? 'active-page' : '' %>">
+          Каталог
+          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="/catalog" class="nav-dropdown-item nav-dropdown-all" data-i18n="nav_catalog">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>
+            Весь каталог
+          </a>
+          <div class="nav-dropdown-divider"></div>
+          <a href="/gravastar-uzbekistan" class="nav-dropdown-item">
+            <span class="nav-dd-brand">GravaStar</span><span class="nav-dd-cat">Игровая периферия</span>
+          </a>
+          <a href="/atk-uzbekistan" class="nav-dropdown-item">
+            <span class="nav-dd-brand">ATK</span><span class="nav-dd-cat">Игровые мыши</span>
+          </a>
+          <a href="/arctic-uzbekistan" class="nav-dropdown-item">
+            <span class="nav-dd-brand">Arctic</span><span class="nav-dd-cat">Системы охлаждения</span>
+          </a>
+          <a href="/picun-uzbekistan" class="nav-dropdown-item">
+            <span class="nav-dd-brand">Picun</span><span class="nav-dd-cat">Аудио</span>
+          </a>
+        </div>
+      </li>
+      <li><a href="/b2b" data-i18n="nav_services" class="<%= page==='b2b' ? 'active-page' : '' %>">Услуги</a></li>
+      <li><a href="/b2c" data-i18n="nav_b2c" class="<%= page==='b2c' ? 'active-page' : '' %>">Покупателям</a></li>
       <li><a href="/become-partner" class="nav-cta <%= page==='partner' ? 'active-page' : '' %>" data-i18n="nav_partner">Стать партнёром</a></li>
     </ul>
 
