@@ -288,15 +288,15 @@ h1, h2, h3, h4, h5 {
 
 .nav-megamenu {
   position: absolute;
-  top: calc(100% + 14px);
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(-8px);
+  transform: translateX(-50%) translateY(-4px);
   width: 520px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.1);
-  padding: 16px;
+  padding: 28px 16px 16px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s, transform 0.2s;
@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5 {
 .nav-dropdown-wrap:hover .nav-megamenu {
   opacity: 1;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(4px);
 }
 
 .nmm-header {
