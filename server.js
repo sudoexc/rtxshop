@@ -37,6 +37,13 @@ app.get('/', (req, res) => res.render('pages/index'));
 app.get('/catalog', (req, res) => res.render('pages/catalog'));
 app.get('/b2b', (req, res) => res.render('pages/b2b'));
 app.get('/b2c', (req, res) => res.render('pages/b2c'));
+app.get('/become-partner', (req, res) => res.render('pages/become-partner'));
+app.get('/arctic-uzbekistan', (req, res) => res.render('pages/brand-arctic'));
+app.get('/gravastar-uzbekistan', (req, res) => res.render('pages/brand-gravastar'));
+// Category shortcuts → catalog with prefill
+app.get('/cooling',     (req, res) => res.redirect('/catalog?brand=Arctic'));
+app.get('/audio',       (req, res) => res.redirect('/catalog?brand=Picun'));
+app.get('/accessories', (req, res) => res.redirect('/catalog?brand=GravaStar'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -113,19 +120,32 @@ function adminAuth(req, res, next) {
 
 // ─── public: contact form ──────────────────────────────────
 app.post('/api/contact', contactLimiter, async (req, res) => {
-  const { name, company, phone, email, message, interest } = req.body;
+  const { name, company, phone, email, message, interest, city, volume, brands, messenger, type } = req.body;
   if (!name || !phone) return res.status(400).json({ error: 'Name and phone are required' });
 
-  const entry = saveSubmission({ name, company, phone, email, message, interest });
+  const entry = saveSubmission({ name, company, phone, email, message, interest, city, volume, brands, messenger, type });
 
-  const text =
+  const isPartner = type === 'partner_request';
+  const text = isPartner
+? `*Заявка на партнёрство — RTXSHOP*
+
+*Имя:* ${name}
+*Компания:* ${company || '—'}
+*Телефон:* ${phone}
+*Город:* ${city || '—'}
+*Объём/мес:* ${volume || '—'}
+*Бренды:* ${brands || '—'}
+*Messenger:* ${messenger || '—'}
+*Сообщение:* ${message || '—'}
+
+_${new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Tashkent' })}_`
+:
 `*Новая заявка — RTXSHOP*
 
 *Имя:* ${name}
 *Компания:* ${company || '—'}
 *Телефон:* ${phone}
 *Email:* ${email || '—'}
-*Бренд:* ${interest || '—'}
 *Сообщение:* ${message || '—'}
 
 _${new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Tashkent' })}_`;

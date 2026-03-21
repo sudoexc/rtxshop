@@ -3236,3 +3236,163 @@ footer {
   .hero-pills { gap: 6px; }
   .hero-pill { font-size: 10.5px; padding: 4px 10px; }
 }
+
+/* ======= PRODUCT MODAL — MOQ STRIP ======= */
+.pm-moq-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--accent-light);
+  border: 1px solid rgba(0,113,227,0.15);
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.pm-moq-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.pm-moq-label {
+  background: var(--accent);
+  color: white;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pm-moq-val {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pm-moq-price {
+  color: var(--text-secondary);
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.pm-moq-price svg { color: var(--accent); flex-shrink: 0; }
+
+/* ======= BECOME PARTNER PAGE ======= */
+.partner-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  align-items: start;
+}
+
+.partner-form-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 36px;
+}
+
+.partner-form-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.partner-form .pf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.partner-benefits {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  position: sticky;
+  top: 90px;
+}
+
+.partner-benefits h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.partner-benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 24px;
+}
+
+.partner-benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.partner-benefits-list li svg {
+  flex-shrink: 0;
+  color: #30d158;
+  margin-top: 1px;
+}
+
+.partner-contact-alt {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.partner-brands-logos {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  opacity: 0.6;
+}
+
+.partner-brands-logos img {
+  height: 18px;
+  object-fit: contain;
+  filter: grayscale(1);
+}
+
+/* ======= BRAND HERO LOGO ======= */
+.brand-hero-logo {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 860px) {
+  .partner-page-grid {
+    grid-template-columns: 1fr;
+  }
+  .partner-benefits {
+    position: static;
+  }
+  .partner-form .pf-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .partner-form-wrap { padding: 20px 16px; }
+  .pm-moq-strip { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
