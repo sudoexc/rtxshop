@@ -554,13 +554,16 @@ function renderBestsellers() {
           `<div class="bsl-spec"><span class="bsl-spec-v">${escHtml(v)}</span><span class="bsl-spec-k">${escHtml(k)}</span></div>`
         ).join('')}</div>` : '';
     return `<div class="bpc bsl-card" onclick="openProductModal('${escHtml(p.id)}')">
-      <div class="bpc-img">${badge}${imgHtml}</div>
+      <div class="bpc-img">${badge}<span class="bpc-stock">In stock</span>${imgHtml}</div>
       <div class="bpc-body">
         <div class="bpc-type">${escHtml(p.brand)} · ${escHtml(p.category)}</div>
         <div class="bpc-name">${escHtml(p.name)}</div>
         ${specsHtml}
         ${colorDots}
-        <button class="bpc-btn">Подробнее</button>
+        <div class="bpc-actions" onclick="event.stopPropagation()">
+          <button class="bpc-btn bpc-btn--info" onclick="openProductModal('${escHtml(p.id)}')">Details</button>
+          <a href="/b2b#contact" class="bpc-btn bpc-btn--price">Request Price</a>
+        </div>
       </div>
     </div>`;
   }).join('');
@@ -669,13 +672,16 @@ function renderCatalog() {
             `<div class="bpc-spec"><span class="bpc-spec-v">${escHtml(v)}</span><span class="bpc-spec-k">${escHtml(k)}</span></div>`
           ).join('')}</div>` : '';
       html += `<div class="bpc" onclick="openProductModal('${escHtml(p.id)}')">
-        <div class="bpc-img">${badge}${imgHtml}</div>
+        <div class="bpc-img">${badge}<span class="bpc-stock">In stock</span>${imgHtml}</div>
         <div class="bpc-body">
           <div class="bpc-type">${escHtml(p.category)}</div>
           <div class="bpc-name">${escHtml(p.name)}</div>
           ${specsHtml}
           ${colorDots}
-          <button class="bpc-btn">Подробнее</button>
+          <div class="bpc-actions" onclick="event.stopPropagation()">
+            <button class="bpc-btn bpc-btn--info" onclick="openProductModal('${escHtml(p.id)}')">Details</button>
+            <a href="/b2b#contact" class="bpc-btn bpc-btn--price">Request Price</a>
+          </div>
         </div>
       </div>`;
     });
