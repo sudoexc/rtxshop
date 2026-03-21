@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(-4px);
+  transform: translateX(-60%) translateY(-4px);
   width: 520px;
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5 {
 .nav-dropdown-wrap:hover .nav-megamenu {
   opacity: 1;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(4px);
+  transform: translateX(-60%) translateY(4px);
 }
 
 .nmm-header {
