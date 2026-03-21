@@ -194,6 +194,38 @@ const T = {
     pf_messenger_ph: '@username или +998...',
     partner_why_title: 'Что вы получаете', pw1: 'Оптовые цены напрямую', pw2: 'Эксклюзивные акции для партнёров',
     pw3: 'Маркетинговые материалы', pw4: 'Персональный менеджер 24/7', pw5: 'Официальная гарантия на всё', pw6: 'Отсрочка платежа',
+    stock_label: 'В наличии', btn_details: 'Подробнее', btn_request_price: 'Запросить цену',
+    colors_label: 'Цвета', form_sending: 'Отправляем...', form_error: 'Ошибка. Попробуйте ещё раз.',
+    no_products: 'Ничего не найдено', catalog_error: 'Не удалось загрузить каталог',
+    product_interest: 'Интересует: ', catalog_items_label: 'товаров',
+    catalog_tag_grava: 'Игровая периферия · sci-fi дизайн', catalog_tag_atk: 'Профессиональные игровые мыши',
+    catalog_tag_arctic: 'Системы охлаждения · Европейский бренд', catalog_tag_picun: 'Игровая аудио техника',
+    b2b_eyebrow: 'Для магазинов и бизнеса',
+    b2b_hero_sub: 'Прямые поставки ATK, GravaStar, Arctic и Picun для вашего магазина. Оптовые цены, официальная гарантия, персональный менеджер.',
+    b2b_cta2: 'Смотреть каталог',
+    b2c_eyebrow: 'Для покупателей', b2c_h1a: 'Найди оригинальный', b2c_h1b: 'товар рядом.',
+    b2c_sub: 'ATK, GravaStar, Arctic и Picun продаются в магазинах по всему Узбекистану. Подпишись на наш канал — первым узнавай о новинках и где купить.',
+    b2c_cta1: 'Подписаться в Telegram', b2c_cta2: 'Смотреть каталог',
+    b2c_tg_title: 'Telegram-канал RTXSHOP',
+    b2c_tg_sub: 'Новинки ATK, GravaStar, Arctic и Picun — первыми. Акции партнёрских магазинов. Где купить в твоём городе. Обзоры и распаковки.',
+    b2c_tg_btn: 'Подписаться @iBazzaruz',
+    b2c_where_eyebrow: 'Где купить', b2c_where_h2a: 'Магазины', b2c_where_h2b: 'партнёры',
+    b2c_where_sub: 'Наши товары продаются в проверенных магазинах. Все точки продают только оригинальную продукцию с гарантией.',
+    b2c_coming_soon: 'Скоро новые партнёры', b2c_list_updates: 'Список обновляется',
+    b2c_become_store: 'Хотите стать точкой продаж?', b2c_contact_link: 'Свяжитесь с нами →',
+    b2c_promo_h2: 'Смотри весь каталог',
+    b2c_promo_sub: 'Все модели ATK, GravaStar, Arctic и Picun — фото, характеристики, описания',
+    b2c_promo_btn: 'Открыть каталог',
+    bp_sell_h2a: 'Продавайте', bp_sell_h2b: 'в своём магазине',
+    bp_stat_delivery: 'Доставка по всему Узбекистану', bp_view_all: 'Весь каталог',
+    bp_feat1_sub: 'Официальный авторизованный дистрибьютор для рынка Узбекистана',
+    bp_feat2_sub: 'Полная гарантия производителя на каждый товар',
+    bp_feat3_sub: 'Товары в наличии на складе. Отгрузка в тот же день',
+    bp_feat4_sub: 'Личный менеджер для каждого партнёра. Помощь с заказами и гарантийными случаями',
+    bp_arctic_sub: 'Европейский эксперт в области охлаждения. Кулеры, термопасты и вентиляторы — поставляем напрямую для магазинов Узбекистана.',
+    bp_grava_sub: 'Sci-fi дизайн и топовые характеристики. Колонки, мыши, наушники GravaStar — поставляем напрямую для магазинов Узбекистана.',
+    bp_atk_sub: 'Профессиональные игровые мыши с передовыми сенсорами. ATK — выбор профессионалов. Поставляем напрямую для магазинов Узбекистана.',
+    bp_picun_sub: 'Игровые наушники и TWS гарнитуры Picun. Качественное звучание — поставляем напрямую для магазинов Узбекистана.',
   },
   uz: {
     nav_about: 'Biz haqimizda', nav_partners: 'Hamkorlar', nav_catalog: 'Katalog',
@@ -310,6 +342,38 @@ const T = {
     pf_messenger_ph: '@username yoki +998...',
     partner_why_title: 'Nima olasiz', pw1: 'To\'g\'ridan-to\'g\'ri ulgurji narxlar', pw2: 'Hamkorlar uchun eksklyuziv aksiyalar',
     pw3: 'Marketing materiallari', pw4: 'Shaxsiy menejer 24/7', pw5: 'Hamma narsaga rasmiy kafolat', pw6: 'Kechiktirilgan to\'lov',
+    stock_label: 'Mavjud', btn_details: 'Tafsilotlar', btn_request_price: 'Narx so\'rash',
+    colors_label: 'Ranglar', form_sending: 'Yuborilmoqda...', form_error: 'Xatolik. Qayta urining.',
+    no_products: 'Hech narsa topilmadi', catalog_error: 'Katalogni yuklab bo\'lmadi',
+    product_interest: 'Qiziqadi: ', catalog_items_label: 'ta mahsulot',
+    catalog_tag_grava: 'O\'yin periferiyasi · sci-fi dizayn', catalog_tag_atk: 'Professional o\'yin sichqonlari',
+    catalog_tag_arctic: 'Sovutish tizimlari · Evropa brendi', catalog_tag_picun: 'O\'yin audio texnikasi',
+    b2b_eyebrow: 'Do\'konlar va biznes uchun',
+    b2b_hero_sub: 'ATK, GravaStar, Arctic va Picun mahsulotlarini to\'g\'ridan-to\'g\'ri do\'koningizga yetkazib beramiz. Ulgurji narxlar, rasmiy kafolat, shaxsiy menejer.',
+    b2b_cta2: 'Katalogni ko\'rish',
+    b2c_eyebrow: 'Xaridorlar uchun', b2c_h1a: 'Asl tovarni top', b2c_h1b: 'yaqin atrofingizda.',
+    b2c_sub: 'ATK, GravaStar, Arctic va Picun butun O\'zbekiston bo\'ylab do\'konlarda sotiladi. Kanalimizga obuna bo\'ling — yangiliklar haqida birinchi bo\'lib bilib oling.',
+    b2c_cta1: 'Telegramga obuna bo\'lish', b2c_cta2: 'Katalogni ko\'rish',
+    b2c_tg_title: 'RTXSHOP Telegram kanali',
+    b2c_tg_sub: 'ATK, GravaStar, Arctic va Picun yangiliklari — birinchi bo\'lib. Hamkor do\'konlar aksiyalari. Shahringizda qayerdan sotib olish. Sharh va qadoqdan chiqarish.',
+    b2c_tg_btn: '@iBazzaruz ga obuna bo\'lish',
+    b2c_where_eyebrow: 'Qayerdan sotib olish', b2c_where_h2a: 'Hamkor', b2c_where_h2b: 'do\'konlar',
+    b2c_where_sub: 'Mahsulotlarimiz ishonchli do\'konlarda sotiladi. Barcha savdo nuqtalari faqat kafolatli original mahsulot sotadi.',
+    b2c_coming_soon: 'Tez orada yangi hamkorlar', b2c_list_updates: 'Ro\'yxat yangilanmoqda',
+    b2c_become_store: 'Savdo nuqtasiga aylanmoqchimisiz?', b2c_contact_link: 'Biz bilan bog\'laning →',
+    b2c_promo_h2: 'Butun katalogni ko\'ring',
+    b2c_promo_sub: 'ATK, GravaStar, Arctic va Picunning barcha modellari — foto, xususiyatlar, tavsiflar',
+    b2c_promo_btn: 'Katalogni ochish',
+    bp_sell_h2a: 'Soting', bp_sell_h2b: 'o\'z do\'koningizda',
+    bp_stat_delivery: 'Butun O\'zbekiston bo\'ylab yetkazib berish', bp_view_all: 'Butun katalog',
+    bp_feat1_sub: 'O\'zbekiston bozori uchun rasmiy vakolatli distribyutor',
+    bp_feat2_sub: 'Har bir mahsulotga ishlab chiqaruvchining to\'liq kafolati',
+    bp_feat3_sub: 'Mahsulotlar omborda mavjud. Buyurtma kuni jo\'natiladi',
+    bp_feat4_sub: 'Har bir hamkor uchun shaxsiy menejer. Buyurtmalar va kafolat holatlari bilan yordam',
+    bp_arctic_sub: 'Sovutish sohasidagi Evropa eksperti. Kulerlar, termopastalar va ventilatorlar — O\'zbekiston do\'konlariga to\'g\'ridan-to\'g\'ri yetkazib beramiz.',
+    bp_grava_sub: 'Sci-fi dizayn va yuqori xususiyatlar. GravaStar kolonkalar, sichqonlar, quloqchinlar — O\'zbekiston do\'konlariga to\'g\'ridan-to\'g\'ri yetkazib beramiz.',
+    bp_atk_sub: 'Ilg\'or sensorli professional o\'yin sichqonlari. ATK — professionallar tanlovi. O\'zbekiston do\'konlariga to\'g\'ridan-to\'g\'ri yetkazib beramiz.',
+    bp_picun_sub: 'Picun o\'yin quloqchinlari va TWS garnituralar. Sifatli ovoz — O\'zbekiston do\'konlariga to\'g\'ridan-to\'g\'ri yetkazib beramiz.',
   },
   en: {
     nav_about: 'About', nav_partners: 'Partners', nav_catalog: 'Catalog',
@@ -426,6 +490,38 @@ const T = {
     pf_messenger_ph: '@username or +998...',
     partner_why_title: 'What you get', pw1: 'Direct wholesale pricing', pw2: 'Exclusive partner promotions',
     pw3: 'Marketing materials', pw4: 'Personal manager 24/7', pw5: 'Official warranty on everything', pw6: 'Deferred payment terms',
+    stock_label: 'In stock', btn_details: 'Details', btn_request_price: 'Request price',
+    colors_label: 'Colors', form_sending: 'Sending...', form_error: 'Error. Please try again.',
+    no_products: 'Nothing found', catalog_error: 'Failed to load catalog',
+    product_interest: 'Interested in: ', catalog_items_label: 'items',
+    catalog_tag_grava: 'Gaming peripherals · sci-fi design', catalog_tag_atk: 'Professional gaming mice',
+    catalog_tag_arctic: 'Cooling systems · European brand', catalog_tag_picun: 'Gaming audio gear',
+    b2b_eyebrow: 'For stores and businesses',
+    b2b_hero_sub: 'Direct supply of ATK, GravaStar, Arctic and Picun for your store. Wholesale pricing, official warranty, personal manager.',
+    b2b_cta2: 'View catalog',
+    b2c_eyebrow: 'For buyers', b2c_h1a: 'Find the original', b2c_h1b: 'product nearby.',
+    b2c_sub: 'ATK, GravaStar, Arctic and Picun are sold in stores across Uzbekistan. Subscribe to our channel — be the first to know about new arrivals and where to buy.',
+    b2c_cta1: 'Subscribe on Telegram', b2c_cta2: 'View catalog',
+    b2c_tg_title: 'RTXSHOP Telegram Channel',
+    b2c_tg_sub: 'ATK, GravaStar, Arctic and Picun news — first. Partner store deals. Where to buy in your city. Reviews and unboxings.',
+    b2c_tg_btn: 'Subscribe @iBazzaruz',
+    b2c_where_eyebrow: 'Where to buy', b2c_where_h2a: 'Partner', b2c_where_h2b: 'stores',
+    b2c_where_sub: 'Our products are sold at trusted stores. All outlets sell only original products with warranty.',
+    b2c_coming_soon: 'New partners coming soon', b2c_list_updates: 'List is updating',
+    b2c_become_store: 'Want to become a sales point?', b2c_contact_link: 'Contact us →',
+    b2c_promo_h2: 'Browse the full catalog',
+    b2c_promo_sub: 'All ATK, GravaStar, Arctic and Picun models — photos, specs, descriptions',
+    b2c_promo_btn: 'Open catalog',
+    bp_sell_h2a: 'Sell', bp_sell_h2b: 'in your store',
+    bp_stat_delivery: 'Nationwide delivery', bp_view_all: 'Full catalog',
+    bp_feat1_sub: 'Official authorized distributor for the Uzbekistan market',
+    bp_feat2_sub: 'Full manufacturer warranty on every product',
+    bp_feat3_sub: 'Items in stock. Same-day dispatch',
+    bp_feat4_sub: 'Personal manager for every partner. Help with orders and warranty cases',
+    bp_arctic_sub: 'European expert in cooling. Coolers, thermal paste and fans — supplied directly to Uzbekistan stores.',
+    bp_grava_sub: 'Sci-fi design and top specs. GravaStar speakers, mice, headphones — supplied directly to Uzbekistan stores.',
+    bp_atk_sub: 'Professional gaming mice with advanced sensors. ATK — the professional\'s choice. Supplied directly to Uzbekistan stores.',
+    bp_picun_sub: 'Picun gaming headphones and TWS headsets. Quality sound — supplied directly to Uzbekistan stores.',
   },
 };
 
@@ -662,15 +758,15 @@ function renderBestsellers() {
           `<div class="bsl-spec"><span class="bsl-spec-v">${escHtml(v)}</span><span class="bsl-spec-k">${escHtml(k)}</span></div>`
         ).join('')}</div>` : '';
     return `<div class="bpc bsl-card" onclick="openProductModal('${escHtml(p.id)}')">
-      <div class="bpc-img">${badge}<span class="bpc-stock">In stock</span>${imgHtml}</div>
+      <div class="bpc-img">${badge}<span class="bpc-stock">${T[currentLang].stock_label}</span>${imgHtml}</div>
       <div class="bpc-body">
         <div class="bpc-type">${escHtml(p.brand)} · ${escHtml(p.category)}</div>
         <div class="bpc-name">${escHtml(p.name)}</div>
         ${specsHtml}
         ${colorDots}
         <div class="bpc-actions" onclick="event.stopPropagation()">
-          <button class="bpc-btn bpc-btn--info" onclick="openProductModal('${escHtml(p.id)}')">Details</button>
-          <a href="/b2b#contact" class="bpc-btn bpc-btn--price">Request Price</a>
+          <button class="bpc-btn bpc-btn--info" onclick="openProductModal('${escHtml(p.id)}')">${T[currentLang].btn_details}</button>
+          <a href="/b2b#contact" class="bpc-btn bpc-btn--price">${T[currentLang].btn_request_price}</a>
         </div>
       </div>
     </div>`;
@@ -710,7 +806,7 @@ async function loadCatalog() {
     renderCatalog();
     renderBestsellers();
   } catch {
-    body.innerHTML = '<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">Не удалось загрузить каталог</div>';
+    body.innerHTML = `<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">${T[currentLang].catalog_error}</div>`;
   }
 }
 
@@ -733,7 +829,7 @@ function renderCatalog() {
   }
 
   if (!products.length) {
-    body.innerHTML = '<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">Ничего не найдено</div>';
+    body.innerHTML = `<div style="padding:60px;text-align:center;color:var(--text-muted);font-size:14px;">${T[currentLang].no_products}</div>`;
     return;
   }
 
@@ -746,12 +842,15 @@ function renderCatalog() {
   });
 
   const multiGroup = Object.keys(groups).length > 1;
-  const tag  = BRAND_TAG[_activeTab] || '';
+  const BRAND_TAG_KEY = { GravaStar: 'catalog_tag_grava', ATK: 'catalog_tag_atk', Arctic: 'catalog_tag_arctic', Picun: 'catalog_tag_picun' };
+  const tag  = T[currentLang][BRAND_TAG_KEY[_activeTab]] || BRAND_TAG[_activeTab] || '';
   const cnt  = products.length;
 
   let html = '';
   if (!q) {
-    const cntLabel = cnt === 1 ? 'товар' : cnt < 5 ? 'товара' : 'товаров';
+    const cntLabel = currentLang === 'ru'
+      ? (cnt === 1 ? 'товар' : cnt < 5 ? 'товара' : 'товаров')
+      : (T[currentLang].catalog_items_label || 'items');
     html += `<div class="brand-catalog-header">
       <div class="bch-top">
         <div class="brand-catalog-logo">${_activeTab}</div>
@@ -780,15 +879,15 @@ function renderCatalog() {
             `<div class="bpc-spec"><span class="bpc-spec-v">${escHtml(v)}</span><span class="bpc-spec-k">${escHtml(k)}</span></div>`
           ).join('')}</div>` : '';
       html += `<div class="bpc" onclick="openProductModal('${escHtml(p.id)}')">
-        <div class="bpc-img">${badge}<span class="bpc-stock">In stock</span>${imgHtml}</div>
+        <div class="bpc-img">${badge}<span class="bpc-stock">${T[currentLang].stock_label}</span>${imgHtml}</div>
         <div class="bpc-body">
           <div class="bpc-type">${escHtml(p.category)}</div>
           <div class="bpc-name">${escHtml(p.name)}</div>
           ${specsHtml}
           ${colorDots}
           <div class="bpc-actions" onclick="event.stopPropagation()">
-            <button class="bpc-btn bpc-btn--info" onclick="openProductModal('${escHtml(p.id)}')">Details</button>
-            <a href="/b2b#contact" class="bpc-btn bpc-btn--price">Request Price</a>
+            <button class="bpc-btn bpc-btn--info" onclick="openProductModal('${escHtml(p.id)}')">${T[currentLang].btn_details}</button>
+            <a href="/b2b#contact" class="bpc-btn bpc-btn--price">${T[currentLang].btn_request_price}</a>
           </div>
         </div>
       </div>`;
@@ -908,7 +1007,7 @@ function openProductModal(id) {
   const colWrap = modal.querySelector('.pm-colors-wrap');
   if (p.colors?.length) {
     colWrap.style.display = '';
-    colWrap.innerHTML = `<div class="pm-colors-label">Цвета:</div>
+    colWrap.innerHTML = `<div class="pm-colors-label">${T[currentLang].colors_label}:</div>
       <div class="pm-colors">${p.colors.map(c =>
         `<span class="pm-color"><span class="pm-color-dot pm-color--${c.toLowerCase().replace(/\s/g,'-')}"></span>${c}</span>`
       ).join('')}</div>`;
@@ -983,7 +1082,7 @@ document.addEventListener('keydown', e => {
 function requestProduct(name) {
   const msg      = document.getElementById('message');
   const interest = document.getElementById('interest');
-  if (msg) msg.value = `Интересует: ${name}`;
+  if (msg) msg.value = `${T[currentLang].product_interest}${name}`;
   if (interest) interest.value = '';
   const contact = document.getElementById('contact');
   if (contact) {
@@ -1025,7 +1124,7 @@ if (form) {
     };
     if (!data.name || !data.phone) return;
     submitBtn.disabled = true;
-    submitText.textContent = currentLang === 'uz' ? 'Yuborilmoqda...' : 'Отправляем...';
+    submitText.textContent = T[currentLang].form_sending;
     try {
       const res    = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
       const result = await res.json();
@@ -1036,7 +1135,7 @@ if (form) {
     } catch {
       submitBtn.disabled = false;
       submitText.textContent = T[currentLang].form_submit;
-      showNotification(currentLang === 'uz' ? 'Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.' : 'Ошибка. Попробуйте ещё раз.', 'error');
+      showNotification(T[currentLang].form_error, 'error');
     }
   });
 }
