@@ -9,11 +9,10 @@
 
     <ul class="nav-links">
       <li><a href="/#about"    data-i18n="nav_about">О нас</a></li>
-      <li><a href="/#partners" data-i18n="nav_partners">Партнёры</a></li>
       <li><a href="/catalog"   data-i18n="nav_catalog" class="<%= page==='catalog' ? 'active-page' : '' %>">Каталог</a></li>
       <li><a href="/b2b"       data-i18n="nav_services" class="<%= page==='b2b' ? 'active-page' : '' %>">Услуги</a></li>
-      <li><a href="/b2c"       class="<%= page==='b2c' ? 'active-page' : '' %>">Покупателям</a></li>
-      <li><a href="/b2b#contact" class="nav-cta" data-i18n="nav_contact">Связаться</a></li>
+      <li><a href="/b2c"       data-i18n="nav_b2c" class="<%= page==='b2c' ? 'active-page' : '' %>">Покупателям</a></li>
+      <li><a href="/become-partner" class="nav-cta <%= page==='partner' ? 'active-page' : '' %>" data-i18n="nav_partner">Стать партнёром</a></li>
     </ul>
 
     <div class="nav-right">
@@ -37,9 +36,14 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="/#about"    onclick="closeMobileMenu()" data-i18n="nav_about">О нас</a>
-  <a href="/#partners" onclick="closeMobileMenu()" data-i18n="nav_partners">Партнёры</a>
   <a href="/catalog"   onclick="closeMobileMenu()" data-i18n="nav_catalog">Каталог</a>
   <a href="/b2b"       onclick="closeMobileMenu()" data-i18n="nav_services">Услуги</a>
-  <a href="/b2c"       onclick="closeMobileMenu()">Покупателям</a>
-  <a href="/b2b#contact" onclick="closeMobileMenu()" class="btn-primary" data-i18n="nav_contact">Связаться с нами</a>
+  <a href="/b2c"       onclick="closeMobileMenu()" data-i18n="nav_b2c">Покупателям</a>
+  <div class="mobile-menu-brands">
+    <a href="/arctic-uzbekistan"   onclick="closeMobileMenu()">Arctic</a>
+    <a href="/gravastar-uzbekistan" onclick="closeMobileMenu()">GravaStar</a>
+    <a href="/atk-uzbekistan"      onclick="closeMobileMenu()">ATK</a>
+    <a href="/picun-uzbekistan"    onclick="closeMobileMenu()">Picun</a>
+  </div>
+  <a href="/become-partner" onclick="closeMobileMenu()" class="btn-primary" data-i18n="nav_partner">Стать партнёром</a>
 </div>

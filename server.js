@@ -40,6 +40,8 @@ app.get('/b2c', (req, res) => res.render('pages/b2c'));
 app.get('/become-partner', (req, res) => res.render('pages/become-partner'));
 app.get('/arctic-uzbekistan', (req, res) => res.render('pages/brand-arctic'));
 app.get('/gravastar-uzbekistan', (req, res) => res.render('pages/brand-gravastar'));
+app.get('/atk-uzbekistan', (req, res) => res.render('pages/brand-atk'));
+app.get('/picun-uzbekistan', (req, res) => res.render('pages/brand-picun'));
 // Category shortcuts → catalog with prefill
 app.get('/cooling',     (req, res) => res.redirect('/catalog?brand=Arctic'));
 app.get('/audio',       (req, res) => res.redirect('/catalog?brand=Picun'));
