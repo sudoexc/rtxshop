@@ -380,16 +380,18 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // ======= STICKY CTA =======
 const stickyCta = document.getElementById('stickyCta');
-let _stickyRaf = false;
-window.addEventListener('scroll', () => {
-  if (_stickyRaf) return;
-  _stickyRaf = true;
-  requestAnimationFrame(() => {
-    if (window.scrollY > window.innerHeight * 0.6) stickyCta.classList.add('visible');
-    else stickyCta.classList.remove('visible');
-    _stickyRaf = false;
-  });
-}, { passive: true });
+if (stickyCta) {
+  let _stickyRaf = false;
+  window.addEventListener('scroll', () => {
+    if (_stickyRaf) return;
+    _stickyRaf = true;
+    requestAnimationFrame(() => {
+      if (window.scrollY > window.innerHeight * 0.6) stickyCta.classList.add('visible');
+      else stickyCta.classList.remove('visible');
+      _stickyRaf = false;
+    });
+  }, { passive: true });
+}
 
 // ======= UTILS =======
 function escHtml(str) {
@@ -578,7 +580,7 @@ function renderBestsellers() {
 // ── Load curated catalog once ──
 async function loadCatalog() {
   const body = document.getElementById('catalogBody');
-  body.innerHTML = '<div class="catalog-loading"><div class="catalog-spinner"></div></div>';
+  if (body) body.innerHTML = '<div class="catalog-loading"><div class="catalog-spinner"></div></div>';
   try {
     const cached = sessionStorage.getItem('rtx_catalog');
     if (cached) {
@@ -588,6 +590,11 @@ async function loadCatalog() {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       _catalogAll = await r.json();
       try { sessionStorage.setItem('rtx_catalog', JSON.stringify(_catalogAll)); } catch {}
+    }
+    // Apply ?brand= from URL if set before main.js loaded
+    if (window._initBrand) {
+      const tab = document.querySelector(`.cat-tab[data-cat="${window._initBrand}"]`);
+      if (tab) { document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active')); tab.classList.add('active'); _activeTab = window._initBrand; }
     }
     renderCatalog();
     renderBestsellers();
@@ -599,6 +606,7 @@ async function loadCatalog() {
 // ── Render catalog (tab or search) ──
 function renderCatalog() {
   const body = document.getElementById('catalogBody');
+  if (!body) return;
   const q    = _searchQuery.toLowerCase().trim();
 
   let products = _catalogAll;
@@ -891,32 +899,33 @@ const submitBtn = document.getElementById('submitBtn');
 const submitText = document.getElementById('submitText');
 const formSuccess = document.getElementById('formSuccess');
 
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  const data = {
-    name:     form.name.value.trim(),
-    company:  form.company.value.trim(),
-    phone:    form.phone.value.trim(),
-    email:    form.email.value.trim(),
-    interest: form.interest.value,
-    message:  form.message.value.trim(),
-  };
-  if (!data.name || !data.phone) return;
-  submitBtn.disabled = true;
-  submitText.textContent = currentLang === 'uz' ? 'Yuborilmoqda...' : 'Отправляем...';
-  try {
-    const res    = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
-    const result = await res.json();
-    if (result.success) {
-      form.style.display = 'none';
-      formSuccess.style.display = 'block';
-    } else throw new Error(result.error);
-  } catch {
-    submitBtn.disabled = false;
-    submitText.textContent = T[currentLang].form_submit;
-    showNotification(currentLang === 'uz' ? 'Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.' : 'Ошибка. Попробуйте ещё раз.', 'error');
-  }
-});
+if (form) {
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = {
+      name:     form.name.value.trim(),
+      company:  form.company.value.trim(),
+      phone:    form.phone.value.trim(),
+      email:    form.email.value.trim(),
+      message:  form.message.value.trim(),
+    };
+    if (!data.name || !data.phone) return;
+    submitBtn.disabled = true;
+    submitText.textContent = currentLang === 'uz' ? 'Yuborilmoqda...' : 'Отправляем...';
+    try {
+      const res    = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      const result = await res.json();
+      if (result.success) {
+        form.style.display = 'none';
+        formSuccess.style.display = 'block';
+      } else throw new Error(result.error);
+    } catch {
+      submitBtn.disabled = false;
+      submitText.textContent = T[currentLang].form_submit;
+      showNotification(currentLang === 'uz' ? 'Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.' : 'Ошибка. Попробуйте ещё раз.', 'error');
+    }
+  });
+}
 
 // ======= NOTIFICATION =======
 function showNotification(msg, type = 'info') {
@@ -987,5 +996,6 @@ function initCounters() {
 
 // ======= INIT =======
 applyLang(currentLang);
+// defer guarantees DOM is ready — call directly
 loadCatalog();
 initCounters();

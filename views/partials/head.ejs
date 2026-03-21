@@ -6,13 +6,13 @@
 <meta property="og:type"        content="website" />
 <meta property="og:title"       content="<%= title %>" />
 <meta property="og:description" content="<%= desc %>" />
-<meta property="og:image"       content="<%= ogImage || '/img/products/gs-v60pro-1.webp' %>" />
-<meta property="og:url"         content="https://rtxshop.uz<%= path || '' %>" />
+<meta property="og:image"       content="<%= (typeof ogImage !== 'undefined' && ogImage) ? ogImage : '/img/products/gs-v60pro-1.webp' %>" />
+<meta property="og:url"         content="https://rtxshop.uz<%= (typeof path !== 'undefined' && path) ? path : '' %>" />
 <meta property="og:site_name"   content="RTXSHOP" />
 <meta name="twitter:card"        content="summary_large_image" />
 <meta name="twitter:title"       content="<%= title %>" />
 <meta name="twitter:description" content="<%= desc %>" />
-<meta name="twitter:image"       content="<%= ogImage || '/img/products/gs-v60pro-1.webp' %>" />
+<meta name="twitter:image"       content="<%= (typeof ogImage !== 'undefined' && ogImage) ? ogImage : '/img/products/gs-v60pro-1.webp' %>" />
 <title><%= title %></title>
 <link rel="stylesheet" href="/css/style.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />

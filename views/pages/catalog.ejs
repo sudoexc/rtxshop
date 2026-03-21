@@ -51,17 +51,11 @@
 <%- include('../partials/footer') %>
 <%- include('../partials/modals') %>
 
-<script src="/js/main.js" defer></script>
-<script defer>
-  document.addEventListener('DOMContentLoaded', () => {
-    loadCatalog();
-    // read ?brand= from URL and activate tab
-    const urlBrand = new URLSearchParams(window.location.search).get('brand');
-    if (urlBrand) {
-      const tab = document.querySelector(`.cat-tab[data-cat="${urlBrand}"]`);
-      if (tab) { document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active')); tab.classList.add('active'); _activeTab = urlBrand; }
-    }
-  });
+<script>
+  // Set initial brand tab from URL before main.js runs
+  const _urlBrand = new URLSearchParams(window.location.search).get('brand');
+  if (_urlBrand) window._initBrand = _urlBrand;
 </script>
+<script src="/js/main.js" defer></script>
 </body>
 </html>
