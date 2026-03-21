@@ -2970,54 +2970,28 @@ footer {
     transition: none;
     gap: 12px;
   }
-  /* Horizontal card layout on mobile */
   .bsl-card {
-    flex: 0 0 calc(100vw - 80px);
+    flex: 0 0 240px;
     scroll-snap-align: center;
     min-width: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    min-height: 0;
   }
-  .bsl-card .bpc-img {
-    width: 120px;
-    flex: 0 0 120px;
-    height: auto;
-    min-height: 120px;
-    border-radius: 14px 0 0 14px;
-  }
-  .bsl-card .bpc-body {
-    flex: 1;
-    min-width: 0;
-    padding: 14px 14px 14px 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 6px;
-  }
+  .bsl-card .bpc-img { height: 160px; }
   .bsl-card .bpc-type {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 10px;
   }
   .bsl-card .bpc-name {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 14px;
-    line-height: 1.3;
   }
-  /* Hide specs on mobile carousel — show in modal */
-  .bsl-card .bsl-specs { display: none; }
-  .bsl-card .bpc-colors { margin: 0; }
-  .bsl-card .bpc-btn {
-    padding: 8px 12px;
-    font-size: 12px;
-    border-radius: 10px;
-    margin-top: auto;
-  }
+  /* Show only 2 specs, in 2 columns, truncated */
+  .bsl-card .bsl-specs { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .bsl-card .bsl-spec:nth-child(n+3) { display: none; }
+  .bsl-card .bsl-spec { padding: 6px 8px; }
+  .bsl-card .bsl-spec-v { font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bsl-card .bsl-spec-k { font-size: 9px; }
   .brand-photo-grid { grid-template-columns: 1fr; gap: 10px; }
   .bsl-specs { grid-template-columns: repeat(3, 1fr); }
   .bpc-specs { grid-template-columns: repeat(2, 1fr); }
