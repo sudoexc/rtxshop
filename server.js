@@ -10,6 +10,9 @@ const rateLimit   = require('express-rate-limit');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 // On Vercel the project filesystem is read-only; use /tmp for mutable data
 const IS_VERCEL     = !!process.env.VERCEL;
 const DATA_DIR      = IS_VERCEL ? '/tmp' : path.join(__dirname, 'data');
@@ -28,6 +31,13 @@ if (!IS_VERCEL && !fs.existsSync(PRODUCTS_FILE)) fs.writeFileSync(PRODUCTS_FILE,
 app.use(compression());
 app.use(cors());
 app.use(express.json());
+
+// ─── page routes ───────────────────────────────────────────
+app.get('/', (req, res) => res.render('pages/index'));
+app.get('/catalog', (req, res) => res.render('pages/catalog'));
+app.get('/b2b', (req, res) => res.render('pages/b2b'));
+app.get('/b2c', (req, res) => res.render('pages/b2c'));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ─── helpers ───────────────────────────────────────────────
@@ -377,12 +387,7 @@ app.get('/admin', (req, res) => res.sendFile(path.join(__dirname, 'admin', 'inde
 
 // catch-all
 app.get('*', (req, res) => {
-  // API routes that don't exist → 404 JSON
   if (req.path.startsWith('/api/')) return res.status(404).json({ error: 'Not found' });
-  // known pages
-  const known = ['/', '/admin'];
-  if (known.includes(req.path)) return res.sendFile(path.join(__dirname, 'public', 'index.html'));
-  // everything else → branded 404
   res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <%- include('../partials/head', {
+    title: 'Каталог — RTXSHOP | ATK, GravaStar, Arctic, Picun',
+    desc: 'Полный каталог товаров RTXSHOP: игровые мыши ATK, периферия GravaStar, системы охлаждения Arctic, аудио Picun. Оптовые поставки по Узбекистану.',
+    path: '/catalog'
+  }) %>
+</head>
+<body>
+
+<%- include('../partials/floats') %>
+<%- include('../partials/navbar', { page: 'catalog' }) %>
+
+<section class="catalog-section" id="catalog" style="padding-top: 120px;">
+  <div class="container">
+    <div class="catalog-header reveal">
+      <div class="section-eyebrow" data-i18n="catalog_eyebrow">Каталог</div>
+      <h1 class="section-title"><span data-i18n="catalog_h2a">Наш</span> <span class="accent-text" data-i18n="catalog_h2b">каталог</span></h1>
+      <p class="section-sub" data-i18n="catalog_sub">Товары, которые мы поставляем напрямую с производства. Для получения прайса — свяжитесь с менеджером.</p>
+    </div>
+
+    <div class="catalog-search reveal">
+      <div class="catalog-search-wrap">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="catalogSearch" class="catalog-search-input" placeholder="Поиск по каталогу..." autocomplete="off" />
+        <button type="button" class="catalog-search-clear" id="searchClear" onclick="clearSearch()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="catalog-tabs reveal" id="catalogTabs">
+      <button type="button" class="cat-tab active" data-cat="GravaStar">GravaStar</button>
+      <button type="button" class="cat-tab" data-cat="ATK">ATK</button>
+      <button type="button" class="cat-tab" data-cat="Picun">Picun</button>
+      <button type="button" class="cat-tab" data-cat="Arctic">Arctic</button>
+    </div>
+
+    <div class="catalog-body" id="catalogBody">
+      <div class="catalog-loading"><div class="catalog-spinner"></div></div>
+    </div>
+
+    <div class="catalog-cta reveal">
+      <p data-i18n="catalog_cta_text">Нужен индивидуальный прайс или товар не в списке?</p>
+      <a href="/b2b#contact" class="btn-primary" data-i18n="catalog_cta_btn">Запросить у менеджера</a>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/modals') %>
+
+<script src="/js/main.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    loadCatalog();
+    // read ?brand= from URL and activate tab
+    const urlBrand = new URLSearchParams(window.location.search).get('brand');
+    if (urlBrand) {
+      const tab = document.querySelector(`.cat-tab[data-cat="${urlBrand}"]`);
+      if (tab) { document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active')); tab.classList.add('active'); _activeTab = urlBrand; }
+    }
+  });
+</script>
+</body>
+</html>

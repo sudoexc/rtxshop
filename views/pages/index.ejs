@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <%- include('../partials/head', {
+    title: 'RTXSHOP OOO — Дистрибьютор ATK, GravaStar, Arctic',
+    desc: 'RTXSHOP OOO — официальный дистрибьютор ATK, GravaStar, Arctic и Picun в Узбекистане. Оптовые поставки для магазинов.',
+    path: '/'
+  }) %>
+</head>
+<body>
+
+<%- include('../partials/floats') %>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <span data-i18n="sticky_text">Станьте партнёром RTXSHOP — ответим за 2 часа</span>
+  <a href="/b2b#contact" class="sticky-cta-btn" data-i18n="sticky_btn">Оставить заявку</a>
+  <button type="button" class="sticky-cta-close" onclick="document.getElementById('stickyCta').classList.add('hidden')" aria-label="close">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+</div>
+
+<%- include('../partials/navbar', { page: 'home' }) %>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        <span data-i18n="hero_eyebrow">Официальный дистрибьютор в Узбекистане</span>
+      </div>
+      <h1>
+        <span data-i18n="hero_h1a">Прямые поставки</span><br>
+        <span class="accent-text" data-i18n="hero_h1b">для вашего магазина.</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">RTXSHOP OOO — официальный дистрибьютор ATK, GravaStar и Arctic в Узбекистане. Игровые мыши, периферия и системы охлаждения оптом для магазинов.</p>
+      <div class="hero-actions">
+        <a href="/b2b#contact" class="btn-primary">
+          <span data-i18n="hero_cta1">Стать партнёром</span>
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        <a href="/catalog" class="btn-secondary" data-i18n="hero_cta2">Смотреть каталог</a>
+      </div>
+      <div class="hero-cats">
+        <span>ATK</span><span>GravaStar</span><span>Arctic</span><span>Picun</span><span>Игровые мыши</span><span>Охлаждение</span><span>Периферия</span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-product-card">
+        <div class="hpc-img">
+          <img src="https://cdn.shopify.com/s/files/1/0295/5988/1807/files/gravastar-v60-pro-8khz-magnetic-switch-gaming-keyboard-1.webp?v=1765965816" alt="Mercury V60 Pro" />
+        </div>
+        <div class="hpc-tag">Хит продаж</div>
+        <div class="hpc-cat">GravaStar — Игровые мыши</div>
+        <div class="hpc-name">Mercury<br>V60 Pro</div>
+        <div class="hpc-specs">
+          <div class="hpc-spec"><span class="hpc-spec-v">PAW3950</span><span class="hpc-spec-k">Сенсор</span></div>
+          <div class="hpc-spec"><span class="hpc-spec-v">4000Hz</span><span class="hpc-spec-k">Polling rate</span></div>
+          <div class="hpc-spec"><span class="hpc-spec-v">71g</span><span class="hpc-spec-k">Вес</span></div>
+          <div class="hpc-spec"><span class="hpc-spec-v">2.4GHz / BT</span><span class="hpc-spec-k">Подключение</span></div>
+        </div>
+        <a href="/catalog" class="hpc-btn">Смотреть каталог</a>
+        <p class="hpc-note">Оптовые условия для магазинов Узбекистана</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-number">20+</div><div class="hero-stat-label" data-i18n="stat_stores">Магазинов-партнёров</div></div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat"><div class="hero-stat-number">4</div><div class="hero-stat-label" data-i18n="stat_brands">Официальных бренда</div></div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat"><div class="hero-stat-number">5+</div><div class="hero-stat-label" data-i18n="stat_years">Лет на рынке</div></div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat"><div class="hero-stat-number">UZB</div><div class="hero-stat-label" data-i18n="stat_coverage">Охват по стране</div></div>
+  </div>
+</section>
+
+<!-- BRANDS TICKER -->
+<div class="brands-ticker">
+  <div class="ticker-label" data-i18n="ticker_label">Официальные партнёры</div>
+  <div class="ticker-track">
+    <span class="ticker-item"><img src="/img/logos/atk-real.png" alt="ATK" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/gravastar-real.png" alt="GravaStar" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/arctic-real.svg" alt="Arctic" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/picun-real.png" alt="Picun" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/nvidia-real.svg" alt="NVIDIA" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/amd-real.svg" alt="AMD" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/asus-real.svg" alt="ASUS" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/msi-real.png" alt="MSI" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/gigabyte-real.svg" alt="GIGABYTE" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/atk-real.png" alt="ATK" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/gravastar-real.png" alt="GravaStar" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/arctic-real.svg" alt="Arctic" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/picun-real.png" alt="Picun" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/nvidia-real.svg" alt="NVIDIA" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/amd-real.svg" alt="AMD" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/asus-real.svg" alt="ASUS" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/msi-real.png" alt="MSI" class="ticker-logo" /></span><span class="ticker-dot"></span>
+    <span class="ticker-item"><img src="/img/logos/gigabyte-real.svg" alt="GIGABYTE" class="ticker-logo" /></span><span class="ticker-dot"></span>
+  </div>
+</div>
+
+<!-- BESTSELLERS -->
+<section class="bestsellers" id="bestsellers">
+  <div class="container">
+    <div class="bsl-header reveal">
+      <div class="section-eyebrow" data-i18n="bsl_eyebrow">Хит продаж</div>
+      <h2 class="section-title"><span data-i18n="bsl_h2a">Самые</span> <span class="accent-text" data-i18n="bsl_h2b">востребованные</span></h2>
+      <p class="section-sub" data-i18n="bsl_sub">Топовые позиции из нашего каталога — игровая периферия и системы охлаждения</p>
+    </div>
+    <div class="bsl-carousel">
+      <button type="button" class="bsl-arrow bsl-arrow--prev" id="bslPrev" onclick="bslNav(-1)" aria-label="Назад">&#8249;</button>
+      <div class="bsl-track-wrap">
+        <div class="bsl-grid" id="bslGrid">
+          <div class="catalog-loading"><div class="catalog-spinner"></div></div>
+        </div>
+      </div>
+      <button type="button" class="bsl-arrow bsl-arrow--next" id="bslNext" onclick="bslNav(1)" aria-label="Вперёд">&#8250;</button>
+    </div>
+    <div class="bsl-dots" id="bslDots"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-card">
+          <div class="about-card-stats">
+            <div class="about-mini-stat"><div class="about-mini-stat-num">20+</div><div class="about-mini-stat-label" data-i18n="stat_stores">Магазинов-партнёров</div></div>
+            <div class="about-mini-stat"><div class="about-mini-stat-num">4</div><div class="about-mini-stat-label" data-i18n="stat_brands">Официальных бренда</div></div>
+            <div class="about-mini-stat"><div class="about-mini-stat-num">5+</div><div class="about-mini-stat-label" data-i18n="stat_years">Лет на рынке</div></div>
+            <div class="about-mini-stat"><div class="about-mini-stat-num">UZB</div><div class="about-mini-stat-label" data-i18n="stat_coverage">Охват по стране</div></div>
+          </div>
+          <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border);">
+            <div style="font-size:13px;color:var(--text-muted);margin-bottom:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:500;">Официальные партнёры</div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="/catalog?brand=ATK" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--text-primary);text-decoration:none;">ATK</a>
+              <a href="/catalog?brand=GravaStar" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--text-primary);text-decoration:none;">GravaStar</a>
+              <a href="/catalog?brand=Arctic" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--text-primary);text-decoration:none;">Arctic</a>
+              <a href="/catalog?brand=Picun" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;color:var(--text-primary);text-decoration:none;">Picun</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal reveal-delay-2">
+        <div class="section-eyebrow" data-i18n="about_eyebrow">О компании</div>
+        <h2 class="section-title">
+          <span data-i18n="about_h2a">Мост между</span><br />
+          <span class="accent-text" data-i18n="about_h2b">мировыми</span> <span data-i18n="about_h2c">брендами</span><br />
+          <span data-i18n="about_h2d">и вашим магазином</span>
+        </h2>
+        <p class="section-sub" data-i18n="about_sub">RTXSHOP OOO — официальный дистрибьютор, который доставляет продукцию ведущих мировых брендов прямо в розничные магазины Узбекистана.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div class="about-feature-text"><h4 data-i18n="feat1_title">Официальное партнёрство</h4><p data-i18n="feat1_sub">Прямые договоры с ATK, GravaStar и Arctic — оригинальная продукция с гарантией</p></div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg></div>
+            <div class="about-feature-text"><h4 data-i18n="feat2_title">Оптовые поставки</h4><p data-i18n="feat2_sub">Работаем с магазинами по всему Узбекистану — от Ташкента до регионов</p></div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
+            <div class="about-feature-text"><h4 data-i18n="feat3_title">Быстрая логистика</h4><p data-i18n="feat3_sub">Выстроенные цепочки поставок для своевременного пополнения вашего склада</p></div>
+          </div>
+        </div>
+        <a href="/b2b" class="btn-primary" style="margin-top:24px;display:inline-flex;align-items:center;gap:8px;">
+          Подробнее об услугах
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners" id="partners">
+  <div class="container">
+    <div class="partners-header reveal">
+      <div class="section-eyebrow" data-i18n="partners_eyebrow">Партнёры</div>
+      <h2 class="section-title"><span data-i18n="partners_h2a">Бренды, которые мы</span><br /><span class="accent-text" data-i18n="partners_h2b">представляем</span></h2>
+      <p class="section-sub" data-i18n="partners_sub">Мы сотрудничаем только с проверенными мировыми брендами</p>
+    </div>
+    <div class="partners-grid">
+      <a href="/catalog?brand=ATK" class="partner-card reveal" style="text-decoration:none;">
+        <div class="partner-brand-name">ATK</div>
+        <div class="partner-sub" data-i18n="atk_cat">Игровые мыши</div>
+        <p class="partner-desc" data-i18n="atk_desc">Профессиональные игровые мыши с передовыми сенсорами и эргономичным дизайном.</p>
+        <span class="partner-link"><span data-i18n="view_catalog">Смотреть каталог</span><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
+      </a>
+      <a href="/catalog?brand=GravaStar" class="partner-card reveal reveal-delay-1" style="text-decoration:none;">
+        <div class="partner-brand-name">GravaStar</div>
+        <div class="partner-sub" data-i18n="grava_cat">Игровая периферия</div>
+        <p class="partner-desc" data-i18n="grava_desc">Уникальный sci-fi дизайн и топовые характеристики. Колонки, наушники, мыши.</p>
+        <span class="partner-link"><span data-i18n="view_catalog">Смотреть каталог</span><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
+      </a>
+      <a href="/catalog?brand=Arctic" class="partner-card reveal reveal-delay-2" style="text-decoration:none;">
+        <div class="partner-brand-name">Arctic</div>
+        <div class="partner-sub" data-i18n="arctic_cat">Системы охлаждения</div>
+        <p class="partner-desc" data-i18n="arctic_desc">Европейский эксперт в области охлаждения. Кулеры, термопасты, вентиляторы.</p>
+        <span class="partner-link"><span data-i18n="view_catalog">Смотреть каталог</span><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
+      </a>
+      <a href="/catalog?brand=Picun" class="partner-card reveal reveal-delay-3" style="text-decoration:none;">
+        <div class="partner-brand-name">Picun</div>
+        <div class="partner-sub">Игровая аудио техника</div>
+        <p class="partner-desc">Игровые наушники и TWS наушники с низкой задержкой. Современный дизайн и качественный звук.</p>
+        <span class="partner-link"><span data-i18n="view_catalog">Смотреть каталог</span><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/modals') %>
+
+<script src="/js/main.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => { loadCatalog(); initCounters(); });
+</script>
+</body>
+</html>
